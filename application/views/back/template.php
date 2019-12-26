@@ -12,7 +12,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
     <head>
         <meta charset="utf-8">
         <title>
-            Page Titile - category_1 - SmartAdmin v4.0.1
+            <?=$title?>
         </title>
         <meta name="description" content="Page Titile">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -50,6 +50,7 @@ CREATE TABLE `aplikasi` (
   `nama_aplikasi` varchar(255),
   `keterangan` text,
   `foto` varchar(255),
+  `link` varchar(255),
   `username` varchar(20)
 );
 
@@ -79,12 +80,6 @@ CREATE TABLE `download` (
   `kategori` varchar(20)
 );
 
-CREATE TABLE `galeri` (
-  `id` int(5),
-  `nama_foto` varchar(100),
-  `tgl_input` datetime
-);
-
 CREATE TABLE `attachment` (
   `id` int(5),
   `nama_file` varchar(255),
@@ -92,9 +87,3 @@ CREATE TABLE `attachment` (
   `tgl_input` datetime,
   `hit_count` int(11)
 );
-
-ALTER TABLE `posts` ADD FOREIGN KEY (`username`) REFERENCES `user` (`username`);
-
-ALTER TABLE `carousel` ADD FOREIGN KEY (`username`) REFERENCES `user` (`username`);
-
-ALTER TABLE `aplikasi` ADD FOREIGN KEY (`username`) REFERENCES `user` (`username`);
