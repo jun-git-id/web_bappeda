@@ -48,11 +48,11 @@
                                         <?php $x = explode(";", $d['tags']) ?>
                                         <?php foreach ($x as $z): ?>
                                              <span class="badge badge-primary"><?=$z?></span>
-                                         <?php endforeach ?> 
+                                         <?php endforeach ?>
                                         </td>
                                         <td><?=tanggal_indo(date('Y-m-d', strtotime($d['tanggal'])))?></td>
                                         <td><?=$d['hit_count']?></td>
-                                        
+
                                         <td>
                                             <a href="<?=base_url('admin/berita/edit/').$d['link']?>" class="btn btn-secondary btn-icon rounded-circle"><i class="far fa-edit"></i></a>
                                             <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/berita/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>

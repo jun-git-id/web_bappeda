@@ -26,11 +26,11 @@ class Berita extends CI_Controller {
 	      			$data['post'][$z]['thumbnail'][] = array(
 	      				'nama_file' => $v['nama_file']
 	      			);
-	      		}	
+	      		}
       		}else{
       			$data['post'][$z]['thumbnail'] = array();
       		}
-      		
+
         	$z += 1;
 	    }
 
@@ -95,9 +95,9 @@ class Berita extends CI_Controller {
 
                 $config['upload_path'] = './assets/images/posts/';
                 $config['allowed_types'] = 'jpeg|jpg|png|JPG|PNG';
-				
+
 				$config['file_name'] = $data['id'].'-'.$x.'.jpg';
-                
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
@@ -114,11 +114,11 @@ class Berita extends CI_Controller {
                 }else{
 					$error = array ('error' => $this->upload->display_errors());
 					var_dump($error);
-				}	
+				}
             }
 
             unset($data['userFiles']);
-        	
+
         }else{
         	echo 'nofile';
         }
@@ -137,13 +137,13 @@ class Berita extends CI_Controller {
 
                 $config['upload_path'] = './assets/attachment/';
                 $config['allowed_types'] = '*';
-                
+
 				$ext = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
 
                 $fn = strtolower(str_replace(" ", "-", pathinfo($_FILES['attachment']['name'], PATHINFO_FILENAME)));
-				
+
 				$config['file_name'] = $fn.'-'.$data['id'].'-'.$x.'.'.$ext;
-                
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
@@ -160,17 +160,17 @@ class Berita extends CI_Controller {
                 }else{
 					$error = array ('error' => $this->upload->display_errors());
 					var_dump($error);
-				}	
+				}
             }
 
             unset($data['attachments']);
-        	
+
         }else{
         	echo 'nofile';
         }
 
         $this->db->insert('posts',$data);
-        	
+
     	$this->session->set_flashdata('alert','<div class="alert alert-primary alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-info"></i></span> </button> <strong>Berhasil!</strong> Data Berita berhasil disimpan.</div>');
 
 
@@ -206,7 +206,7 @@ class Berita extends CI_Controller {
 
 		if(!empty($_FILES['userFiles']['name'][0])){
             $filesCount = count($_FILES['userFiles']['name']);
-            
+
             $zxc = $this->db->where('id_post',$data['id'])->get('thumbnail')->result_array();
             foreach ($zxc as $z) {
             	unlink('./assets/images/posts/'.$z['nama_file']);
@@ -224,9 +224,9 @@ class Berita extends CI_Controller {
 
                 $config['upload_path'] = './assets/images/posts/';
                 $config['allowed_types'] = 'jpeg|jpg|png|JPG|PNG';
-				
+
 				$config['file_name'] = $data['id'].'-'.$x.'.jpg';
-                
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
@@ -243,7 +243,7 @@ class Berita extends CI_Controller {
                 }else{
 					$error = array ('error' => $this->upload->display_errors());
 					var_dump($error);
-				}	
+				}
             }
 
         	unset($data['userFiles']);
@@ -256,7 +256,7 @@ class Berita extends CI_Controller {
 
         if(!empty($_FILES['attachments']['name'][0])){
             $filesCount = count($_FILES['attachments']['name']);
-            
+
             $zxc = $this->db->where('id_post',$data['id'])->get('attachment')->result_array();
             foreach ($zxc as $z) {
             	unlink('./assets/attachment/'.$z['nama_file']);
@@ -274,13 +274,13 @@ class Berita extends CI_Controller {
 
                 $config['upload_path'] = './assets/attachment/';
                 $config['allowed_types'] = '*';
-				
+
 				$ext = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
 				$fn = strtolower(str_replace(" ", "-", pathinfo($_FILES['attachment']['name'], PATHINFO_FILENAME)));
-				
+
 				$config['file_name'] = $fn.'-'.$data['id'].'-'.$x.'.'.$ext;
-                
-                
+
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
@@ -309,7 +309,7 @@ class Berita extends CI_Controller {
         }
 
     	$this->db->where('id',$data['id'])->update('posts',$data);
-    	
+
     	$this->session->set_flashdata('alert','<div class="alert alert-secondary alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-info"></i></span> </button> <strong>Berhasil!</strong> Data Berita berhasil diperbarui.</div>');
 
 		redirect('admin/berita');

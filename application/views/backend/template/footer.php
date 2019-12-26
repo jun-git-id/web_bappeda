@@ -241,8 +241,8 @@
                 </div>
             </div>
         </div> <!-- END Page Settings -->
-        <!-- base vendor bundle: 
-			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+        <!-- base vendor bundle:
+			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations
 						+ pace.js (recommended)
 						+ jquery.js (core)
 						+ jquery-ui-cust.js (core)
@@ -504,7 +504,7 @@
                     confirmButtonClass: "btn-danger",
                     confirmButtonText: "Ya, Saya Yakin!!",
                     closeOnConfirm:false
-                    
+
                 },
                 function(){
                     swal({
@@ -531,7 +531,7 @@
                     confirmButtonClass: "btn-danger",
                     confirmButtonText: "Ya, Saya Yakin!!",
                     closeOnConfirm:false
-                    
+
                 },
                 function(){
                     swal({
@@ -548,7 +548,7 @@
 
             // $(document).on('click','.del', function(){
 
-                
+
             // });
 
         </script>

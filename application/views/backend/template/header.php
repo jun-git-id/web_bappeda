@@ -1,5 +1,5 @@
 <?php
-    // if($this->session->userdata('status') != "login"){redirect('admin/login');} 
+    // if($this->session->userdata('status') != "login"){redirect('admin/login');}
     $page = strtolower($this->uri->segment(2));
     $page2 = strtolower($this->uri->segment(3));
     $page3 = strtolower($this->uri->segment(4));
@@ -45,20 +45,20 @@
         <!-- DOC: script to save and load page settings -->
         <script>
             /**
-             *	This script should be placed right after the body tag for fast execution 
+             *	This script should be placed right after the body tag for fast execution
              *	Note: the script is written in pure javascript and does not depend on thirdparty library
              **/
             'use strict';
 
             var classHolder = document.getElementsByTagName("BODY")[0],
-                /** 
+                /**
                  * Load from localstorage
                  **/
                 themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
                 {},
                 themeURL = themeSettings.themeURL || '',
                 themeOptions = themeSettings.themeOptions || '';
-            /** 
+            /**
              * Load theme options
              **/
             if (themeSettings.themeOptions)
@@ -78,8 +78,8 @@
                 cssfile.href = themeURL;
                 document.getElementsByTagName('head')[0].appendChild(cssfile);
             }
-            /** 
-             * Save to localstorage 
+            /**
+             * Save to localstorage
              **/
             var saveSettings = function()
             {
@@ -93,7 +93,7 @@
                 };
                 localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
             }
-            /** 
+            /**
              * Reset settings
              **/
             var resetSettings = function()
@@ -516,7 +516,7 @@
                                             </span>
                                             <div class="info-card-text">
                                                 <div class="fs-lg text-truncate text-truncate-lg"><?=strtoupper($this->session->userdata('nama_bidang'))?></div>
-                                                <span class="text-truncate text-truncate-md opacity-80">DINDIKBUD</span>
+                                                <span class="text-truncate text-truncate-md opacity-80">Bappeda Litbang</span>
                                             </div>
                                         </div>
                                     </div>
