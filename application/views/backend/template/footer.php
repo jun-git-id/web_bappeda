@@ -340,7 +340,7 @@
                     {}
                 });
 
-                $('.js-sambutan').summernote({
+                $('.js-latar_belakang').summernote({
                     height: 450,
                     tabsize: 2,
                     placeholder: "Ketik Disini...",
@@ -468,14 +468,14 @@
                 });
             }
 
-            function edit_sambutan(id){
-                $.post("<?=base_url('admin/profil/edit_sambutan/')?>",
+            function edit_latar_belakang(id){
+                $.post("<?=base_url('admin/profil/edit_latar_belakang/')?>",
                 {
                   id:id
                 },
                 function(data){
                   $('#modal-edit').modal('toggle');
-                  $('#sambutan').summernote("code",data.isi);
+                  $('#latar_belakang').summernote("code",data.isi);
                   $('#xid').val(data.id);
                 });
             }
