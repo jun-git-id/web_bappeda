@@ -9,9 +9,9 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('back/template/header');
-		$this->load->view('back/dashboard/index');
-		$this->load->view('back/template/footer');
+		$this->load->view('backend/template/header');
+		$this->load->view('backend/dashboard/index');
+		$this->load->view('backend/template/footer');
 	}
 
 	function grafikperhari($bulan,$tahun){

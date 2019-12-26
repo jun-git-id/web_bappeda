@@ -12,7 +12,7 @@ class Profil extends CI_Controller {
 	}
 
 	public function sambutan(){
-		$data['data'] = $this->db->where('page','sambutan')->get('page')->row_array();
+		$data['data'] = $this->db->where('isi','sambutan')->get('page')->row_array();
 		$this->load->view('backend/template/header');
 		$this->load->view('backend/profil/sambutan',$data);
 		$this->load->view('backend/template/footer');
