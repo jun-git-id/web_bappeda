@@ -5,6 +5,7 @@ class Bidang extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('mbidang');
 	}
 
 	public function index(){
@@ -17,7 +18,7 @@ class Bidang extends CI_Controller {
 	function save(){
 		$data = $this->input->post();
 		$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data Bidang berhasil disimpan.</div>');
-		$this->db->insert('bidang',$data);
+		$this->mbidang->create($data);
 		redirect('admin/bidang');
 	}
 

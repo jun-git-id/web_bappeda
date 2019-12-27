@@ -10,7 +10,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('back/template',[
-			'content' => $this->load->view('back/dashboard',[
+			'content' => $this->load->view('backend/dashboard',[
 				'data' => array()
 			],true),
 			'title' => 'Judul'

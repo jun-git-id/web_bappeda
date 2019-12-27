@@ -27,6 +27,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -85,10 +86,10 @@
                             <tbody>
                                 <?php $no=1; foreach ($data as $d): ?>
                                     <tr>
-                                        <td><?=$no?></td>
-                                        <td><?=$d['nama_bidang']?></td>
-                                        <td><?=$d['keterangan']?></td>
-                                        <td>
+                                        <td width="5%"><?=$no?></td>
+                                        <td width="20%"><?=$d['nama_bidang']?></td>
+                                        <td width="60%"><?=$d['keterangan']?></td>
+                                        <td width="15%">
                                             <a href="javascript:;" class="btn btn-info btn-icon rounded-circle" onclick="edit_bidang('<?=$d['id']?>')"><i class="far fa-edit"></i></a>
                                             <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/bidang/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                         </td>

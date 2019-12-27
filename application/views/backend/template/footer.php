@@ -254,12 +254,13 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
+        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
-        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>        
         <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
+        <script src="<?=base_url('assets/backend/')?>js/statistics/flot/flot.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/formplugins/summernote/summernote.js"></script>
-        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
 
         <script type="text/javascript">
             $(function(){
@@ -323,10 +324,10 @@
                     }
                 });
 
-                $('.js-readmore').summernote({
+                $('.js-isi').summernote({
                     height: 150,
                     tabsize: 2,
-                    placeholder: "Untuk Isi Readmore...",
+                    placeholder: "Untuk Isi Menu...",
                     dialogsFade: true,
                     toolbar: [
                         ['font', ['strikethrough', 'superscript', 'subscript']],
@@ -493,6 +494,7 @@
             }
 
             $('.del').click(function(){
+                // alert('kkk');
                 var href = $(this).attr('rel');
                 swal({
                     title: "Anda Yakin?",
@@ -546,10 +548,86 @@
                 return false ;
             })
 
-            // $(document).on('click','.del', function(){
+             /*  GRAFIK FLOT */
+            $(document).ready(function(){
+                var dataPost = [
+                [0, 10],
+                [1, 7],
+                [2, 8],
+                [3, 9],
+                [4, 6],
+                [5, 5],
+                [6, 7]
+            ];
 
-
-            // });
+            var flotLineAlt = $.plot($('#flot-line-alt'), [
+                {
+                    data: dataPost,
+                    label: 'Jumlah Postingan',
+                    color: myapp_get_color.danger_500
+                }],
+                {
+                    series:
+                    {
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 1
+                        },
+                        shadowSize: 0
+                    },
+                    points:
+                    {
+                        show: true,
+                    },
+                    legend:
+                    {
+                        noColumns: 1,
+                        position: 'nw'
+                    },
+                    tooltip: true,
+                    tooltipOpts:
+                    {
+                        cssClass: 'tooltip-inner',
+                        defaultTheme: false,
+                        shifts:
+                        {
+                            x: 10,
+                            y: -40
+                        }
+                    },
+                    grid:
+                    {
+                        hoverable: true,
+                        clickable: true,
+                        borderColor: '#ddd',
+                        borderWidth: 0,
+                        labelMargin: 5,
+                        backgroundColor: '#fff'
+                    },
+                    yaxis:
+                    {
+                        min: 0,
+                        max: 15,
+                        color: '#eee',
+                        font:
+                        {
+                            size: 10,
+                            color: '#999'
+                        }
+                    },
+                    xaxis:
+                    {
+                        color: '#eee',
+                        font:
+                        {
+                            size: 10,
+                            color: '#999'
+                        }
+                    }
+                });
+                /* flot lines tooltip -- end */
+            })
 
         </script>
     </body>
