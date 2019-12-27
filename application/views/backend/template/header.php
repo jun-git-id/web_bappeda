@@ -2,6 +2,7 @@
     // if($this->session->userdata('status') != "login"){redirect('admin/login');}
     $page = strtolower($this->uri->segment(2));
     $page2 = strtolower($this->uri->segment(3));
+    $page3 = strtolower($this->uri->segment(4));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,27 +148,10 @@
                                 </a>
                             </li>
                             <li <?= ($page=='profil') ? 'class="active"' : '' ?>>
-                                <a href="#" title="UI Components" data-filter-tags="ui components">
+                                <a href="<?=base_url('admin/profil')?>" title="UI Components" data-filter-tags="ui components">
                                     <i class="far fa-building"></i>
                                     <span class="nav-link-text" data-i18n="nav.ui_components">Profil</span>
                                 </a>
-                                <ul>
-                                    <li <?= ($page2=='sambutan') ? 'class="active"' : '' ?>>
-                                        <a href="<?=base_url('admin/profil/sambutan')?>" title="Sambutan" data-filter-tags="sambutan">
-                                            <span class="nav-link-text" data-i18n="nav.sambutan">Sambutan</span>
-                                        </a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="ui_accordion.html" title="Accordions" data-filter-tags="ui components accordions">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_accordions">Visi Misi</span>
-                                        </a>
-                                    </li> -->
-                                    <li <?= ($page2=='struktur_organisasi') ? 'class="active"' : '' ?>>
-                                        <a href="<?=base_url('admin/profil/struktur_organisasi')?>" title="Struktur Organisasi" data-filter-tags="struktur organisasi">
-                                            <span class="nav-link-text" data-i18n="nav.struktur_organisasi">Struktur Organisasi</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <!-- <li>
                                 <a href="#" title="UI Components" data-filter-tags="ui components">

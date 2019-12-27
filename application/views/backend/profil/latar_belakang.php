@@ -4,7 +4,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">
-                        <i class="far fa-edit"></i> Ubah Data Sambutan
+                        <i class="far fa-edit"></i> Ubah Data Latar Belakang
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="fal fa-times"></i></span>
@@ -12,11 +12,11 @@
                 </div>
                 <div class="modal-body">
                     <!-- <div class="js-summernote"></div> -->
-                    <form method="post" action="<?=base_url('admin/profil/update_sambutan')?>">
+                    <form method="post" action="<?=base_url('admin/profil/update_latar_belakang')?>">
                         <input type="hidden" name="xid" id="xid">
                         <div class="form-group">
-                            <label class="form-label">Sambutan</label>
-                            <textarea class="js-sambutan form-control" name="isi" id="sambutan" required=""></textarea>
+                            <label class="form-label">Latar Belakang</label>
+                            <textarea class="js-latar_belakang form-control" name="isi" id="latar_belakang" required=""></textarea>
                         </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
                         <button type="submit" class="btn btn-info"><i class="far fa-save"></i> Perbarui</button>
@@ -31,26 +31,26 @@
             <div id="panel-9" class="panel">
                 <div class="panel-hdr">
                     <h2>
-                        Sambutan
+                        Latar Belakang
                     </h2>
-                    <div class="panel-toolbar">
+                    <!-- <div class="panel-toolbar">
                         <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
                         <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="panel-container show">
                     <div class="panel-content">
                         <!-- <div class="panel-tag">
                             Display of some example optional "stuff" you can add to <code>.card-header</code>
                         </div> -->
-                        <a href="javascript:;" class="btn btn-primary mb-3" onclick="edit_sambutan('<?=$data['id']?>')"><i class="far fa-edit"></i> Ubah Sambutan</a>
+                        <a href="javascript:;" class="btn btn-primary mb-3" onclick="edit_latar_belakang('<?=$data['id']?>')"><i class="far fa-edit"></i> Ubah Latar Belakang </a>
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card border mb-4 mb-xl-0">
                                     <!-- notice the additions of utility paddings and display properties on .card-header -->
                                     <div class="card-header bg-trans-gradient py-2 pr-2 d-flex align-items-center flex-wrap">
                                         <!-- we wrap header title inside a span tag with utility padding -->
-                                        <div class="card-title text-white">Sambutan - Dinas Pendidikan dan Kebudayaan Kab. Pekalongan</div>
+                                        <div class="card-title text-white">Latar Belakang - Bappeda Litbang</div>
                                         <!-- <div class="d-flex position-relative ml-auto" style="max-width: 10rem;">
                                             <i class="fal fa-search position-absolute pos-left fs-lg px-3 py-2 mt-1"></i>
                                             <input type="text" class="form-control bg-subtlelight pl-6" placeholder="Search">
