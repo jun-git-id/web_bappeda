@@ -413,6 +413,56 @@
                 });
             }
 
+            function simpantags() {
+              var url = "<?= base_url('index.php/admin/berita/tambah_tags')?>";
+
+              $.ajax({
+                url:url,
+                type: "POST",
+                data: $('#form').serialize(),
+                success: function(data) {
+                  $('#modal-tags').modal('hide');
+                  refresh_tags();
+                },
+                error: function(jqXHR,textStatus,errorThrown) {
+                  alert("something went wrong, error checking")
+                }
+              });
+
+              function refresh_tags(){
+                $.post("<?= base_url('index.php/admin/berita/refresh_tags')?>",
+                function(data){
+                  $('#tags').empty();
+                  for (i = 0; i < data.length; i++) {
+                    $('#tags').append('<option value="'+data[i].id+'">'+data[i].tags+'</option>')
+                  }
+                  // $('#keterangan').val(data.keterangan);
+                });
+              }
+              // $.post("<?= base_url('index.php/admin/berita/tambah_tags')?>",
+              //
+              //   $('#form').serialize(),
+              // function(data){
+              //   $('#modal-edit').modal('toggle');
+              //   // $('#xid').val(data.id);
+              //   // $('#keterangan').val(data.keterangan);
+              // });
+            }
+            // function refreshtbl() {
+            //   var url = "<?= base_url('index.php/Peminjaman_lainya/refreshtblpengembalian')?>";
+            //   $.ajax({
+            //     url:url,
+            //     type: "POST",
+            //     data: $('#form').serialize(),
+            //     success: function(data) {
+            //       $('.kembali').html(data);
+            //     },
+            //     error: function(jqXHR,textStatus,errorThrown) {
+            //       alert("something went wrong, error checking")
+            //     }
+            //   });
+            // }
+
             function edit_user(username){
                 $.post("<?=base_url('admin/user/edit/')?>",
                 {
@@ -428,7 +478,7 @@
             }
 
             function edit_aplikasi(id){
-                $.post("<?=base_url('admin/aplikasi/edit/')?>",
+                $.post("<?=base_url('index.php/admin/aplikasi/edit/')?>",
                 {
                   id:id
                 },
@@ -436,13 +486,13 @@
                   $('#modal-edit').modal('toggle');
                   $('#nama_aplikasi').val(data.nama_aplikasi);
                   $('#keterangan').val(data.keterangan);
-                  $('#link_aplikasi').val(data.link_aplikasi);
+                  $('#link').val(data.link);
                   $('#xid').val(data.id);
                 });
             }
 
             function edit_carousel(id){
-                $.post("<?=base_url('admin/carousel/edit/')?>",
+                $.post("<?=base_url('index.php/admin/carousel/edit/')?>",
                 {
                   id:id
                 },
@@ -451,7 +501,7 @@
                   $('#keterangan').summernote("code",data.keterangan);
                   $('#link').val(data.link);
                   $('#xid').val(data.id);
-                  $('#status').val(data.status).change();
+                  $('#status_post').val(data.status_post).change();
                 });
             }
 

@@ -12,7 +12,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- <div class="js-summernote"></div> -->
-                    <form method="post" action="<?=base_url('admin/carousel/save')?>" enctype='multipart/form-data'>
+                    <form method="post" action="<?=base_url('index.php/admin/carousel/save')?>" enctype='multipart/form-data'>
                         <div class="form-group">
                             <label class="form-label">Keterangan</label>
                             <textarea class="js-summernote form-control" name="keterangan" required=""></textarea>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Status</label>
-                            <select class="form-control" required="" name="status">
+                            <select class="form-control" required="" name="status_post">
                                 <option value="1">Ditampilkan</option>
                                 <option value="0">Disembunyikan</option>
                             </select>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- <div class="js-summernote"></div> -->
-                    <form method="post" action="<?=base_url('admin/carousel/update')?>" enctype='multipart/form-data'>
+                    <form method="post" action="<?=base_url('index.php/admin/carousel/update')?>" enctype='multipart/form-data'>
                         <input type="hidden" name="xid" id="xid">
                         <div class="form-group">
                             <label class="form-label">Keterangan</label>
@@ -68,7 +68,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Status</label>
-                            <select class="form-control" required="" name="status" id="status">
+                            <select class="form-control" required="" name="status_post" id="status_post">
                                 <option value="1">Ditampilkan</option>
                                 <option value="0">Disembunyikan</option>
                             </select>
@@ -118,16 +118,16 @@
                                         <td><a href="<?=base_url('assets/images/carousel/').$d['foto']?>" target="_blank"><img height="100" src="<?=base_url('assets/images/carousel/').$d['foto']?>"></a></td>
                                         <td><?=tanggal_indo(date('Y-m-d', strtotime($d['tgl_input'])))?></td>
                                         <td>
-                                            <?php if ($d['status']== '1') : ?>
+                                            <?php if ($d['status_post']== '1') : ?>
                                                 Ditampilkan
                                             <?php endif ?>
-                                            <?php if ($d['status']== '0') : ?>
+                                            <?php if ($d['status_post']== '0') : ?>
                                                 Disembunyikan
                                             <?php endif ?>
                                         </td>
                                         <td>
                                             <a href="javascript:;" class="btn btn-secondary btn-icon rounded-circle" onclick="edit_carousel('<?=$d['id']?>')"><i class="far fa-edit"></i></a>
-                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/carousel/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
+                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('index.php/admin/carousel/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php $no++; endforeach ?>

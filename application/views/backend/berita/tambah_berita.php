@@ -38,12 +38,13 @@
                                 <label class="form-label">
                                     Tags
                                 </label>
-                                <select class="select2 form-control" multiple="multiple" name="tags[]">
-                                    <?php $tags = $this->db->get('tags')->result_array(); ?>
-                                    <?php foreach ($tags as $t): ?>
-                                        <option value="<?=$t['tags']?>"><?=$t['tags']?></option>
-                                    <?php endforeach ?>
-                                </select>
+                                 <a href="javascript:;"  data-toggle="modal" data-target="#modal-tags" onclick="tambah_tags_modal"><button type="button" class="form-control col-md-1"><i class="far fa-plus-hexagon"></i> </button></a>
+                                  <select class="select2 form-control" multiple="multiple" name="tags[]" id="tags">
+                                      <?php $tags = $this->db->get('tags')->result_array(); ?>
+                                      <?php foreach ($tags as $t): ?>
+                                          <option value="<?=$t['tags']?>"><?=$t['tags']?></option>
+                                      <?php endforeach ?>
+                                  </select>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">
@@ -76,3 +77,28 @@
         </div>
     </div>
 </main>
+
+<div class="modal fade" id="modal-tags" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <i class="far fa-edit"></i> Edit Data Bidang
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="form" enctype="multipart/form-data" action="javascript:simpantags()">
+                    <div class="form-group">
+                        <label class="form-label">Tags</label>
+                        <input type="text" name="tags" class="form-control" required="">
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
+                    <button type="submit" class="btn btn-info"><i class="far fa-save"></i>Tambah Tags</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

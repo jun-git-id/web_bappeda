@@ -27,7 +27,7 @@ class Aplikasi extends CI_Controller {
 		$config['file_name'] = uniqid().'.jpg';
 
 		$this->load->library('upload', $config);
- 
+
 		if ( ! $this->upload->do_upload('foto')){
 			$error = array('error' => $this->upload->display_errors());
 			var_dump($error);
@@ -68,7 +68,7 @@ class Aplikasi extends CI_Controller {
 			$config['file_name'] = uniqid().'.jpg';
 
 			$this->load->library('upload', $config);
-	 
+
 			if ( ! $this->upload->do_upload('foto')){
 				$error = array('error' => $this->upload->display_errors());
 				var_dump($error);
@@ -76,14 +76,14 @@ class Aplikasi extends CI_Controller {
 			}else{
 				$data['foto'] = $config['file_name'];
 				$u = $this->db->where('id',$data['id'])->get('aplikasi')->row_array();
-				unlink('./assets/images/aplikasi/'.$u['foto']);	
+				unlink('./assets/images/aplikasi/'.$u['foto']);
 			}
 		}
 
 		$this->session->set_flashdata('alert','<div class="alert alert-secondary alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="fal fa-window-close"></i></span> </button> <strong>Berhasil!</strong> Data Aplikasi berhasil diperbarui.</div>');
 
 		$this->db->where('id',$data['id'])->update('aplikasi',$data);
-		redirect('admin/aplikasi');
+		redirect('index.php/admin/aplikasi');
 	}
 
 }
