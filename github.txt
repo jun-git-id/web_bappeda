@@ -1,0 +1,13 @@
+$ gid add .
+//untuk menambahkan semua file
+
+$ git commit -m "Pesan"
+//untuk memberikan komntar atau pesan kemudian file diupdate
+
+$ git push -u origin master
+//untuk push ke branch master data
+
+$ git pull 
+// menarik data file terbaru
+
+**sebelum push harus pool (menarik data baru) terlebih dahulu
