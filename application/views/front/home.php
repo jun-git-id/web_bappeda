@@ -33,6 +33,7 @@
 		<div class="section mt-4 mb-4">
 			<div class="container px-0">
 				<div class="title-wrap text-center">
+					<div class="h1"></div>
 					<div class="h1">APLIKASI BAPPEDA LITBANG KAB. PEKALONGAN</div>
 					<div class="h-decor"></div>
 					<h2 class="h-sub theme-color">Saat ini setiap elemen dituntut untuk bisa berinovasi dalam upaya peningkatan kualitas aparatur pemerintah. Salah satu inovasi yang telah dilakukan Bappeda Litbang Kabupaten Pekalongan 
@@ -75,8 +76,8 @@
 									<div class="col-4">
 						<div class="service-box service-box-whitebg service-box--hiddenbtn">
 							<div class="service-box-caption text-center">
-								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/simakba.png') ?>"></div>
-								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/simakba.png') ?>"></div>
+								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/cloud.png') ?>"></div>
+								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/cloud.png') ?>"></div>
 								<h3 class="service-box-title">Cloud Storage</h3>
 								<p>Cloud Storage merupakan penyimpanan file berbasis cloud, dimana file-file tersebut akan tersimpan pada server bappeda.</p>
 								<div class="btn-wrap"><a href="http://kajen-rodo.dindikbud.pekalongankab.go.id/" target="_blank" class="btn"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a></div>
@@ -97,17 +98,38 @@
 									<div class="col-4">
 						<div class="service-box service-box-whitebg service-box--hiddenbtn">
 							<div class="service-box-caption text-center">
-								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/simakba.png') ?>"></div>
-								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/simakba.png') ?>"></div>
+								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/simonev.png') ?>"></div>
+								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/simonev.png') ?>"></div>
 								<h3 class="service-box-title">E-Jurnal Kajen</h3>
 								<p>E-jurnal adalah representasi elektronik sederhana dari jurnal-jurnal yang terdapat pada Bappeda Litbang.</p>
 								<div class="btn-wrap"><a href="http://kajen-rodo.dindikbud.pekalongankab.go.id/" target="_blank" class="btn"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a></div>
 							</div>
 						</div>
 					</div>
-									
+									<div class="col-4">
+						<div class="service-box service-box-whitebg service-box--hiddenbtn">
+							<div class="service-box-caption text-center">
+								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/sirangga.png') ?>"></div>
+								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/sirangga.png') ?>"></div>
+								<h3 class="service-box-title">SiRangga</h3>
+								<p>Sistem Informasi Perencanaan Anggaran.</p>
+								<div class="btn-wrap"><a href="http://kajen-rodo.dindikbud.pekalongankab.go.id/" target="_blank" class="btn"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a></div>
+							</div>
+						</div>
+					</div>
+									<div class="col-4">
+						<div class="service-box service-box-whitebg service-box--hiddenbtn">
+							<div class="service-box-caption text-center">
+								<div class="service-box-icon"><img height="80" src="<?= base_url('/assets/front/images/cloud.png') ?>"></div>
+								<div class="service-box-icon-bg"><img height="200" src="<?= base_url('/assets/front/images/cloud.png') ?>"></div>
+								<h3 class="service-box-title">SiPeka</h3>
+								<p>Sistem Informasi Penjagaan Kenaikan.</p>
+								<div class="btn-wrap"><a href="http://kajen-rodo.dindikbud.pekalongankab.go.id/" target="_blank" class="btn"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a></div>
+							</div>
+						</div>
+					</div>		
 				</div>
-				<div class="row no-gutters services-box-wrap services-box-wrap-mobile">
+				<!-- <div class="row no-gutters services-box-wrap services-box-wrap-mobile">
 					<div class="service-box-rotator js-service-box-rotator">
 											<div class="service-box service-box-greybg service-box--hiddenbtn" onclick="window.open('https://e-bos.dindikbudkabpekalongan.com','_blank');">
 							<div class="service-box-caption text-center">
@@ -145,7 +167,113 @@
 								<div class="btn-wrap"><a href="http://kajen-rodo.dindikbud.pekalongankab.go.id/" target="_blank" class="btn"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a></div>
 							</div>
 						</div>
-										</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!--//section services-->
+		<!--section-->
+		<div class="section">
+			<div class="container">
+				<div class="title-wrap text-center">
+					<div class="h-sub theme-color">See the difference</div>
+					<h2 class="h1">Why Choose Us?</h2>
+					<div class="h-decor"></div>
+				</div>
+				<div class="row js-icn-carousel icn-carousel flex-column flex-sm-row text-center text-sm-left" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}]}'>
+					<div class="col-md">
+						<div class="icn-text">
+							<div class="icn-text-circle icn-text-circle--sm"><i class="icon-medicine"></i></div>
+							<div>
+								<h5 class="icn-text-title">High Standard of surgery</h5>
+								<p>Our surgeons are fellows of the most rigorous and academically recognized accreditation body for surgeons, and have completed accredited fellowship training with high standards of quality.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md">
+						<div class="icn-text">
+							<div class="icn-text-circle"><i class="icon-team"></i></div>
+							<div>
+								<h5 class="icn-text-title">Committed Surgical Team</h5>
+								<p>Our surgeons' expertise covers the broad scope of general, vascular and trauma surgery. This includes surgery of the breast, cancers, colon and rectum, endocrine system, and skin diseases.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md">
+						<div class="icn-text">
+							<div class="icn-text-circle icn-text-circle--sm"><i class="icon-syringe"></i></div>
+							<div>
+								<h5 class="icn-text-title">Modern Equipment</h5>
+								<p>Our practice is equipped with the latest technology that allows us to perform the most modern treatments. We only use the premium brand products from the leading manufacturers.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//section slider-->
+		<!--section welcome-->
+		<div class="section">
+			<div class="container">
+				<div class="title-wrap text-center">
+					<div class="h1"></div>
+					<h1>TENTANG <strong style="color : #0CB3FA">BAPPEDA LITBANG KAB. PEKALONGAN</strong></h1>
+					<div class="h-decor"></div>
+					<h2 class="h-sub theme-color">Badan Perencanaan Pembangunan Daerah dan Penelitian Dan Pengembangan Kabupaten Pekalongan dibentuk berdasarkan Peraturan Daerah Kabupaten Pekalongan Nomor 4 Tahun 2016 tentang 
+						Pembentukan dan Susunan Perangkat Daerah Kabupaten Pekalongan (Lembaran Daerah Kabupaten Pekalongan Tahun 2016 Nomor 4).</h2>
+					<h2></h2>
+				</div>
+				<div class="row d-block js-counter-carousel">
+					<div class="col">
+						<div class="counter-box">
+							<div class="counter-box-image"><img src="<?= base_url('/assets/front/images/Profil/1.jpg') ?>"></div>
+							<div class="decor"></div>
+							<div class="counter-box-text" style="color : #0CB3FA">M. YULIAN AKBAR, S.Sos, M.Si</div>
+							<div class="counter-box-text">PLT</div>
+							<h2></h2>
+							<div class="counter-box-text">NIP. 19750710 199903 1 008</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter-box">
+							<div class="counter-box-image"><img src="<?= base_url('/assets/front/images/Profil/2.jpg') ?>"></div>
+							<div class="decor"></div>
+							<div class="counter-box-text" style="color : #0CB3FA">YUDHI HIMAWAN, ST, M.Sc, MT</div>
+							<div class="counter-box-text">KABID EKONOMI DAN INFRASTRUKTUR</div>
+							<h2></h2>
+							<div class="counter-box-text">NIP. 19790511 200502 1 003</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter-box">
+							<div class="counter-box-image"><img src="<?= base_url('/assets/front/images/Profil/3.jpg') ?>"></div>
+							<div class="decor"></div>
+							<div class="counter-box-text" style="color : #0CB3FA">FERY IRAWAN, ST, MT</div>
+							<div class="counter-box-text">KABID PROGRAM, MONITORING DAN EVALUASI PEMBANGUNAN</div>
+							<h2></h2>
+							<div class="counter-box-text">NIP. 19780308 199703 1 002</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter-box">
+							<div class="counter-box-image"><img src="<?= base_url('/assets/front/images/Profil/4.jpg') ?>"></div>
+							<div class="decor"></div>
+							<div class="counter-box-text" style="color : #0CB3FA">IKHLAS ANANDA, SH, M.Si</div>
+							<div class="counter-box-text">KABID PENELITIAN DAN PENGEMBANGAN</div>
+							<h2></h2>
+							<div class="counter-box-text">NIP. 19660811 199301 1 001</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="counter-box">
+							<div class="counter-box-image"><img src="<?= base_url('/assets/front/images/Profil/5.jpg') ?>"></div>
+							<div class="decor"></div>
+							<div class="counter-box-text" style="color : #0CB3FA">DIDIN NASRUDDIN, SH, M.Si</div>
+							<div class="counter-box-text">KABID PEMERINTAHAN DAN SOSIAL BUDAYA</div>
+							<h2></h2>
+							<div class="counter-box-text">NIP. 19751011 199603 1 001</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -299,46 +427,7 @@
 				</div>
 			</div>
 		</div>
-		<!--//section services-->
-		<!--section-->
-		<div class="section">
-			<div class="container">
-				<div class="title-wrap text-center">
-					<div class="h-sub theme-color">See the difference</div>
-					<h2 class="h1">Why Choose Us?</h2>
-					<div class="h-decor"></div>
-				</div>
-				<div class="row js-icn-carousel icn-carousel flex-column flex-sm-row text-center text-sm-left" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}]}'>
-					<div class="col-md">
-						<div class="icn-text">
-							<div class="icn-text-circle icn-text-circle--sm"><i class="icon-medicine"></i></div>
-							<div>
-								<h5 class="icn-text-title">High Standard of surgery</h5>
-								<p>Our surgeons are fellows of the most rigorous and academically recognized accreditation body for surgeons, and have completed accredited fellowship training with high standards of quality.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md">
-						<div class="icn-text">
-							<div class="icn-text-circle"><i class="icon-team"></i></div>
-							<div>
-								<h5 class="icn-text-title">Committed Surgical Team</h5>
-								<p>Our surgeons' expertise covers the broad scope of general, vascular and trauma surgery. This includes surgery of the breast, cancers, colon and rectum, endocrine system, and skin diseases.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md">
-						<div class="icn-text">
-							<div class="icn-text-circle icn-text-circle--sm"><i class="icon-syringe"></i></div>
-							<div>
-								<h5 class="icn-text-title">Modern Equipment</h5>
-								<p>Our practice is equipped with the latest technology that allows us to perform the most modern treatments. We only use the premium brand products from the leading manufacturers.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!--//section-->
 		<!--section-->
 		<div class="section bg-grey py-0">
@@ -384,49 +473,7 @@
 		</div>
 		<!--//section-->
 		<!--section achieved-->
-		<div class="section">
-			<div class="container">
-				<div class="title-wrap text-center">
-					<div class="h-sub theme-color">Clinic figures</div>
-					<h2 class="h1">What Have We Achieved</h2>
-					<div class="h-decor"></div>
-				</div>
-				<div class="row d-block js-counter-carousel">
-					<div class="col">
-						<div class="counter-box">
-							<div class="counter-box-icon"><i class="icon-hand"></i></div>
-							<div class="counter-box-number"><span class="count" data-to="15" data-speed="1500">0</span>+</div>
-							<div class="decor"></div>
-							<div class="counter-box-text">Years of experience</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="counter-box">
-							<div class="counter-box-icon"><i class="icon-tooth-1"></i></div>
-							<div class="counter-box-number"><span class="count" data-to="10" data-speed="1500">0</span>K</div>
-							<div class="decor"></div>
-							<div class="counter-box-text">Improved Smiles</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="counter-box">
-							<div class="counter-box-icon"><i class="icon-team"></i></div>
-							<div class="counter-box-number"><span class="count" data-to="50" data-speed="1500">0</span></div>
-							<div class="decor"></div>
-							<div class="counter-box-text">Surgical Specialists</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="counter-box">
-							<div class="counter-box-icon"><i class="icon-placeholder3"></i></div>
-							<div class="counter-box-number"><span class="count" data-to="4" data-speed="1500">0</span></div>
-							<div class="decor"></div>
-							<div class="counter-box-text">Our Locations</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!--//section achieved-->
 		<!--section faq-->
 		<div class="section bg-grey py-0">

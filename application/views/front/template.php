@@ -32,15 +32,14 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-auto d-flex align-items-center">
-						<div class="header-phone"><i class="icon-telephone"></i><a href="tel:1-847-555-5555">1-800-267-0000</a></div>
-						<div class="header-info"><i class="icon-placeholder2"></i>1560 Holden Street San Diego, CA 92139</div>
-						<div class="header-info"><i class="icon-black-envelope"></i><a href="mailto:info@dentco.net">info@dentco.net</a></div>
+						<div class="header-phone"><i class="icon-telephone"></i><a href="tel:(0285)381456">(0285) 381456, (0285) 3801010</a></div>
+						<div class="header-info"><i class="icon-black-envelope"></i><a href="gmail:bappedalitbang@pekalongankab.go.id">bappedalitbang@pekalongankab.go.id</a></div>
 					</div>
 					<div class="col-auto ml-auto d-flex align-items-center">
 						<span class="header-social">
-							<a href="#" class="hovicon"><i class="icon-facebook-logo-circle"></i></a>
-							<a href="#" class="hovicon"><i class="icon-twitter-logo-circle"></i></a>
-							<a href="#" class="hovicon"><i class="icon-google-plus-circle"></i></a>
+							<a href="https://www.facebook.com/bappeda.l.kabpkl/" class="hovicon"><i class="icon-facebook-logo-circle"></i></a>
+							<a href="https://twitter.com/bappedalitbang/" class="hovicon"><i class="icon-twitter-logo-circle"></i></a>
+							<a href="https://www.instagram.com/bappedalitbang_pekalongankab/" class="hovicon"><i class="icon-instagram-circle"></i></a>
 						</span>
 					</div>
 				</div>
