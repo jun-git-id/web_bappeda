@@ -270,7 +270,7 @@
 
                 if ($('#edit-berita').length > 0) {
                     <?php $page4 = strtolower($this->uri->segment(4)); ?>
-                    $.post("<?=base_url('admin/berita/json_edit/')?>",
+                    $.post("<?=base_url('index.php/admin/berita/json_edit/')?>",
                     {
                       link:'<?=$page4;?>'
                     },
@@ -401,7 +401,7 @@
             }
 
             function edit_bidang(id){
-                $.post("<?=base_url('admin/bidang/edit/')?>",
+                $.post("<?=base_url('index.php/admin/bidang/edit/')?>",
                 {
                   id:id
                 },

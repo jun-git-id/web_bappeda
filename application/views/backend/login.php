@@ -13,15 +13,15 @@
         <!-- Remove Tap Highlight on Windows Phone IE -->
         <meta name="msapplication-tap-highlight" content="no">
         <!-- base css -->
-        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/back/')?>css/vendors.bundle.css">
-        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/back/')?>css/app.bundle.css">
+        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/vendors.bundle.css">
+        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backendend/')?>css/app.bundle.css">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/back/')?>img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/back/')?>img/favicon/favicon-32x32.png">
-        <link rel="mask-icon" href="<?=base_url('assets/back/')?>img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/backendend/')?>img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/backend/')?>img/favicon/favicon-32x32.png">
+        <link rel="mask-icon" href="<?=base_url('assets/backend/')?>img/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <!-- Optional: page related CSS-->
-        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/back/')?>css/fa-regular.css">
-        <!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/back/')?>css/fa-brands.css"> -->
+        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/fa-regular.css">
+        <!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/fa-brands.css"> -->
     </head>
     <body>
         <div class="page-wrapper">
@@ -36,13 +36,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-1" style="background: url(<?=base_url('assets/back/')?>img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
+                    <div class="flex-1" style="backendground: url(<?=base_url('assets/backend/')?>img/svg/pattern-1.svg) no-repeat center bottom fixed; backendground-size: cover;">
                         <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
                             <div class="row">
                                 <div class="col col-md-6 col-lg-7 hidden-sm-down">
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <img height="200" src="<?=base_url('assets/back/img/logo_pekalongan.png')?>">
+                                            <img height="200" src="<?=base_url('assets/backend/img/icon.png')?>">
                                         </div>
                                     </div>
                                     <h2 class="fs-xxl fw-500 mt-4 text-white text-center">
@@ -57,16 +57,16 @@
                                         <i class="far fa-sign-in"></i> Secure login
                                     </h1>
                                     <div class="card p-4 rounded-plus bg-faded">
-                                        <form method="post" id="js-login" action="<?=base_url('admin/login/check')?>">
+                                        <form method="post" id="js-login" action="<?=base_url('index.php/admin/login/check')?>">
                                             <div class="form-group">
                                                 <label class="form-label" for="username">Username</label>
                                                 <input type="text" id="username" class="form-control form-control-lg" placeholder="Username" name="username" required>
-                                                <div class="invalid-feedback">Username Belum Diisi</div>
+                                                <div class="invalid-feedbackend">Username Belum Diisi</div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-label" for="password">Password</label>
                                                 <input type="password" id="password" class="form-control form-control-lg" placeholder="password" name="password" required>
-                                                <div class="invalid-feedback">Maaf, Password Belum Diisi</div>
+                                                <div class="invalid-feedbackend">Maaf, Password Belum Diisi</div>
                                             </div>
                                             <div class="row no-gutters">
                                                 <div class="col-lg-6 pl-lg-1 my-2">
@@ -85,8 +85,8 @@
                 </div>
             </div>
         </div>
-        <!-- base vendor bundle: 
-			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+        <!-- base vendor bundle:
+			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations
 						+ pace.js (recommended)
 						+ jquery.js (core)
 						+ jquery-ui-cust.js (core)
@@ -98,8 +98,8 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
-        <script src="<?=base_url('assets/back/')?>js/vendors.bundle.js"></script>
-        <script src="<?=base_url('assets/back/')?>js/app.bundle.js"></script>
+        <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
         <script>
             $("#js-login-btn").click(function(event)
             {

@@ -9,7 +9,7 @@
                 </div>
                 <div class="panel-container show">
                     <div class="panel-content">
-                        <form method="post" action="<?=base_url('admin/berita/save')?>" enctype="multipart/form-data">
+                        <form method="post" action="<?=base_url('index.php/admin/berita/save')?>" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="form-label">Judul Berita</label>
                                 <input type="text" class="form-control" name="judul" placeholder="Judul Berita">

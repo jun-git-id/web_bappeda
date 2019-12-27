@@ -11,7 +11,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?=base_url('admin/bidang/save')?>">
+                    <form method="post" action="<?=base_url('index.php/admin/bidang/save')?>">
                         <div class="form-group">
                             <label class="form-label">Nama Bidang</label>
                             <input type="text" name="nama_bidang" class="form-control" required="">
