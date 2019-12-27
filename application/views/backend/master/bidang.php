@@ -39,7 +39,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?=base_url('admin/bidang/update')?>">
+                    <form method="post" action="<?=base_url('index.php/admin/bidang/update')?>">
                         <input type="hidden" name="xid" id="xid">
                         <div class="form-group">
                             <label class="form-label">Nama Bidang</label>
@@ -90,7 +90,7 @@
                                         <td><?=$d['keterangan']?></td>
                                         <td>
                                             <a href="javascript:;" class="btn btn-info btn-icon rounded-circle" onclick="edit_bidang('<?=$d['id']?>')"><i class="far fa-edit"></i></a>
-                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/bidang/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
+                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('index.php/admin/bidang/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php $no++; endforeach ?>
