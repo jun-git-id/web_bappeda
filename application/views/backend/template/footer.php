@@ -464,7 +464,7 @@
             // }
 
             function edit_user(username){
-                $.post("<?=base_url('admin/user/edit/')?>",
+                $.post("<?=base_url('index.php/admin/user/edit/')?>",
                 {
                   username:username
                 },
@@ -473,7 +473,7 @@
                   $('#id_bidang').val(data.id_bidang).change();
                   $('#xusername').val(data.username);
                   $('#username').val(data.username);
-                  $('#password').val(data.password);
+                  // $('#password').val(data.password);
                 });
             }
 

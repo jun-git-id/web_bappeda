@@ -11,7 +11,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?=base_url('admin/user/save')?>">
+                    <form method="post" action="<?=base_url('index.php/admin/User/save')?>">
                         <div class="form-group">
                             <label class="form-label">
                                 Bidang
@@ -51,7 +51,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?=base_url('admin/user/update')?>">
+                    <form method="post" action="<?=base_url('index.php/admin/user/update')?>">
                         <input type="hidden" name="xusername" id="xusername">
                         <div class="form-group">
                             <label class="form-label">
@@ -71,7 +71,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Password</label>
-                            <input type="password" name="password" id="password" class="form-control" required="">
+                            <input type="password" name="password" class="form-control" >
                         </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
                         <button type="submit" class="btn btn-info"><i class="far fa-save"></i> perbarui</button>
@@ -114,7 +114,7 @@
                                         <td><?=$d['username']?></td>
                                         <td>
                                             <a href="javascript:;" class="btn btn-info btn-icon rounded-circle" onclick="edit_user('<?=$d['username']?>')"><i class="far fa-edit"></i></a>
-                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/user/hapus/').$d['username']?>"><i class="far fa-trash"></i></a>
+                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('index.php/admin/user/hapus/').$d['username']?>"><i class="far fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php $no++; endforeach ?>
