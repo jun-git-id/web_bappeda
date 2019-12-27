@@ -100,7 +100,7 @@
 											</ul>
 										</li>										
 										<li class="nav-item">
-											<a class="nav-link" href="testimonials.html">KONTAK</a>
+											<a class="nav-link" href="<?=base_url('kontak/info')?>">KONTAK</a>
 										</li>
 </ul>
 								</div>

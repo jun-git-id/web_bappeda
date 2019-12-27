@@ -19,7 +19,7 @@ class Media extends CI_Controller {
 			'content' => $this->load->view('media/unduhan',[
 				'data' => $data['data']
 			],true),
-			'title' => 'Unduhan Data'
+			'title' => 'Unduhan Data Bapped Litbang Kab. Pekalongan'
 		]);	
 		// $this->load->view('template/footer');
 	}
