@@ -8,16 +8,112 @@ class Berita extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 	}
-	
-	public function index(){
-		// redirect('berita/kategori/?k=semua');
+
+	function coba_page(){
+		$jumlah_data = $this->db->get('posts')->num_rows();
+		$this->load->library('pagination');
+		$config['base_url'] = base_url().'berita/coba_page/';
+		$config['total_rows'] = $jumlah_data;
+		$config['per_page'] = 2;
+		
+		$config['first_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-left"></i></li>';
+		$config['last_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-right"></i></li>';
+		$config['next_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-right"></i></li>';
+		$config['prev_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-left"></i></li>';
+
+		$config['cur_tag_open'] = '<li class="page-item active"><div class="page-link">';
+		$config['cur_tag_close'] = '</div></li>';
+		$config['num_tag_open'] = '<li class="page-item"><div class="page-link">';
+		$config['num_tag_close'] = '</div></li>';
+
+		$from = $this->uri->segment(3);
+		$this->pagination->initialize($config);		
+		$data['posts'] = $this->db->get('posts',$config['per_page'],$from)->result_array();
+		// $this->load->view('berita/v_data',$data);
+
 		$this->load->view('front/template',[
 			'content' => $this->load->view('berita/index',[
-				'data' => array(),
+				'data' => $data['posts'],
 				'breadcumb' => '<a style="color: #1e76bd !important" href="http://localhost/dindik/">Beranda</a><span class="theme-color">Berita / Bidang Paud</span>'
 			],true),
-			'title' => 'Judul'
-		]);	
+			'title' => 'Berita Bappeda Litbang Kabupaten Pekalongan'
+		]);
+	}
+
+	function index(){
+		redirect('berita/k/semua');
+	}
+	
+	public function k($kategori){
+		$this->load->library('pagination');
+		$jumlah_data = $this->db->where('status','1')->get('posts')->num_rows();
+		$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
+		$config['total_rows'] = $jumlah_data;
+		$config['per_page'] = 2;
+		$from = $this->uri->segment(4);
+
+		if ($kategori == 'semua') {
+			$query = $this->db->select('bidang.*, posts.*')
+			->from('posts')
+			->join('bidang','bidang.id=posts.id_bidang','null')
+			->where('status','1')
+			->order_by('tanggal','desc')
+			->limit($config['per_page'],$from)
+			->get();
+		}else{
+			$id = $this->db->where('nama_bidang',$kategori)->get('bidang')->row_array();
+			$query = $this->db->select('bidang.*, posts.*')
+			->from('posts')
+			->join('bidang','bidang.id=posts.id_bidang')
+			->where('status','1')
+			->where('id_bidang',$id_bidang['id'])
+			->order_by('tanggal','desc')
+			->limit($config['per_page'])
+			->get();
+		}
+
+
+		$data['posts'] = $query->result_array();
+		$z = 0;
+
+	    while ($z < count($data['posts'])) {
+      		$resp = $this->db->where('id_post',$data['posts'][$z]['id'])->get('thumbnail')->result_array();
+
+      		if ($resp) {
+      			foreach ($resp as $v) {
+	      			$data['posts'][$z]['thumbnail'][] = array(
+	      				'nama_file' => $v['nama_file']
+	      			);
+	      		}	
+      		}else{
+      			$data['posts'][$z]['thumbnail'] = array();
+      		}
+      		
+        	$z += 1;
+	    }
+		
+		
+		$config['first_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-left"></i></li>';
+		$config['last_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-right"></i></li>';
+		$config['next_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-right"></i></li>';
+		$config['prev_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-left"></i></li>';
+
+		$config['cur_tag_open'] = '<li class="page-item active"><div class="page-link">';
+		$config['cur_tag_close'] = '</div></li>';
+		$config['num_tag_open'] = '<li class="page-item"><div class="page-link">';
+		$config['num_tag_close'] = '</div></li>';
+
+		$this->pagination->initialize($config);		
+		// $data['posts'] = $this->db->get('posts',$config['per_page'],$from)->result_array();
+		// $this->load->view('berita/v_data',$data);
+
+		$this->load->view('front/template',[
+			'content' => $this->load->view('berita/index',[
+				'data' => $data['posts'],
+				'breadcumb' => '<a style="color: #1e76bd !important" href="http://localhost/dindik/">Beranda</a><span class="theme-color">Berita / Bidang Paud</span>'
+			],true),
+			'title' => 'Berita Bappeda Litbang Kabupaten Pekalongan'
+		]);
 	}
 
 	public function kategori(){

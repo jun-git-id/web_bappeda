@@ -1,3 +1,4 @@
+<?php $page = strtolower($this->uri->segment(1)); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,7 @@
 	<link href="<?=base_url('assets/front/vendor')?>/animate/animate.min.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/icons')?>/style.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+	<link href="<?=base_url('assets/front/vendor')?>/fontawesome-pro/css/all.min.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/css')?>/style.css" rel="stylesheet">
 	<!--Favicon-->
 	<link rel="icon" href="<?=base_url('assets/front/images')?>/favicon.png" type="image/x-icon">
@@ -60,10 +62,10 @@
 							<nav class="navbar navbar-expand-lg btco-hover-menu">
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
-										<li class="nav-item">
-											<a class="nav-link" href="about.html">BERANDA</a>
+										<li class="nav-item <?= ($page=='') ? 'active' : '' ?>">
+											<a class="nav-link" href="about.html"><i class="fas fa-home"></i> BERANDA</a>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
 											<a href="services.html" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFIL</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="services.html">Visi Misi</a></li>
@@ -71,10 +73,10 @@
 												<li><a class="dropdown-item" href="prices.html">Bagan Organisasi</a></li>
 											</ul>
 										</li>
-										<li class="nav-item">
-											<a href="gallery.html" class="nav-link dropdown-toggle" data-toggle="dropdown">BERITA</a>
+										<li class="nav-item <?= ($page=='berita') ? 'active' : '' ?>">
+											<a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">BERITA</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="gallery.html">Semua</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/semua')?>">Semua</a></li>
 												<li><a class="dropdown-item" href="gallery-simple.html">Sekretariatan</a></li>
 												<li><a class="dropdown-item" href="gallery-simple.html">Program, Monitoring dan Evaluasi Pembangunan</a></li>
 												<li><a class="dropdown-item" href="gallery-simple.html">Ekonomi dan Infrastruktur</a></li>
@@ -82,10 +84,10 @@
 												<li><a class="dropdown-item" href="gallery-simple.html">Pemerintahan dan Sosial Budaya</a></li>
 											</ul>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item <?= ($page=='agenda') ? 'active' : '' ?>">
 											<a class="nav-link" href="about.html">AGENDA</a>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="our-specialist.html">1</a></li>
@@ -93,7 +95,7 @@
 												<li><a class="dropdown-item" href="schedule.html">3</a></li>
 											</ul>
 										</li>
-										<li class="nav-item">
+										<li class="nav-item <?= ($page=='media') ? 'active' : '' ?>">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">MEDIA</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="our-specialist.html">Unduhan</a></li>
