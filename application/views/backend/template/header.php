@@ -130,7 +130,7 @@
                             <div class="info-card-text">
                                 <a href="#" class="d-flex align-items-center text-white">
                                     <span class="text-truncate text-truncate-sm d-inline-block">
-                                        <?=$this->session->userdata('nama_bidang')?>
+                                        <?=$this->session->userdata('username')?>
                                     </span>
                                 </a>
                                 <span class="d-inline-block text-truncate text-truncate-sm">Bappeda Litbang</span>
@@ -209,12 +209,6 @@
                                 <a href="<?=base_url('admin/carousel')?>" title="Carousel" data-filter-tags="carousel">
                                     <i class="far fa-image"></i>
                                     <span class="nav-link-text" data-i18n="nav.carousel">Carousel</span>
-                                </a>
-                            </li>
-                            <li <?= ($page=='tags') ? 'class="active"' : '' ?>>
-                                <a href="<?=base_url('admin/tags')?>" title="Tags" data-filter-tags="tags">
-                                    <i class="far fa-hashtag"></i>
-                                    <span class="nav-link-text" data-i18n="nav.tags">Tags</span>
                                 </a>
                             </li>
                             <li <?= ($page=='user') ? 'class="active"' : '' ?>>
@@ -503,7 +497,7 @@
                             <!-- app user menu -->
                             <div>
                                 <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2">
-                                    <img src="<?=base_url('assets/backend/img/logo_pekalongan.png')?>" class="profile-image" alt="Dr. Codex Lantern">
+                                    <img src="<?=base_url('assets/backend/img/logo_pekalongan.png')?>" class="profile-image">
                                     <!-- you can also add username next to the avatar with the codes below:
                                     <span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
                                     <i class="ni ni-chevron-down hidden-xs-down"></i> -->
@@ -512,7 +506,7 @@
                                     <div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
                                         <div class="d-flex flex-row align-items-center mt-1 mb-1 color-white">
                                             <span class="mr-2">
-                                                <img src="<?=base_url('assets/backend/')?>img/logo_pekalongan.png" class="profile-image" alt="Dr. Codex Lantern">
+                                                <img src="<?=base_url('assets/backend/')?>img/logo_pekalongan.png" class="profile-image">
                                             </span>
                                             <div class="info-card-text">
                                                 <div class="fs-lg text-truncate text-truncate-lg"><?=strtoupper($this->session->userdata('nama_bidang'))?></div>

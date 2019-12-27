@@ -254,12 +254,13 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
+        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
-        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>        
         <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
+        <script src="<?=base_url('assets/backend/')?>js/statistics/flot/flot.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/formplugins/summernote/summernote.js"></script>
-        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
 
         <script type="text/javascript">
             $(function(){
@@ -323,10 +324,10 @@
                     }
                 });
 
-                $('.js-readmore').summernote({
+                $('.js-isi').summernote({
                     height: 150,
                     tabsize: 2,
-                    placeholder: "Untuk Isi Readmore...",
+                    placeholder: "Untuk Isi Menu...",
                     dialogsFade: true,
                     toolbar: [
                         ['font', ['strikethrough', 'superscript', 'subscript']],
@@ -340,7 +341,7 @@
                     {}
                 });
 
-                $('.js-latar_belakang').summernote({
+                $('.js-sambutan').summernote({
                     height: 450,
                     tabsize: 2,
                     placeholder: "Ketik Disini...",
@@ -413,8 +414,58 @@
                 });
             }
 
+            function simpantags() {
+              var url = "<?= base_url('index.php/admin/berita/tambah_tags')?>";
+
+              $.ajax({
+                url:url,
+                type: "POST",
+                data: $('#form').serialize(),
+                success: function(data) {
+                  $('#modal-tags').modal('hide');
+                  refresh_tags();
+                },
+                error: function(jqXHR,textStatus,errorThrown) {
+                  alert("something went wrong, error checking")
+                }
+              });
+
+              function refresh_tags(){
+                $.post("<?= base_url('index.php/admin/berita/refresh_tags')?>",
+                function(data){
+                  $('#tags').empty();
+                  for (i = 0; i < data.length; i++) {
+                    $('#tags').append('<option value="'+data[i].id+'">'+data[i].tags+'</option>')
+                  }
+                  // $('#keterangan').val(data.keterangan);
+                });
+              }
+              // $.post("<?= base_url('index.php/admin/berita/tambah_tags')?>",
+              //
+              //   $('#form').serialize(),
+              // function(data){
+              //   $('#modal-edit').modal('toggle');
+              //   // $('#xid').val(data.id);
+              //   // $('#keterangan').val(data.keterangan);
+              // });
+            }
+            // function refreshtbl() {
+            //   var url = "<?= base_url('index.php/Peminjaman_lainya/refreshtblpengembalian')?>";
+            //   $.ajax({
+            //     url:url,
+            //     type: "POST",
+            //     data: $('#form').serialize(),
+            //     success: function(data) {
+            //       $('.kembali').html(data);
+            //     },
+            //     error: function(jqXHR,textStatus,errorThrown) {
+            //       alert("something went wrong, error checking")
+            //     }
+            //   });
+            // }
+
             function edit_user(username){
-                $.post("<?=base_url('admin/user/edit/')?>",
+                $.post("<?=base_url('index.php/admin/user/edit/')?>",
                 {
                   username:username
                 },
@@ -423,12 +474,12 @@
                   $('#id_bidang').val(data.id_bidang).change();
                   $('#xusername').val(data.username);
                   $('#username').val(data.username);
-                  $('#password').val(data.password);
+                  // $('#password').val(data.password);
                 });
             }
 
             function edit_aplikasi(id){
-                $.post("<?=base_url('admin/aplikasi/edit/')?>",
+                $.post("<?=base_url('index.php/admin/aplikasi/edit/')?>",
                 {
                   id:id
                 },
@@ -436,13 +487,13 @@
                   $('#modal-edit').modal('toggle');
                   $('#nama_aplikasi').val(data.nama_aplikasi);
                   $('#keterangan').val(data.keterangan);
-                  $('#link_aplikasi').val(data.link_aplikasi);
+                  $('#link').val(data.link);
                   $('#xid').val(data.id);
                 });
             }
 
             function edit_carousel(id){
-                $.post("<?=base_url('admin/carousel/edit/')?>",
+                $.post("<?=base_url('index.php/admin/carousel/edit/')?>",
                 {
                   id:id
                 },
@@ -451,7 +502,7 @@
                   $('#keterangan').summernote("code",data.keterangan);
                   $('#link').val(data.link);
                   $('#xid').val(data.id);
-                  $('#status').val(data.status).change();
+                  $('#status_post').val(data.status_post).change();
                 });
             }
 
@@ -468,14 +519,14 @@
                 });
             }
 
-            function edit_latar_belakang(id){
-                $.post("<?=base_url('admin/profil/edit_latar_belakang/')?>",
+            function edit_sambutan(id){
+                $.post("<?=base_url('admin/profil/edit_sambutan/')?>",
                 {
                   id:id
                 },
                 function(data){
                   $('#modal-edit').modal('toggle');
-                  $('#latar_belakang').summernote("code",data.isi);
+                  $('#sambutan').summernote("code",data.isi);
                   $('#xid').val(data.id);
                 });
             }
@@ -493,6 +544,7 @@
             }
 
             $('.del').click(function(){
+                // alert('kkk');
                 var href = $(this).attr('rel');
                 swal({
                     title: "Anda Yakin?",
@@ -546,10 +598,86 @@
                 return false ;
             })
 
-            // $(document).on('click','.del', function(){
+             /*  GRAFIK FLOT */
+            $(document).ready(function(){
+                var dataPost = [
+                [0, 10],
+                [1, 7],
+                [2, 8],
+                [3, 9],
+                [4, 6],
+                [5, 5],
+                [6, 7]
+            ];
 
-
-            // });
+            var flotLineAlt = $.plot($('#flot-line-alt'), [
+                {
+                    data: dataPost,
+                    label: 'Jumlah Postingan',
+                    color: myapp_get_color.danger_500
+                }],
+                {
+                    series:
+                    {
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 1
+                        },
+                        shadowSize: 0
+                    },
+                    points:
+                    {
+                        show: true,
+                    },
+                    legend:
+                    {
+                        noColumns: 1,
+                        position: 'nw'
+                    },
+                    tooltip: true,
+                    tooltipOpts:
+                    {
+                        cssClass: 'tooltip-inner',
+                        defaultTheme: false,
+                        shifts:
+                        {
+                            x: 10,
+                            y: -40
+                        }
+                    },
+                    grid:
+                    {
+                        hoverable: true,
+                        clickable: true,
+                        borderColor: '#ddd',
+                        borderWidth: 0,
+                        labelMargin: 5,
+                        backgroundColor: '#fff'
+                    },
+                    yaxis:
+                    {
+                        min: 0,
+                        max: 15,
+                        color: '#eee',
+                        font:
+                        {
+                            size: 10,
+                            color: '#999'
+                        }
+                    },
+                    xaxis:
+                    {
+                        color: '#eee',
+                        font:
+                        {
+                            size: 10,
+                            color: '#999'
+                        }
+                    }
+                });
+                /* flot lines tooltip -- end */
+            })
 
         </script>
     </body>

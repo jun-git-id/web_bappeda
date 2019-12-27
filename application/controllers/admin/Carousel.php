@@ -15,15 +15,20 @@ class Carousel extends CI_Controller {
 	}
 
 	function save(){
-		$data = $this->input->post();
+		// print_r($this->session->userdata('username'));die;
+		$data['keterangan'] = $_POST['keterangan'];
+		$data['link'] = $_POST['link'];
+		$data['status_post'] = $_POST['status_post'];
+		$data['username'] = $this->session->userdata('username');
+
 		$data['tgl_input'] = date('Y-m-d H:i:s');
 
 		$config['upload_path'] = './assets/images/carousel/';
-		$config['allowed_types'] = 'gif|jpg|png';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$config['file_name'] = uniqid().'.jpg';
 
 		$this->load->library('upload', $config);
- 
+
 		if ( ! $this->upload->do_upload('foto')){
 			$error = array('error' => $this->upload->display_errors());
 			var_dump($error);
@@ -32,7 +37,7 @@ class Carousel extends CI_Controller {
 			$data['foto'] = $config['file_name'];
 			$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-info"></i></span> </button> <strong>Berhasil!</strong> Data carousel berhasil disimpan.</div>');
 			$this->db->insert('carousel',$data);
-			redirect('admin/carousel');
+			redirect('index.php/admin/carousel');
 		}
 	}
 
@@ -64,7 +69,7 @@ class Carousel extends CI_Controller {
 			$config['file_name'] = uniqid().'.jpg';
 
 			$this->load->library('upload', $config);
-	 
+
 			if ( ! $this->upload->do_upload('foto')){
 				$error = array('error' => $this->upload->display_errors());
 				var_dump($error);
@@ -72,7 +77,7 @@ class Carousel extends CI_Controller {
 			}else{
 				$data['foto'] = $config['file_name'];
 				$u = $this->db->where('id',$data['id'])->get('carousel')->row_array();
-				unlink('./assets/images/carousel/'.$u['foto']);	
+				unlink('./assets/images/carousel/'.$u['foto']);
 			}
 		}
 

@@ -9,9 +9,12 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$data['jml_post'] = count($this->db->get('posts')->result_array());
+		$data['jml_file'] = count($this->db->get('download')->result_array());
 		$this->load->view('backend/template/header');
-		$this->load->view('backend/dashboard/index');
+		$this->load->view('backend/dashboard', $data);
 		$this->load->view('backend/template/footer');
+		// echo $data['jml_post'];
 	}
 
 	function grafikperhari($bulan,$tahun){
