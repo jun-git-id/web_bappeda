@@ -23,7 +23,7 @@ class Bidang extends CI_Controller {
 
 	function hapus($id){
 		$this->db->where('id',$id)->delete('bidang');
-		redirect('admin/bidang');
+		redirect('index.php/admin/bidang');
 	}
 
 	function edit(){
@@ -38,7 +38,7 @@ class Bidang extends CI_Controller {
 		unset($data['xid']);
 		$this->session->set_flashdata('alert','<div class="alert alert-primary alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data Bidang berhasil diperbarui.</div>');
 		$this->db->where('id',$id)->update('bidang',$data);
-		redirect('admin/bidang');
+		redirect('index.php/admin/bidang');
 	}
 
 }
