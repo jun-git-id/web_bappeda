@@ -29,6 +29,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="modal-edit" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -60,6 +61,7 @@
             </div>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-xl-12">
             <div id="panel-1" class="panel">

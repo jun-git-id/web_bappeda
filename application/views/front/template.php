@@ -60,7 +60,7 @@
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item">
-											<a class="nav-link" href="about.html">BERANDA</a>
+											<a class="nav-link" href="<?=base_url('home')?>">BERANDA</a>
 										</li>
 										<li class="nav-item">
 											<a href="services.html" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFIL</a>
@@ -95,7 +95,7 @@
 										<li class="nav-item">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">MEDIA</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">Unduhan</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('media/unduhan')?>">Unduhan</a></li>
 												<li><a class="dropdown-item" href="doctor-page.html">Album/Galeri</a></li>
 											</ul>
 										</li>										

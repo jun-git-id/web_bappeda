@@ -5,6 +5,7 @@ class Download extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('mdownload');
 	}
 
 	public function index(){
@@ -16,7 +17,7 @@ class Download extends CI_Controller {
 
 	function save(){
 		$data = $this->input->post();
-		$uid = uniqid();
+		$uid  = uniqid();
 
         $ext = pathinfo($_FILES['userFile']['name'], PATHINFO_EXTENSION);
         $config['upload_path'] = './assets/download/';
@@ -35,12 +36,14 @@ class Download extends CI_Controller {
         		'kategori' => 'download'
         	);
 
-        	$this->db->insert('download',$filedata);
+        	$this->mdownload->create($filedata);
+        	// var_dump($filedata);
 
         }else{
 			$error = array ('error' => $this->upload->display_errors());
-			var_dump($error);
+			// var_dump($error);
 		}
+
 		redirect('admin/download');
 	}
 
@@ -55,6 +58,12 @@ class Download extends CI_Controller {
 		$data = $this->db->where('id',$this->input->post('id'))->get('download')->row_array();
 		header('Content-Type: application/json');
 		echo json_encode($data);
+	}
+
+	function unduh($id){
+		$data = $this->db->where('id',$id)->get('download')->row_array();
+		echo $data['nama_unduhan'];
+		// redirect('admin/download');
 	}
 
 	function update(){

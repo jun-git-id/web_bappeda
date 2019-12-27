@@ -34,7 +34,7 @@
 			<div class="container px-0">
 				<div class="title-wrap text-center">
 					<div class="h1"></div>
-					<div class="h1">APLIKASI BAPPEDA LITBANG KAB. PEKALONGAN</div>
+					<h1>APLIKASI <strong style="color : #0CB3FA">BAPPEDA LITBANG KAB. PEKALONGAN</strong></h1>
 					<div class="h-decor"></div>
 					<h2 class="h-sub theme-color">Saat ini setiap elemen dituntut untuk bisa berinovasi dalam upaya peningkatan kualitas aparatur pemerintah. Salah satu inovasi yang telah dilakukan Bappeda Litbang Kabupaten Pekalongan 
 						adalah dengan memanfaatkan teknologi guna meningkatkan efektifitas pekerjaan. Berikut ini adalah berbagai inovasi yang sudah dilakukan sebagai wujud kreatifitas anak bangsa dalam upaya berpartisipasi membangun negeri.</h2>
