@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 		if($this->session->userdata('status') == "login"){
 	        redirect(base_url('admin'));
 	    }else{
-			$this->load->view('back/login');
+			$this->load->view('backend/login');
 	    }
 	}
 
@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 				'status' => 'login'
 			);
 			$this->session->set_userdata($data_session);
-			redirect('admin');
+			redirect('admin/Admin');
 		}else{
 			// $this->session->set_flashdata("berhasil","toastr.error('Maaf, Username atau Password Salah!')");
 			redirect('');
@@ -51,5 +51,5 @@ class Login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('admin/login');
 	}
-	
+
 }

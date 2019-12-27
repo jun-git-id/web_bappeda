@@ -12,7 +12,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- <div class="js-summernote"></div> -->
-                    <form method="post" action="<?=base_url('admin/aplikasi/save')?>" enctype='multipart/form-data'>
+                    <form method="post" action="<?=base_url('index.php/admin/aplikasi/save')?>" enctype='multipart/form-data'>
                         <div class="form-group">
                             <label class="form-label">Nama Aplikasi</label>
                             <input type="text" name="nama_aplikasi" class="form-control" required="">
@@ -23,8 +23,9 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Link</label>
-                            <input type="text" name="link_aplikasi" class="form-control" required="">
+                            <input type="text" name="link" class="form-control" required="">
                         </div>
+                                    <input type="hidden" name="username" class="form-control" required="">
                         <div class="form-group">
                             <label class="form-label">Gambar Aplikasi</label>
                             <input type="file" name="foto" class="form-control" required="">
@@ -49,7 +50,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- <div class="js-summernote"></div> -->
-                    <form method="post" action="<?=base_url('admin/aplikasi/update')?>" enctype='multipart/form-data'>
+                    <form method="post" action="<?=base_url('index.php/admin/aplikasi/update')?>" enctype='multipart/form-data'>
                         <input type="hidden" name="xid" id="xid">
                         <div class="form-group">
                             <label class="form-label">Nama Aplikasi</label>
@@ -61,7 +62,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Link</label>
-                            <input type="text" name="link_aplikasi" id="link_aplikasi" class="form-control" required="">
+                            <input type="text" name="link" id="link" class="form-control" required="">
                         </div>
                         <div class="form-group">
                             <label class="form-label">Gambar Aplikasi</label>
@@ -109,7 +110,7 @@
                                         <td><?=$no?></td>
                                         <td><?=$d['nama_aplikasi']?></td>
                                         <td><?=$d['keterangan']?></td>
-                                        <td><a href="<?=$d['link_aplikasi']?>" target="_blank"><?=$d['link_aplikasi']?></a></td>
+                                        <td><a href="<?=$d['link']?>" target="_blank"><?=$d['link']?></a></td>
                                         <td><a href="<?=base_url('assets/images/aplikasi/').$d['foto']?>" target="_blank"><img height="100" src="<?=base_url('assets/images/aplikasi/').$d['foto']?>"></a></td>
                                         <td><?=tanggal_indo(date('Y-m-d', strtotime($d['tgl_input'])))?></td>
                                         <td>

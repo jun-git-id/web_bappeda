@@ -195,6 +195,22 @@ class Berita extends CI_Controller {
 		echo json_encode($data);
 	}
 
+	public function tambah_tags()
+	{
+		// code...
+			$data = $this->input->post();
+			$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data Bidang berhasil disimpan.</div>');
+			$this->db->insert('tags',$data);
+			redirect('index.php/admin/berita');
+	}
+
+	public function refresh_tags()
+	{
+		$data = $this->db->get('tags')->result_array();
+		header('Content-Type: application/json');
+		echo json_encode($data);
+	}
+
 	function update(){
 		$data = $this->input->post();
 		$data['tanggal'] = date('Y-m-d H:i:s');

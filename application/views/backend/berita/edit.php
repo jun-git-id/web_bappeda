@@ -72,6 +72,13 @@
                                 <span class="fal fa-check mr-1"></span>
                                 Perbarui
                             </button>
+                          </br>
+                          </br>
+                            <a href="<?= base_url('index.php/admin/berita')?>"><button type="button" class="btn btn-block btn-warning waves-effect waves-themed">
+                                <span class="fal fa-arrow-left mr-1"></span>
+                                Kembali
+                            </button>
+                          </a>
                         </form>
                     </div>
                 </div>
