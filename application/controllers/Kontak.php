@@ -8,11 +8,18 @@ class Kontak extends CI_Controller {
 	}
 	
 	public function index(){
+		$title = 'Kontak Bappeda Litbang Kabupaten Pekalongan';
 		$this->load->view('front/template',[
 			'content' => $this->load->view('kontak/info',[
-				'data' => array()
+				'data' => array(),
+				'og' => array(
+					'url' => base_url(''),
+					'title' => $title,
+					'description' => 'description',
+					'image' => 'image'
+				)
 			],true),
-			'title' => 'Kontak Bappeda Litbang Kab. Pekalongan'
+			'title' => $title
 		]);
 	}
 

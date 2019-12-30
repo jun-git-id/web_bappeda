@@ -9292,7 +9292,7 @@ form.contact-form textarea + label.error {
     color: #37474F; }
 
 .content-search {
-  max-width: 280px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (max-width: 767px) {
@@ -14893,7 +14893,7 @@ body:not(.touch) .filters-by-category ul a:hover {
     image-rendering: optimizeQuality;
     vertical-align: middle;
     max-width: 100%; }
-  .blog-post:hover .post-image img {
+  /*.blog-post:hover .post-image img {
     -webkit-transition: transform 0.6s ease 0.05s;
     -o-transition: transform 0.6s ease 0.05s;
     transition: -webkit-transform 0.6s ease 0.05s;
@@ -14901,7 +14901,7 @@ body:not(.touch) .filters-by-category ul a:hover {
     transition: transform 0.6s ease 0.05s, -webkit-transform 0.6s ease 0.05s;
     -webkit-transform: scale(1.1) rotate(0.0001deg);
     -ms-transform: scale(1.1) rotate(0.0001deg);
-    transform: scale(1.1) rotate(0.0001deg); }
+    transform: scale(1.1) rotate(0.0001deg); }*/
 
 .blog-post:not(.post-preview) .post-date {
   display: flex;

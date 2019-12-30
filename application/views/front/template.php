@@ -8,7 +8,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="description" content="html 5 template, dentist, stomatologist, dental clinic template, medical template, clinic template, surgery clinic theme, plastic surgery template">
-	<meta name="author" content="websmirno.site">
+	<meta property="og:url"           content="<?=$og['url']?>" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="<?=$og['title']?>" />
+	<meta property="og:description"   content="<?=$og['description']?>" />
+	<meta property="og:image"         content="<?=$og['image']?>" />
 	<meta name="<?=base_url('assets/front/form')?>at-detection" content="telephone=no">
 	<title><?=$title?></title>
 	<!-- Stylesheets -->
@@ -65,7 +69,7 @@
 											<a class="nav-link" href="<?=base_url()?>"><i class="fas fa-home"></i> BERANDA</a>
 										</li>
 										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
-											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFIL</a>
+											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-warehouse-alt"></i> PROFIL</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="<?=base_url('profil/visi_misi')?>">Visi Misi</a></li>
 												<li><a class="dropdown-item" href="<?=base_url('profil/latar_belakang')?>">Latar Belakang</a></li>
@@ -73,7 +77,7 @@
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='berita') ? 'active' : '' ?>">
-											<a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">BERITA</a>
+											<a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-th"></i> BERITA</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="<?=base_url('berita/k/semua')?>">Semua</a></li>
 												<li><a class="dropdown-item" href="<?=base_url('berita/k/sekretariat')?>">Sekretariat</a></li>
@@ -84,10 +88,10 @@
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='agenda') ? 'active' : '' ?>">
-											<a class="nav-link" href="about.html">AGENDA</a>
+											<a class="nav-link" href="<?=base_url('agenda')?>"><i class="fas fa-calendar-week"></i> AGENDA</a>
 										</li>
 										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
-											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">INFORMASI PUBLIK</a>
+											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="our-specialist.html">1</a></li>
 												<li><a class="dropdown-item" href="doctor-page.html">2</a></li>
@@ -95,16 +99,16 @@
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='media') ? 'active' : '' ?>">
-											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">MEDIA</a>
+											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-images"></i> MEDIA</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="<?=base_url('media/unduhan')?>">Unduhan</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">Album/Galeri</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('media/galeri')?>">Galeri</a></li>
 											</ul>
 										</li>										
 										<li class="nav-item">
-											<a class="nav-link" href="<?=base_url('kontak/info')?>">KONTAK</a>
+											<a class="nav-link" href="<?=base_url('kontak/info')?>"><i class="fas fa-phone-office"></i> KONTAK</a>
 										</li>
-</ul>
+									</ul>
 								</div>
 							</nav>
 						</div>
@@ -123,7 +127,7 @@
 	<!--//header-->
 	<?=$content?>
 	<!--footer-->
-	<div class="footer">
+	<div class="footer mt-2">
 		<div class="container">
 			<div class="row py-1 py-md-2 px-lg-0">
 				<div class="col-lg-4 footer-col1">
