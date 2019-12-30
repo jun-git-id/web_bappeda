@@ -32,6 +32,9 @@
 </head>
 
 <body class="shop-page">
+	
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v5.0&appId=154933331965577&autoLogAppEvents=1"></script>
 	<!--header-->
 	<header class="header">
 		<div class="header-topline d-none d-lg-flex">

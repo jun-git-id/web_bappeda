@@ -27,7 +27,7 @@
 							<div class="footer-post d-flex <?= ($i== 0) ? 'mt-0' : '' ?>">
 								<div class="mr-1"><img src="<?=base_url('assets/images/posts/'.$t['thumbnail'])?>" alt="" class="img-fluid" width="60px"></div>
 								<div class="footer-post-text">
-									<div class="footer-post-title"><a href="#"><?=$t['judul']?></a></div>
+									<div class="footer-post-title"><a href="<?=base_url('berita/detail/').$t['link']?>"><?=$t['judul']?></a></div>
 									<p><i class="fas fa-history"></i> <?=tanggal_indo(date('Y-m-d', strtotime($t['tanggal'])), true)?></p>
 								</div>
 							</div>
@@ -56,7 +56,7 @@
 							<div class="footer-post d-flex <?= ($i== 0) ? 'mt-0' : '' ?>">
 								<div class="mr-1"><img src="<?=base_url('assets/images/posts/'.$t['thumbnail'])?>" alt="" class="img-fluid" width="60px"></div>
 								<div class="footer-post-text">
-									<div class="footer-post-title"><a href="#"><?=$t['judul']?></a></div>
+									<div class="footer-post-title"><a href="<?=base_url('berita/detail/').$t['link']?>"><?=$t['judul']?></a></div>
 									<p><i class="fas fa-history"></i> <?=tanggal_indo(date('Y-m-d', strtotime($t['tanggal'])), true)?></p>
 								</div>
 							</div>

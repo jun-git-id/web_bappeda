@@ -145,6 +145,77 @@ class Berita extends CI_Controller {
 		]);
 	}
 
+	function detail($link){
+		$query = $this->db->select('bidang.*, posts.*')
+				->from('posts')
+				->join('bidang','bidang.id=posts.id_bidang')
+				->where('link',$link)
+				->get();
+
+		$data['p'] = $query->row_array();
+
+		$hit_count = array(
+			'hit_count' => $data['p']['hit_count']+1
+		);
+		$this->db->where('link',$link)->update('posts',$hit_count);
+
+  		$resp = $this->db->where('id_post',$data['p']['id'])->get('thumbnail')->result_array();
+
+  		if ($resp) {
+  			foreach ($resp as $v) {
+      			$data['p']['thumbnail'][] = array(
+      				'nama_file' => $v['nama_file']
+      			);
+      		}	
+  		}else{
+  			$data['p']['thumbnail'] = array();
+  		}
+
+  		$ath = $this->db->where('id_post',$data['p']['id'])->get('attachment')->result_array();
+
+  		if ($ath) {
+  			foreach ($ath as $v) {
+      			$data['p']['attachment'][] = array(
+      				'nama_file' => $v['nama_file']
+      			);
+      		}
+      		$image = $data['p']['thumbnail']['0']['nama_file'];
+  		}else{
+  			$data['p']['attachment'] = array();
+  			$image = '';
+  		}
+
+  		// echo json_encode($data, JSON_PRETTY_PRINT);
+
+		$this->load->view('front/template',[
+			'content' => $this->load->view('berita/detail',[
+				'p' => $data['p'],
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a> / Detail',
+				'og' => array(
+					'url' => base_url('berita/detail/'.$link),
+					'title' => $data['p']['judul'],
+					'description' => strip_tags($data['p']['readmore']),
+					'image' => $image
+				),
+				'side_blog' => $this->load->view('side_blog',[],true),
+				'komentar' => $this->db->order_by('tgl_komen','desc')->get('komentar')->result_array()
+			],true),
+			'title' => $data['p']['judul']
+		]);
+	}
+
+	function komen(){
+		$data = $this->input->post();
+		$link = $data['link'];
+		unset($data['link']);
+		$data['tgl_komen'] = date('Y-m-d H:i:s');
+
+		$this->db->insert('komentar',$data);
+		redirect('berita/detail/'.$link);
+	}
+
+	// xxxmamskadskdjkasd
+
 	public function kategori(){
 		$bidang = $this->input->get('k');
 		$data['breadcumbs'] = 'Berita / '.ucwords($bidang);
@@ -349,50 +420,5 @@ class Berita extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	function detail($link){
-		$data['breadcumbs'] = 'Berita / Detail';
-
-		$query = $this->db->select('bidang.*, posts.*')
-				->from('posts')
-				->join('bidang','bidang.id=posts.id_bidang')
-				->where('link',$link)
-				->get();
-
-		$data['p'] = $query->row_array();
-
-		$hit_count = array(
-			'hit_count' => $data['p']['hit_count']+1
-		);
-		$this->db->where('link',$link)->update('posts',$hit_count);
-
-  		$resp = $this->db->where('id_post',$data['p']['id'])->get('thumbnail')->result_array();
-
-  		if ($resp) {
-  			foreach ($resp as $v) {
-      			$data['p']['thumbnail'][] = array(
-      				'nama_file' => $v['nama_file']
-      			);
-      		}	
-  		}else{
-  			$data['p']['thumbnail'] = array();
-  		}
-
-  		$ath = $this->db->where('id_post',$data['p']['id'])->get('attachment')->result_array();
-
-  		if ($ath) {
-  			foreach ($ath as $v) {
-      			$data['p']['attachment'][] = array(
-      				'nama_file' => $v['nama_file']
-      			);
-      		}	
-  		}else{
-  			$data['p']['attachment'] = array();
-  		}
-
-  		// echo json_encode($data, JSON_PRETTY_PRINT);
-
-		$this->load->view('template/header');
-		$this->load->view('blog/detail',$data);
-		$this->load->view('template/footer');
-	}
+	
 }
