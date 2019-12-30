@@ -62,25 +62,29 @@
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item <?= ($page=='') ? 'active' : '' ?>">
+<<<<<<< HEAD
 											<a class="nav-link" href="<?=base_url('home')?>"><i class="fas fa-home"></i> BERANDA</a>
+=======
+											<a class="nav-link" href="<?=base_url()?>"><i class="fas fa-home"></i> BERANDA</a>
+>>>>>>> f32b430a5412f95ff4de89f075e0d15b087a478c
 										</li>
 										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
-											<a href="services.html" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFIL</a>
+											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown">PROFIL</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="services.html">Visi Misi</a></li>
-												<li><a class="dropdown-item" href="service-page.html">Latar Belakang</a></li>
-												<li><a class="dropdown-item" href="prices.html">Bagan Organisasi</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/visi_misi')?>">Visi Misi</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/latar_belakang')?>">Latar Belakang</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/bagan_organisasi')?>">Bagan Organisasi</a></li>
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='berita') ? 'active' : '' ?>">
 											<a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">BERITA</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="<?=base_url('berita/k/semua')?>">Semua</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Sekretariatan</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Program, Monitoring dan Evaluasi Pembangunan</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Ekonomi dan Infrastruktur</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Penelitian dan Pengembangan</a></li>
-												<li><a class="dropdown-item" href="gallery-simple.html">Pemerintahan dan Sosial Budaya</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/sekretariat')?>">Sekretariat</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/program')?>">Program, Monitoring dan Evaluasi Pembangunan</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/ekoinfra')?>">Ekonomi dan Infrastruktur</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/litbang')?>">Penelitian dan Pengembangan</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('berita/k/pemsosbud')?>">Pemerintahan dan Sosial Budaya</a></li>
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='agenda') ? 'active' : '' ?>">

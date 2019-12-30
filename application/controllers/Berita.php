@@ -46,13 +46,14 @@ class Berita extends CI_Controller {
 	
 	public function k($kategori){
 		$this->load->library('pagination');
-		$jumlah_data = $this->db->where('status','1')->get('posts')->num_rows();
-		$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 2;
-		$from = $this->uri->segment(4);
+		
 
 		if ($kategori == 'semua') {
+			$jumlah_data = $this->db->where('status','1')->get('posts')->num_rows();
+			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 2;
+			$from = $this->uri->segment(4);
 			$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
 			->join('bidang','bidang.id=posts.id_bidang','null')
@@ -61,12 +62,29 @@ class Berita extends CI_Controller {
 			->limit($config['per_page'],$from)
 			->get();
 		}else{
+			if ($kategori == 'sekretariat') {
+				$id_bidang = '1';
+			}else if ($kategori == 'program') {
+				$id_bidang = '2';
+			}else if ($kategori == 'ekoinfra') {
+				$id_bidang = '3';
+			}else if ($kategori == 'litbang') {
+				$id_bidang = '4';
+			}else if ($kategori == 'pemsosbud') {
+				$id_bidang = '5';
+			}
+			$jumlah_data = $this->db->where('status','1')->where('id_bidang',$id_bidang)->get('posts')->num_rows();
+			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 2;
+			$from = $this->uri->segment(4);
+
 			$id = $this->db->where('nama_bidang',$kategori)->get('bidang')->row_array();
 			$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
 			->join('bidang','bidang.id=posts.id_bidang')
 			->where('status','1')
-			->where('id_bidang',$id_bidang['id'])
+			->where('id_bidang',$id_bidang)
 			->order_by('tanggal','desc')
 			->limit($config['per_page'])
 			->get();
