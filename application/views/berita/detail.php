@@ -94,6 +94,7 @@
 									<p><?=$k['komentar']?></p>
 								</div>
 							</div>
+							<hr class="my-2">
 							<?php endforeach ?>
 							
 							<!-- <div class="comment">
