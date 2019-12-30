@@ -11,11 +11,25 @@ class Admin extends CI_Controller {
 	{
 		$data['jml_post'] = count($this->db->get('posts')->result_array());
 		$data['jml_file'] = count($this->db->get('download')->result_array());
+		$data['jml_user'] = count($this->db->get('user')->result_array());
+		$data['jml_carousel'] = count($this->db->get('carousel')->result_array());
 		$this->load->view('backend/template/header');
 		$this->load->view('backend/dashboard', $data);
 		$this->load->view('backend/template/footer');
 		// echo $data['jml_post'];
 	}
+
+	public function get_post()
+	{
+		for ($i=1; $i <= 12 ; $i++) { 
+			$data[] = array(
+				"posts" => count($this->db->where('month(tanggal)', $i)->get('posts')->result_array())
+			);
+		}
+		header('Content-Type: application/json');
+		echo json_encode($data);
+	}
+
 
 	function grafikperhari($bulan,$tahun){
 		$list=array();
