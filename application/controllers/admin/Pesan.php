@@ -14,12 +14,34 @@ class Pesan extends CI_Controller {
 		$this->load->view('backend/template/footer');
 	}
 
-	function balas($id){
-		$data = array(
-			'status' => '1'
-		);
-		$this->db->where('id',$id)->update('kontak',$data);
-		redirect('admin/pesan');
+	function balas(){
+		// $data = array(
+		// 	'status' => '1'
+		// );
+		// $this->db->where('id',$id)->update('kontak',$data);
+		// redirect('admin/pesan');
+		// Konfigurasi email
+		$ci = get_instance();
+    $ci->load->library('email');
+    $config['protocol'] = "send_mail";
+    $config['smtp_host'] = "ssl://smtp.gmail.com";
+    $config['smtp_port'] = "465";
+    $config['smtp_user'] = "bappedapkl.kab@gmail.com";
+    $config['smtp_pass'] = "bappeda_123";
+    $config['charset'] = "utf-8";
+    $config['mailtype'] = "html";
+    $config['newline'] = "\r\n";
+    $ci->email->initialize($config);
+    $ci->email->from('bappedapkl.kab@gmail.com', 'kamaludin muhamad');
+    $list = array('kamalreibonz@gmail.com');
+    $ci->email->to($list);
+    $ci->email->subject('judul email');
+    $ci->email->message('isi email');
+    if ($this->email->send()) {
+        echo 'Email sent.';
+    } else {
+        show_error($this->email->print_debugger());
+    }
 	}
 
 	function hapus($id){
