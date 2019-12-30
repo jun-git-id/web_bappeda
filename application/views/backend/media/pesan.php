@@ -41,7 +41,7 @@
                                                 </button>
                                             <?php endif ?>
                                             <?php if ($d['status']== '0') : ?>
-                                                <a class="btn btn-warning text-white" href="<?=base_url('admin/pesan/balas/').$d['id']?>">Belum Dibalas</a>
+                                                <a class="btn btn-warning text-white" href="<?=base_url('admin/pesan/balas/')?>">Belum Dibalas</a>
                                             <?php endif ?>
                                         </td>
                                         <td>

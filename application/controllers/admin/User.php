@@ -37,13 +37,21 @@ class User extends CI_Controller {
 	}
 
 	function update(){
-		$data = $this->input->post();
-		$id = $data['xusername'];
-		unset($data['xusername']);
-		$data['password'] = md5($data['password']);
-		$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data User berhasil diperbarui.</div>');
-		$this->db->where('username',$id)->update('user',$data);
-		redirect('admin/user');
+		if(isset($_POST['password'])){
+			$id=$_POST['xusername'];
+			$data['id_bidang'] =$_POST['id_bidang'];
+			$data['password'] = md5($_POST['password']);
+			$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data User berhasil diperbarui.</div>');
+			$this->db->where('username',$id)->update('user',$data);
+			redirect('index.php/admin/xxx');
+
+		}else{
+			$id=$_POST['xusername'];
+			$data['id_bidang'] =$_POST['id_bidang'];
+			$this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Data User berhasil diperbarui.</div>');
+			$this->db->where('username',$id)->update('user',$data);
+			redirect('index.php/admin/User');
+		}
 	}
 
 }

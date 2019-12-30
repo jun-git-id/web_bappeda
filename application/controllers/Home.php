@@ -10,13 +10,20 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$slideshow = $this->db->where('status_post','1')->get('carousel')->result_array();
+		$title = 'Website Bappeda Litbang Kabupaten Pekalongan';
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('front/home',[
 				'data' => array(),
-				'carousel' => $slideshow
+				'carousel' => $slideshow,
+				'og' => array(
+					'url' => base_url(''),
+					'title' => $title,
+					'description' => 'description',
+					'image' => 'image'
+				)
 			],true),
-			'title' => 'Website Bappeda Litbang Kab. Pekalongan'
+			'title' => $title
 		]);	
 	}
 	

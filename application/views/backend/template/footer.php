@@ -254,7 +254,7 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
-        
+
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>        
         <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
@@ -262,6 +262,7 @@
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
         <script src="<?=base_url('assets/backend/')?>js/statistics/flot/flot.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/formplugins/summernote/summernote.js"></script>
+        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
 
         <script type="text/javascript">
             $(function(){
@@ -485,7 +486,7 @@
             // }
 
             function edit_user(username){
-                $.post("<?=base_url('admin/user/edit/')?>",
+                $.post("<?=base_url('index.php/admin/user/edit/')?>",
                 {
                   username:username
                 },
@@ -494,7 +495,7 @@
                   $('#id_bidang').val(data.id_bidang).change();
                   $('#xusername').val(data.username);
                   $('#username').val(data.username);
-                  $('#password').val(data.password);
+                  // $('#password').val(data.password);
                 });
             }
 
