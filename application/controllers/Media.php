@@ -14,12 +14,19 @@ class Media extends CI_Controller {
 	public function unduhan(){
 		$data['breadcumbs'] = 'Media / Download';
 		$data['data'] = $this->db->where('kategori','download')->order_by('tgl_input','desc')->get('download')->result_array();
+		$title = 'Unduh Data Bappeda Litbang Kabupaten Pekalongan';
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('media/unduhan',[
-				'data' => $data['data']
+				'data' => $data['data'],
+				'og' => array(
+					'url' => base_url('media/unduhan'),
+					'title' => $title,
+					'description' => 'description',
+					'image' => 'image'
+				)
 			],true),
-			'title' => 'Unduhan Data Bapped Litbang Kab. Pekalongan'
+			'title' => $title
 		]);	
 		// $this->load->view('template/footer');
 	}

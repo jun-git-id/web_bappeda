@@ -46,13 +46,12 @@ class Berita extends CI_Controller {
 	
 	public function k($kategori){
 		$this->load->library('pagination');
-		
+		$config['per_page'] = 4;
 
 		if ($kategori == 'semua') {
 			$jumlah_data = $this->db->where('status','1')->get('posts')->num_rows();
 			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
 			$config['total_rows'] = $jumlah_data;
-			$config['per_page'] = 2;
 			$from = $this->uri->segment(4);
 			$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
@@ -61,6 +60,9 @@ class Berita extends CI_Controller {
 			->order_by('tanggal','desc')
 			->limit($config['per_page'],$from)
 			->get();
+
+			$breadcumbs = '<span class="theme-color">Berita / Semua</span>';
+			$title = 'Semua Berita Bappeda Litbang Kabupaten Pekalongan';
 		}else{
 			if ($kategori == 'sekretariat') {
 				$id_bidang = '1';
@@ -76,10 +78,9 @@ class Berita extends CI_Controller {
 			$jumlah_data = $this->db->where('status','1')->where('id_bidang',$id_bidang)->get('posts')->num_rows();
 			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
 			$config['total_rows'] = $jumlah_data;
-			$config['per_page'] = 2;
 			$from = $this->uri->segment(4);
 
-			$id = $this->db->where('nama_bidang',$kategori)->get('bidang')->row_array();
+			$bidang = $this->db->where('id',$id_bidang)->get('bidang')->row_array();
 			$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
 			->join('bidang','bidang.id=posts.id_bidang')
@@ -88,6 +89,9 @@ class Berita extends CI_Controller {
 			->order_by('tanggal','desc')
 			->limit($config['per_page'])
 			->get();
+
+			$breadcumbs = '<span class="theme-color">Berita / '.$bidang['nama_bidang'].'</span>';
+			$title = 'Berita '.$bidang['nama_bidang'].' Bappeda Litbang Kabupaten Pekalongan';
 		}
 
 
@@ -128,9 +132,16 @@ class Berita extends CI_Controller {
 		$this->load->view('front/template',[
 			'content' => $this->load->view('berita/index',[
 				'data' => $data['posts'],
-				'breadcumb' => '<a style="color: #1e76bd !important" href="http://localhost/dindik/">Beranda</a><span class="theme-color">Berita / Bidang Paud</span>'
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
+				'og' => array(
+					'url' => base_url('berita/k/'.$kategori),
+					'title' => $title,
+					'description' => 'description',
+					'image' => 'image'
+				),
+				'side_blog' => $this->load->view('side_blog',[],true)
 			],true),
-			'title' => 'Berita Bappeda Litbang Kabupaten Pekalongan'
+			'title' => $title
 		]);
 	}
 
