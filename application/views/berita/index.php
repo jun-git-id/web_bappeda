@@ -25,25 +25,36 @@
 						<?php $i=1; foreach ($data as $p): ?>
 						<div class="blog-post <?= ($i%2 != 0) ? 'mx-1' : '' ?>">
 							<div class="post-image">
-								<a href="blog-post-page.html"><img src="<?=base_url('assets/front/images/')?>blog/blog-post-img-1.jpg" alt=""></a>
+								<!-- <a href="blog-post-page.html"><img src="<?=base_url('assets/front/images/')?>blog/blog-post-img-1.jpg" alt=""></a> -->
+								<?php if (count($p['thumbnail']) > 1) { ?>
+									<div class="slider-gallery post-carousel js-post-carousel">
+										<?php foreach ($p['thumbnail'] as $t): ?>
+											<a href="<?=base_url('berita/detail/').$p['link']?>"><img src="<?=base_url('assets/images/posts/'.$t['nama_file'])?>" alt=""></a>	
+										<?php endforeach ?>
+									</div>
+								<?php } else { ?>
+									<?php foreach ($p['thumbnail'] as $t): ?>
+										<a href="<?=base_url('berita/detail/').$p['link']?>"><img src="<?=base_url('assets/images/posts/'.$t['nama_file'])?>" alt=""></a>
+									<?php endforeach ?>
+								<?php } ?>
 							</div>
 							<div class="blog-post-info">
-								<div class="post-date">17<span>JAN</span></div>
+								<?php setlocale(LC_ALL,"id_ID"); $date = DateTime::createFromFormat("Y-m-d", $p['tanggal']);?>
+								<div class="post-date"><?=date('d',strtotime($p['tanggal']))?><span><?=strftime("%b",$date->getTimestamp());?></span></div>
 								<div>
 									<h2 class="post-title"><a href="blog-post-page.html"><?=$p['judul']?></a></h2>
 									<div class="post-meta">
-										<div class="post-meta-author">by <a href="#"><i>admin</i></a></div>
+										<div class="post-meta-author">by <a href="#"><i><?=$p['nama_bidang']?></i></a></div>
 										<div class="post-meta-social">
 											<a href="#"><i class="icon-facebook-logo"></i></a>
 											<a href="#"><i class="icon-twitter-logo"></i></a>
-											<a href="#"><i class="icon-google-logo"></i></a>
 											<a href="#"><i class="icon-instagram"></i></a>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="post-teaser"><?=$p['readmore'];?></div>
-							<div class="mt-2"><a href="blog-post-page.html" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Read more</span><i class="icon-right-arrow"></i></a></div>
+							<div class="mt-2"><a href="<?=base_url('berita/detail/').$p['link']?>" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Read more</span><i class="icon-right-arrow"></i></a></div>
 						</div>
 						<?php $i++; endforeach ?>
 						
@@ -73,6 +84,7 @@
 							<div class="post-teaser">Oral hygiene is essential for your overall wellbeing, not just your oral health. In fact, gum disease is a major risk factor for developing certain dangerous health conditions, such as diabetes and heart disease […]</div>
 							<div class="mt-2"><a href="blog-post-page.html" class="btn btn-sm btn-hover-fill"><i class="icon-right-arrow"></i><span>Read more</span><i class="icon-right-arrow"></i></a></div>
 						</div>
+
 					</div>
 					<div class="clearfix"></div>
 					<ul class="pagination justify-content-center">
