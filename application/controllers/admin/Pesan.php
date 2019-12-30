@@ -23,16 +23,16 @@ class Pesan extends CI_Controller {
 		// Konfigurasi email
 		$ci = get_instance();
     $ci->load->library('email');
-    $config['protocol'] = "send_mail";
+    $config['protocol'] = "smtp";
     $config['smtp_host'] = "ssl://smtp.gmail.com";
     $config['smtp_port'] = "465";
-    $config['smtp_user'] = "bappedapkl.kab@gmail.com";
-    $config['smtp_pass'] = "bappeda_123";
+    $config['smtp_user'] = "einfostmikwp@gmail.com";
+    $config['smtp_pass'] = "gottic76";
     $config['charset'] = "utf-8";
     $config['mailtype'] = "html";
     $config['newline'] = "\r\n";
     $ci->email->initialize($config);
-    $ci->email->from('bappedapkl.kab@gmail.com', 'kamaludin muhamad');
+    $ci->email->from('einfostmikwp@gmail.com', 'einfo stmik');
     $list = array('kamalreibonz@gmail.com');
     $ci->email->to($list);
     $ci->email->subject('judul email');
