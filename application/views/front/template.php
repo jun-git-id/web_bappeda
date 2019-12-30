@@ -66,7 +66,11 @@
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item <?= ($page=='') ? 'active' : '' ?>">
+<<<<<<< HEAD
+											<a class="nav-link" href="<?=base_url('home')?>"><i class="fas fa-home"></i> BERANDA</a>
+=======
 											<a class="nav-link" href="<?=base_url()?>"><i class="fas fa-home"></i> BERANDA</a>
+>>>>>>> f32b430a5412f95ff4de89f075e0d15b087a478c
 										</li>
 										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
 											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-warehouse-alt"></i> PROFIL</a>
@@ -157,9 +161,9 @@
 							</div>
 							<div class="footer-social d-none d-lg-block">
 								<a href="https://www.facebook.com/" target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-								<a href="https://www.twitter.com/" target="blank" class="hovicon"><i class="icon-twitter-logo"></i></a>
+								<a href="https://twitter.com/bappedalitbang/" target="blank" class="hovicon"><i class="icon-twitter-logo"></i></a>
 								<a href="https://plus.google.com/" target="blank" class="hovicon"><i class="icon-google-logo"></i></a>
-								<a href="https://www.instagram.com/" target="blank" class="hovicon"><i class="icon-instagram"></i></a>
+								<a href="https://www.instagram.com/bappedalitbang_pekalongankab/" target="blank" class="hovicon"><i class="icon-instagram"></i></a>
 							</div>
 						</div>
 					</div>
@@ -190,7 +194,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<h3>Our Contacts</h3>
+					<h3>Kontak Kami</h3>
 					<div class="h-decor"></div>
 					<ul class="icn-list">
 						<li><i class="icon-placeholder2"></i>1560 Holden Street San Diego, CA 92139
