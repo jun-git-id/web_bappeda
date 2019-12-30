@@ -35,25 +35,29 @@
                                         <td><?=nl2br($d['komentar'])?></td>
                                         <td>
                                             <?php if ($d['status']== '0') : ?>
-                                               <h3 class="badge badge-danger">disembunyikan</h3>
+                                               <h3><span class="badge badge-danger">disembunyikan</span></h3>
                                             <?php endif ?>
                                             <?php if ($d['status']== '1') : ?>
-                                                <h3 class="badge badge-success">ditampilkan</h3>
+                                                <h3><span class="badge badge-info">ditampilkan</span></h3>
                                             <?php endif ?>
                                             <?php if ($d['status']== '2') : ?>
-                                                <h3 class="badge badge-info">dibalas</h3>
+                                                <h3><span class="badge badge-success">dibalas</span></h3>
                                             <?php endif ?>
                                         </td>
                                         <td>
                                             <?php if ($d['status']== '0') : ?>
                                                <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                                <a href="javascript:;" class="btn btn-success btn-icon rounded-circle tampilkan" rel="<?=base_url('admin/komentar/tampilkan/').$d['id']?>"><i class="far fa-eye"></i></a>
-                                               <a href="javascript:;" class="btn btn-info btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/balas/').$d['id']?>"><i class="far fa-comments"></i></a>
+                                               <a href="javascript:;" class="btn btn-info btn-icon rounded-circle balas_kom" data-email="<?= $d['email'] ?>" data-id="<?= $d['id'] ?>" rel="<?=base_url('admin/komentar/balas/').$d['id']?>"><i class="far fa-comments"></i></a>
                                             <?php endif ?>
                                             <?php if ($d['status']== '1') : ?>
                                                <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                                <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle sembunyikan" rel="<?=base_url('admin/komentar/sembunyikan/').$d['id']?>"><i class="far fa-eye-slash"></i></a>
-                                               <a href="javascript:;" class="btn btn-info btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/balas/').$d['id']?>"><i class="far fa-comments"></i></a>
+                                               <a href="javascript:;" class="btn btn-info btn-icon rounded-circle balas_kom" data-email="<?= $d['email'] ?>" data-id="<?= $d['id'] ?>" rel="<?=base_url('admin/komentar/balas/').$d['id']?>"><i class="far fa-comments"></i></a>
+                                            <?php endif ?>
+                                            <?php if ($d['status']== '2') : ?>
+                                               <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
+                                               <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle sembunyikan" rel="<?=base_url('admin/komentar/sembunyikan/').$d['id']?>"><i class="far fa-eye-slash"></i></a>
                                             <?php endif ?>
                                             
                                         </td>
@@ -78,3 +82,36 @@
         </div>
     </div>
 </main>
+
+
+<div class="modal fade" id="modal-balas" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <i class="far fa-edit"></i>Balas Komentar
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- <form method="post" id="form" enctype="multipart/form-data" action="javascript:kirim_pesan()"> -->
+                <form method="post"  enctype="multipart/form-data" action="<?= base_url('index.php/admin/komentar/balas')?>">
+                    <div class="form-group">
+                        <input type="text" id="email" name="email" class="form-control" required="" disabled>
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" name="balasan" class=" form-control" required=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="id" name="id_komentar" class="form-control" required="">
+                        <input type="text" id="username" name="username" class="form-control" required="" value="<?= $this->session->userdata('username') ?>">
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
+                    <button type="submit" class="btn btn-info"><i class="far fa-arrow-alt-up"></i>Balas Pesan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

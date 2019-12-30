@@ -35,27 +35,44 @@ class Komentar extends CI_Controller {
 	}
 
 	function balas(){
-		$ci = get_instance();
-	    $ci->load->library('email');
-	    $config['protocol'] = "smtp";
-	    $config['smtp_host'] = "ssl://smtp.gmail.com";
-	    $config['smtp_port'] = "465";
-	    $config['smtp_user'] = "einfostmikwp@gmail.com";
-	    $config['smtp_pass'] = "gottic76";
-	    $config['charset'] = "utf-8";
-	    $config['mailtype'] = "html";
-	    $config['newline'] = "\r\n";
-	    $ci->email->initialize($config);
-	    $ci->email->from('einfostmikwp@gmail.com', 'einfo stmik');
-	    $list = array('kamalreibonz@gmail.com');
-	    $ci->email->to($list);
-	    $ci->email->subject('judul email');
-	    $ci->email->message('isi email');
-	    if ($this->email->send()) {
-	        echo 'Email sent.';
-	    } else {
-	        show_error($this->email->print_debugger());
-	    }
+		// $email = $this->input->post('email');
+		// $ci = get_instance();
+	 //    $ci->load->library('email');
+	 //    $config['protocol'] = "smtp";
+	 //    $config['smtp_host'] = "ssl://smtp.gmail.com";
+	 //    $config['smtp_port'] = "465";
+	 //    $config['smtp_user'] = "einfostmikwp@gmail.com";
+	 //    $config['smtp_pass'] = "gottic76";
+	 //    $config['charset'] = "utf-8";
+	 //    $config['mailtype'] = "html";
+	 //    $config['newline'] = "\r\n";
+	 //    $ci->email->initialize($config);
+	 //    $ci->email->from('einfostmikwp@gmail.com', 'BAPPEDA LITBANG');
+	 //    $ci->email->to($email);
+	 //    $ci->email->subject('INI JUDUL');
+	 //    $ci->email->message('INI ISI EMAIL');
+
+	 //    if ($this->email->send()) {
+	 //        echo 'Email sent.';
+	 //    } else {
+	 //        show_error($this->email->print_debugger());
+	 //    }
+
+		$data = array(
+        		'balasan' 		=> $this->input->post('balasan'),
+        		'id_komentar' 	=> $this->input->post('id_komentar'),
+        		'tgl_balas' 	=> date('Y-m-d H:i:s'),
+        		'username' 		=> $this->input->post('username'),
+        	);
+
+	    $this->db->insert('balasan',$data);
+	    
+	    $status = array( 
+		    'status'      => 2
+		);
+
+		$this->db->where('id',$this->input->post('id_komentar'))->update('komentar',$status);
+		redirect('admin/komentar');
 	}
 }
 

@@ -15,11 +15,9 @@ class Pesan extends CI_Controller {
 	}
 
 	function balas(){
-		// $data = array(
-		// 	'status' => '1'
-		// );
-		// $this->db->where('id',$id)->update('kontak',$data);
-		// redirect('admin/pesan');
+		$id= $_POST['id'];
+		$data['status'] = '1';
+		//
 		// Konfigurasi email
 		$ci = get_instance();
 	    $ci->load->library('email');
@@ -48,7 +46,5 @@ class Pesan extends CI_Controller {
 		$this->db->where('id',$id)->delete('kontak');
 		redirect('admin/pesan');
 	}
-
-
 
 }

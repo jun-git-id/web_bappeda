@@ -27,7 +27,7 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="pesan">
                                 <?php $no=1; foreach ($data as $d): ?>
                                     <tr>
                                         <td><?=$no?></td>
@@ -41,10 +41,12 @@
                                                 </button>
                                             <?php endif ?>
                                             <?php if ($d['status']== '0') : ?>
-                                                <a class="btn btn-warning text-white" href="<?=base_url('admin/pesan/balas/')?>">Belum Dibalas</a>
+                                              <button type="button" class="btn btn-warning waves-effect waves-themed">Belum Dibalas
+                                              </button>
                                             <?php endif ?>
                                         </td>
                                         <td>
+                                            <a href="javascript:;" onclick="balas_pesan(`<?=$d['id'].';/;'.$d['email']?>`)" class="btn btn-info btn-icon rounded-circle"><i class="far fa-location-arrow"></i></a>
                                             <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/pesan/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                         </td>
                                     </tr>
@@ -69,3 +71,31 @@
         </div>
     </div>
 </main>
+
+
+<div class="modal fade" id="modal-balas" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    <i class="far fa-edit"></i>Balas Pesan
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- <form method="post" id="form" enctype="multipart/form-data" action="javascript:kirim_pesan()"> -->
+                <form method="post"  enctype="multipart/form-data" action="<?= base_url('index.php/admin/pesan/balas')?>">
+                    <div class="form-group">
+                        <textarea type="text" name="balas_pesan" class=" form-control" required=""></textarea>
+                        <input type="hidden" id="email" name="email" class="form-control" required="">
+                        <input type="hidden" id="id" name="id" class="form-control" required="">
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
+                    <button type="submit" class="btn btn-info"><i class="far fa-arrow-alt-up"></i>Balas Pesan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
