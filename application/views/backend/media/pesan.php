@@ -88,8 +88,8 @@
                 <!-- <form method="post" id="form" enctype="multipart/form-data" action="javascript:kirim_pesan()"> -->
                 <form method="post"  enctype="multipart/form-data" action="<?= base_url('index.php/admin/pesan/balas')?>">
                     <div class="form-group">
-                        <textarea type="text" name="balas_pesan" class="js-balasemail form-control" required=""></textarea>
-                        <input type="email" id="email" name="email" class="form-control" required="">
+                        <textarea type="text" name="balas_pesan" class=" form-control" required=""></textarea>
+                        <input type="hidden" id="email" name="email" class="form-control" required="">
                         <input type="hidden" id="id" name="id" class="form-control" required="">
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>

@@ -92,11 +92,15 @@ class Berita extends CI_Controller {
                 $_FILES['userFile']['size'] = $_FILES['userFiles']['size'][$i];
 
                 $x = $i+1;
-
+								$config['create_thumb']= FALSE;
+                $config['maintain_ratio']= FALSE;
+                $config['quality']= '10%';
+								$config['x_axis'] = 100;
+								$config['y_axis'] = 60;
                 $config['upload_path'] = './assets/images/posts/';
                 $config['allowed_types'] = 'jpeg|jpg|png|JPG|PNG';
 
-				$config['file_name'] = $data['id'].'-'.$x.'.jpg';
+								$config['file_name'] = $data['id'].'-'.$x.'.jpg';
 
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
@@ -135,7 +139,7 @@ class Berita extends CI_Controller {
 
                 $x = $i+1;
 
-                $config['upload_path'] = './assets/attachment/';
+                $config['upload_path'] = './assets/attachments/';
                 $config['allowed_types'] = '*';
 
 				$ext = pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION);
@@ -158,9 +162,9 @@ class Berita extends CI_Controller {
                 	$this->db->insert('attachment',$filedata);
 
                 }else{
-					$error = array ('error' => $this->upload->display_errors());
-					var_dump($error);
-				}
+								$error = array ('error' => $this->upload->display_errors());
+								var_dump($error);
+							}
             }
 
             unset($data['attachments']);
@@ -174,7 +178,7 @@ class Berita extends CI_Controller {
     	$this->session->set_flashdata('alert','<div class="alert alert-primary alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-info"></i></span> </button> <strong>Berhasil!</strong> Data Berita berhasil disimpan.</div>');
 
 
-		redirect('admin/berita');
+		redirect('index.php/admin/berita');
 	}
 
 	function edit($link){
