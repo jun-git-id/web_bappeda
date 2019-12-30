@@ -29,6 +29,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<!-- Google map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiFdr5Z0WRIXKUOqoRRvzRQ5SkzhkUVjk"></script>
+
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	  var OneSignal = window.OneSignal || [];
+	  OneSignal.push(function() {
+	    OneSignal.init({
+	      appId: "04e2cc56-7beb-4ba7-a823-0de0ba5ad667",
+	    });
+	  });
+	</script>
 </head>
 
 <body class="shop-page">
@@ -109,7 +119,7 @@
 											</ul>
 										</li>										
 										<li class="nav-item">
-											<a class="nav-link" href="<?=base_url('kontak/info')?>"><i class="fas fa-phone-office"></i> KONTAK</a>
+											<a class="nav-link" href="<?=base_url('kontak')?>"><i class="fas fa-phone-office"></i> KONTAK</a>
 										</li>
 									</ul>
 								</div>
@@ -246,6 +256,23 @@
 	<script src="<?=base_url('assets/front/js')?>/app.js"></script>
 	<script src="<?=base_url('assets/front/js')?>/app-shop.js"></script>
 	<script src="<?=base_url('assets/front/form')?>/forms.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			OneSignal.push(function() {
+              OneSignal.sendTags({
+                user: '1'
+                // petugas: '1'
+              }).then(function(tagsSent) {
+                // Callback called when tags have finished sending
+                console.log(tagsSent);   
+              });
+
+              OneSignal.getUserId(function(userId) {
+                console.log("OneSignal User ID:", userId);
+              });
+            })
+		})
+	</script>
 	
 </body>
 

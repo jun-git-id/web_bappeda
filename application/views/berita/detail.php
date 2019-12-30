@@ -13,7 +13,7 @@
 		<!--//section-->
 		<!--section-->
 		<div class="section page-content-first mt-4">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 					<div class="container-fluid mb-4">
 					<form action="http://localhost/dindik/berita/pencarian" method="GET" class="content-search d-flex" style="width: 100% !important">
@@ -25,8 +25,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-8">
-						<div class="blog-posts" id="blog-posts">
+					<div class="col-md-12 col-xl-9 col-sm-12 px-xl-0 px-md-2 px-sm-2 pl-xl-4">
+						<div class="blog-posts pr-xl-0" id="blog-posts">
 							<div class="blog-post">
 								<div class="blog-post-info">
 									<div>
