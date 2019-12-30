@@ -1,5 +1,5 @@
 
-			<div class="col-4">
+			<div class="col-xl-3 col-md-12 col-sm-12 pl-xl-0">
 				<div class="container-fluid">
 					<div class="blog-isotope">
 						<div class="blog-post" style="width: 100%">

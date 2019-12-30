@@ -23,11 +23,11 @@
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-8 px-0">
-				<div class="container-fluid">
+			<div class="col-md-12 col-xl-9 col-sm-12 px-xl-0 px-md-2 px-sm-2">
+				<div class="container-fluid pr-xl-0">
 					<div class="blog-isotope">
 						<?php $i=1; foreach ($data as $p): ?>
-						<div class="blog-post <?= ($i%2 != 0) ? 'mx-1' : '' ?>">
+						<div class="blog-post <?= ($i%2 != 0) ? 'mx-xl-1' : '' ?>">
 							<div class="post-image">
 								<!-- <a href="blog-post-page.html"><img src="<?=base_url('assets/front/images/')?>blog/blog-post-img-1.jpg" alt=""></a> -->
 								<?php if (count($p['thumbnail']) > 1) { ?>
