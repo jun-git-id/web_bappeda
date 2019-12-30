@@ -256,8 +256,12 @@
 						+ src/../jquery-snippets.js (core) -->
 
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
+<<<<<<< HEAD
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
+=======
         <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>        
         <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
+>>>>>>> 1c55030f795c348b0531b1808bc16bb2d9404981
         <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
         <script src="<?=base_url('assets/backend/')?>js/statistics/flot/flot.bundle.js"></script>
@@ -265,6 +269,22 @@
         <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
 
         <script type="text/javascript">
+
+            $(document).on('click','.button-balas',function (){
+              var data= JSON.parse($(this).attr('list'));
+              $('#email').val(data.email);
+              // $('#nama_barangedit').val(data.nama_barang);
+              // $('#jumlah_barangedit').val(data.jumlah_barang);
+              // $('#tanggal_masukedit').val(data.tanggal_masuk);
+            })
+
+            function balas_pesan(id){
+              $('#modal-balas').modal('toggle');
+              var data = id.split(";/;");
+              $('#email').val(data[1]);
+              $('#id').val(data[0]);
+            }
+
             $(function(){
                 $('#dt-basic-example').dataTable(
                 {
@@ -365,6 +385,28 @@
                     {
                     }
                 });
+                $('.js-balasemail').summernote({
+                    height: 450,
+                    tabsize: 2,
+                    placeholder: "Ketik Disini...",
+                    dialogsFade: true,
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['font', ['bold', 'italic', 'underline', 'clear']],
+                        ['fontsize', ['fontsize']],
+                        ['fontname', ['fontname']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']]
+                        ['table', ['table']],
+                        ['insert', ['link', 'picture', 'video']],
+                        ['view', ['fullscreen', 'codeview', 'help']]
+                    ],
+                    callbacks:
+                    {
+                    }
+                });
 
             });
 
@@ -434,6 +476,7 @@
                   $('#keterangan').val(data.keterangan);
                 });
             }
+
 
             function simpantags() {
               var url = "<?= base_url('index.php/admin/berita/tambah_tags')?>";
@@ -716,6 +759,7 @@
             // ];
 
             
+
 
         </script>
     </body>
