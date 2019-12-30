@@ -46,9 +46,9 @@
 								<?php setlocale(LC_ALL,"id_ID"); $date = DateTime::createFromFormat("Y-m-d", date('Y-m-d', strtotime($p['tanggal'])));?>
 								<div class="post-date"><?=date('d',strtotime(date('Y-m-d', strtotime($p['tanggal']))))?><span><?=strftime("%b",$date->getTimestamp());?></span></div>
 								<div>
-									<h2 class="post-title mb-0"><a href="blog-post-page.html"><?=$p['judul']?></a></h2>
+									<h2 class="post-title mb-0"><a href="<?=base_url('berita/detail/').$p['link']?>"><?=$p['judul']?></a></h2>
 									<div class="post-meta">
-										<div class="post-meta-author">by <a href="#"><i><?=$p['nama_bidang']?></i></a></div>
+										<div class="post-meta-author">by <a href="javascript:;"><i><?=$p['nama_bidang']?></i></a></div>
 										<br>
 										
 									</div>

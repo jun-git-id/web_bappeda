@@ -51,10 +51,15 @@ class Pesan extends CI_Controller {
 		redirect('admin/pesan');
 	}
 
+<<<<<<< HEAD
 	public function refresh_pesan()
 	{
 		$data = $this->db->get('kontak')->result_array();
 		header('Content-Type: application/json');
 		echo json_encode($data);
 	}
+=======
+
+
+>>>>>>> 1c55030f795c348b0531b1808bc16bb2d9404981
 }

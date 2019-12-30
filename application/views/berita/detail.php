@@ -4,8 +4,7 @@
 			<div class="breadcrumbs-wrap">
 				<div class="container">
 					<div class="breadcrumbs">
-						<a style="color: #1e76bd !important" href="<?=base_url()?>">Beranda</a>
-						<span class="theme-color"><?=$breadcumbs?></span>
+						<span class="theme-color"><?=$breadcumb?></span>
 					</div>
 				</div>
 			</div>
@@ -13,10 +12,20 @@
 		</div>
 		<!--//section-->
 		<!--section-->
-		<div class="section page-content-first">
+		<div class="section page-content-first mt-4">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-9 aside">
+					<div class="container-fluid mb-4">
+					<form action="http://localhost/dindik/berita/pencarian" method="GET" class="content-search d-flex" style="width: 100% !important">
+						<div class="input-wrap">
+							<input type="text" class="form-control" placeholder="Cari Berita..." name="s">
+						</div>
+						<button type="submit"><i class="icon-search"></i></button>
+					</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8">
 						<div class="blog-posts" id="blog-posts">
 							<div class="blog-post">
 								<div class="blog-post-info">
@@ -26,6 +35,8 @@
 											<div class="post-meta-author"><i class="fa fa-user"></i> <?=$p['nama_bidang']?> |</div>
 											<div class="post-meta-social">
 												<i class="icon icon-calendar"></i><?=tanggal_indo(date('Y-m-d', strtotime($p['tanggal']))).', '.date('H.i',strtotime($p['tanggal'])).' WIB'?>
+												<div class="float-right">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -56,80 +67,75 @@
 									</div>
 								</div>	
 								<?php endif ?>
-								<ul class="tags-list">
-									<p class="mb-0">Tags :</p>
-									<?php $x = explode(";", $p['tags']) ?>
-									<?php foreach ($x as $d): ?>
-										<li><a href="<?=base_url('berita/tags?t=').$d?>"><?=$d?></a></li>
-									<?php endforeach ?>
-									<!-- <li><a href="#">Dental Implants</a></li>
-									<li><a href="#">Orthodontics</a></li> -->
-								</ul>
+								<?php if (isset($p['tags'])): ?>
+									
+									<ul class="tags-list">
+										<p class="mb-0">Tags :</p>
+										<?php $x = explode(";", $p['tags']) ?>
+										<?php foreach ($x as $d): ?>
+											<li><a href="<?=base_url('berita/tags?t=').$d?>"><?=$d?></a></li>
+										<?php endforeach ?>
+									</ul>
+									
+								<?php endif ?>
 							</div>
 						</div>
-						<div class="clearfix mt-4"></div>
-						
-					</div>
-					<div class="col-lg-3 aside-left mt-5 mt-lg-0">
-						<div class="side-block">
-							<form action="<?=base_url('berita/pencarian')?>" method="GET" class="content-search d-flex">
-								<div class="input-wrap">
-									<input type="text" class="form-control" placeholder="Pencarian" name="s">
-								</div>
-								<button type="submit"><i class="icon-search"></i></button>
-							</form>
+						<div class="row ml-1 mt-1">
+							<div class="fb-share-button" data-href="<?=base_url('berita/detail/'.$p['link'])?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div>
+							&nbsp;
+							<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</div>
-						<div class="side-block">
-							<h3 class="side-block-title">Berita Terpopuler</h3>
-							<?php 
-								$data = $this->db->select('bidang.*, posts.*')
-										->from('posts')
-										->join('bidang','bidang.id=posts.id_bidang')
-										->where('status','1')
-										->order_by('hit_count','desc')
-										->order_by('tanggal','desc')
-										->limit(3)
-										->get()->result_array();
-								$z = 0;
-							    while ($z < count($data)) {
-						      		$resp = $this->db->where('id_post',$data[$z]['id'])->limit(1)->get('thumbnail')->row_array();
-
-						      		$data[$z]['thumbnail'] = $resp['nama_file'];
-
-						        	$z += 1;
-							    }
-							?>
-							<?php foreach ($data as $d): ?>
-							<div class="blog-post post-preview">
-								<div class="post-image">
-									<a href="blog-post-page.html">
-										<a href="<?=base_url('berita/detail/').$d['link']?>"><img src="<?=base_url('assets/images/posts/'.$d['thumbnail'])?>" alt=""></a>
-									</a>
-								</div>
-								<div>
-									<h4 class="post-title"><a href="<?=base_url('berita/detail/').$d['link']?>"><?=$d['judul']?></a></h4>
-									<div class="post-meta">
-										<div class="post-meta-author text-nowrap"><i><?=$d['nama_bidang']?></i></div>
-										<div class="post-meta-date text-nowrap"><i class="icon icon-clock3"></i><?=tanggal_indo(date('Y-m-d', strtotime($d['tanggal'])))?></div>
-									</div>
+						<div class="comments-block mt-3 mt-lg-6">
+							<h3>Komentar</h3>
+							<?php foreach ($komentar as $k): ?>
+							<div class="comment mt-0">
+								<div class="text">
+									<div class="meta"><a href="javascript:;" class="meta-author"><b><?=$k['nama']?></b></a><span class="meta-date"><i class="icon icon-clock3"></i><?=tanggal_indo(date('Y-m-d', strtotime($k['tgl_komen'])), true)?></span></div>
+									<p><?=$k['komentar']?></p>
 								</div>
 							</div>
+							<hr class="my-2">
 							<?php endforeach ?>
+							
+							<!-- <div class="comment">
+								<div class="userpic d-none d-sm-block"><span class="icon icon-user"></span></div>
+								<div class="text">
+									<div class="meta"><a href="#" class="meta-author"><b>Admin</b></a><span class="meta-date"><i class="icon icon-clock3"></i>17 Jan, 2018</span></div>
+									<p>Make sure to replace your toothbrush every three months or when it begins to show wear, whichever comes first. </p>
+									<a href="#" class="reply"><i class="icon-reply-black"></i>Reply</a>
+								</div>
+							</div> -->
 						</div>
-						<div class="side-block">
-							<h3 class="side-block-title">Tags</h3>
-							<ul class="tags-list">
-							<?php $tag = $this->db->get('tags')->result_array(); ?>
-							<?php foreach ($tag as $t): ?>
-								<li><a href="<?=base_url('berita/tags?t=').$t['tags']?>"><?=$t['tags']?></a></li>
-							<?php endforeach ?>
-							</ul>
-						</div>
-						<script type="text/javascript" src=//widget.kominfo.go.id/gpr-widget-kominfo.min.js></script>
-						<div class="side-block d-sm-none d-md-block" style="display:block; width:100%; float:right;  max-height: 400px; overflow: auto;">
-							<div id="gpr-kominfo-widget-container"></div>
-						</div>
+						<div class="clearfix mt-3 mt-lg-4"></div>
+						<h3>Tinggalkan Komentar</h3>
+						<p>Email anda tidak akan dipublikasikan, kolom bertanda * wajib untuk diisi</p>
+						<form class="contact-form mt-2 pb-0" method="post" novalidate="novalidate" action="<?=base_url('berita/komen')?>">
+							<input type="hidden" name="id_post" value="<?=$p['id']?>">
+							<input type="hidden" name="link" value="<?=$p['link']?>">
+							<div class="mt-0 row">
+								<div class="col-md-8">
+									<label>Nama Anda*</label>
+									<input type="text" class="form-control" name="nama" required="">
+								</div>
+							</div>
+							<div class="mt-15 row">
+								<div class="col-md-8">
+									<label>Email*</label>
+									<input type="email" class="form-control" name="email" required="">
+								</div>
+							</div>
+							<div class="mt-15 row">
+								<div class="col-md-10">
+									<label>Komentar*</label>
+									<textarea class="form-control" name="komentar" required=""></textarea>
+								</div>
+							</div>
+							<div class="mt-3">
+								<button type="submit" class="btn btn-primary"><i class="icon-right-arrow"></i><span>Tinggalkan Komentar</span><i class="icon-right-arrow"></i></button>
+							</div>
+						</form>
 					</div>
+					<?=$side_blog?>
 				</div>
 			</div>
 		</div>

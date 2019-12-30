@@ -254,8 +254,14 @@
 						+ waves.js (extension)
 						+ smartpanels.js (extension)
 						+ src/../jquery-snippets.js (core) -->
+
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
+<<<<<<< HEAD
         <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
+=======
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>        
+        <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
+>>>>>>> 1c55030f795c348b0531b1808bc16bb2d9404981
         <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
         <script src="<?=base_url('assets/backend/')?>js/statistics/flot/flot.bundle.js"></script>
@@ -436,6 +442,25 @@
                   $('#modal-edit').modal('toggle');
                   $('#xid').val(data.id);
                   $('#keterangan').val(data.keterangan);
+                  // $('#kategori').val(data.kategori).change;
+                  // alert(data.kategori)
+                });
+            }
+
+            function edit_info(id_info){
+                $.post("<?=base_url('admin/info_publik/edit/')?>",
+                {
+                  id_info:id_info
+                },
+                function(data){
+                  $('#modal-edit').modal('toggle');
+                  $('#id_info').val(data.id_info);
+                  $('#nama_unduhan').val(data.nama_unduhan);
+                  $('#keterangan').val(data.keterangan);
+                  $('#tahun').val(data.tahun);
+                  $('#kategori').val(data.kategori).change;
+                  alert(id)
+                  // console.log(data)
                 });
             }
 
@@ -639,17 +664,16 @@
 
              /*  GRAFIK FLOT */
             $(document).ready(function(){
-                var dataPost = [
-                [0, 10],
-                [1, 7],
-                [2, 8],
-                [3, 9],
-                [4, 6],
-                [5, 5],
-                [6, 7]
-            ];
+                 var dataPost = [];
+                $.post("<?= base_url('index.php/admin/admin/get_post')?>",
+                function(data){
+                 
+                    for (i = 0; i < data.length; i++) {
+                        dataPost[i] = [i+1,data[i].posts];
+                      }
+                  // console.log(data[0].posts)
 
-            var flotLineAlt = $.plot($('#flot-line-alt'), [
+                  var flotLineAlt = $.plot($('#flot-line-alt'), [
                 {
                     data: dataPost,
                     label: 'Jumlah Postingan',
@@ -717,6 +741,24 @@
                 });
                 /* flot lines tooltip -- end */
             })
+                });
+
+                // var dataPost = [];
+                // for (i = 0; i < 10; i++) {
+                //     dataPost[i] = [i,10];
+                //   }
+
+            //     var dataPost = [
+            //     [0, 10],
+            //     [1, 7],
+            //     [2, 8],
+            //     [3, 9],
+            //     [4, 6],
+            //     [5, 5],
+            //     [6, 7]
+            // ];
+
+            
 
 
         </script>
