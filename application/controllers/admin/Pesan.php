@@ -23,7 +23,7 @@ class Pesan extends CI_Controller {
 		// Konfigurasi email
 		$ci = get_instance();
     $ci->load->library('email');
-    $config['protocol'] = "send_mail";
+    $config['protocol'] = "smtp";
     $config['smtp_host'] = "ssl://smtp.gmail.com";
     $config['smtp_port'] = "465";
     $config['smtp_user'] = "bappedapkl.kab@gmail.com";
