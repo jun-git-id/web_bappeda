@@ -218,7 +218,7 @@
                                 </a>
                             </li>
                             <li class="nav-title">Media</li>
-                            
+
                             <li <?= ($page=='info_publik') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/download')?>" title="Informasi Publik" data-filter-tags="info_publik">
                                     <i class="far fa-info-circle"></i>
@@ -241,6 +241,12 @@
                                 <a href="<?=base_url('admin/pesan')?>" title="Pesan" data-filter-tags="pesan">
                                     <i class="far fa-envelope"></i>
                                     <span class="nav-link-text" data-i18n="nav.pesan">Pesan</span>
+                                </a>
+                            </li>
+                            <li <?= ($page=='komentar') ? 'class="active"' : '' ?>>
+                                <a href="<?=base_url('admin/komentar')?>" title="Pesan" data-filter-tags="pesan">
+                                    <i class="far fa-envelope"></i>
+                                    <span class="nav-link-text" data-i18n="nav.pesan">Komentar</span>
                                 </a>
                             </li>
                         </ul>

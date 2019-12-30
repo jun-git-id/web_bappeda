@@ -1,26 +1,40 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pesan extends CI_Controller {
+class Komentar extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
 	}
 
 	public function index(){
-		$data['data'] = $this->db->order_by('status','asc')->order_by('tgl_input','asc')->get('kontak')->result_array();
+		$data['data'] = $this->db->order_by('status','asc')->order_by('tgl_komen','asc')->get('komentar')->result_array();
 		$this->load->view('backend/template/header');
-		$this->load->view('backend/media/pesan',$data);
+		$this->load->view('backend/media/komentar',$data);
 		$this->load->view('backend/template/footer');
 	}
 
+	function tampilkan($id){
+		$data = array( 
+		    'status'      => 1
+		);
+
+		$this->db->where('id',$id)->update('komentar',$data);
+		redirect('admin/komentar');
+		// var_dump($data);
+	}
+
+	function sembunyikan($id){
+		$data = array( 
+		    'status'      => 0
+		);
+
+		$this->db->where('id',$id)->update('komentar',$data);
+		redirect('admin/komentar');
+		// var_dump($data);
+	}
+
 	function balas(){
-		// $data = array(
-		// 	'status' => '1'
-		// );
-		// $this->db->where('id',$id)->update('kontak',$data);
-		// redirect('admin/pesan');
-		// Konfigurasi email
 		$ci = get_instance();
 	    $ci->load->library('email');
 	    $config['protocol'] = "smtp";
@@ -43,12 +57,7 @@ class Pesan extends CI_Controller {
 	        show_error($this->email->print_debugger());
 	    }
 	}
-
-	function hapus($id){
-		$this->db->where('id',$id)->delete('kontak');
-		redirect('admin/pesan');
-	}
-
-
-
 }
+
+/* End of file Komentar.php */
+/* Location: ./application/controllers/admin/Komentar.php */

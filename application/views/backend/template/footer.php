@@ -592,6 +592,56 @@
                 return false ;
             })
 
+            $('.tampilkan').click(function(){
+                var href = $(this).attr('rel');
+                swal({
+                    title: "Anda Yakin untuk Menampilkan ?",
+                    type: "info",
+                    showCancelButton: true,
+                    cancelButtonText:"Batal",
+                    cancelButtonClass: "btn-info",
+                    confirmButtonClass: "btn-success",
+                    confirmButtonText: "Ya, Saya Yakin!!",
+                    closeOnConfirm:false
+                },
+                function(){
+                    swal({
+                        title:"Data Ditampilkan!",
+                        text: "Data yang anda maksud telah berhasil ditampilkan",
+                        type: "success"
+                    },
+                    function(){
+                        window.location=href;
+                    });
+                });
+                return false ;
+            })
+
+            $('.sembunyikan').click(function(){
+                var href = $(this).attr('rel');
+                swal({
+                    title: "Anda Yakin untuk Menyembunyikan ?",
+                    type: "info",
+                    showCancelButton: true,
+                    cancelButtonText:"Batal",
+                    cancelButtonClass: "btn-info",
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Ya, Saya Yakin!!",
+                    closeOnConfirm:false
+                },
+                function(){
+                    swal({
+                        title:"Data Disembunyikan!",
+                        text: "Data yang anda maksud telah berhasil ditampilkan",
+                        type: "warning"
+                    },
+                    function(){
+                        window.location=href;
+                    });
+                });
+                return false ;
+            })
+
             $('.stat').click(function(){
                 var href = $(this).attr('rel');
                 swal({
