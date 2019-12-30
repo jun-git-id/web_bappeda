@@ -218,28 +218,12 @@
                                 </a>
                             </li>
                             <li class="nav-title">Media</li>
-                            <li <?= ($page=='informasi') ? 'class="active"' : '' ?>>
-                                <a href="#" title="Informasi Publik" data-filter-tags="informasi publik">
+                            
+                            <li <?= ($page=='info_publik') ? 'class="active"' : '' ?>>
+                                <a href="<?=base_url('admin/download')?>" title="Informasi Publik" data-filter-tags="info_publik">
                                     <i class="far fa-info-circle"></i>
-                                    <span class="nav-link-text" data-i18n="nav.informasi_publik">Informasi Publik</span>
+                                    <span class="nav-link-text" data-i18n="nav.download">Informasi Publik</span>
                                 </a>
-                                <ul>
-                                    <li <?= ($page2=='renstra') ? 'class="active"' : '' ?>>
-                                        <a href="<?=base_url('admin/informasi/renstra')?>" title="Renstra" data-filter-tags="informasi publik renstra">
-                                            <span class="nav-link-text" data-i18n="nav.informas_publik_renstra">Renstra</span>
-                                        </a>
-                                    </li>
-                                    <li <?= ($page2=='lkpj') ? 'class="active"' : '' ?>>
-                                        <a href="<?=base_url('admin/informasi/lkpj')?>" title="LKPJ" data-filter-tags="informasi publik lkpj">
-                                            <span class="nav-link-text" data-i18n="nav.informas_publik_lkpj">LKPJ</span>
-                                        </a>
-                                    </li>
-                                    <li <?= ($page2=='layanan_umum') ? 'class="active"' : '' ?>>
-                                        <a href="<?=base_url('admin/informasi/layanan_umum')?>" title="Layanan Umum" data-filter-tags="informasi publik layanan umum">
-                                            <span class="nav-link-text" data-i18n="nav.informas_publik_layanan_umum">Layanan Umum</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                             <li <?= ($page=='download') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/download')?>" title="Download" data-filter-tags="download">
