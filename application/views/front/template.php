@@ -66,11 +66,7 @@
 								<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 									<ul class="navbar-nav">
 										<li class="nav-item <?= ($page=='') ? 'active' : '' ?>">
-<<<<<<< HEAD
-											<a class="nav-link" href="<?=base_url('home')?>"><i class="fas fa-home"></i> BERANDA</a>
-=======
 											<a class="nav-link" href="<?=base_url()?>"><i class="fas fa-home"></i> BERANDA</a>
->>>>>>> f32b430a5412f95ff4de89f075e0d15b087a478c
 										</li>
 										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
 											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-warehouse-alt"></i> PROFIL</a>
