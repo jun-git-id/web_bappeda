@@ -26,7 +26,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-xl-9 col-sm-12 px-xl-0 px-md-2 px-sm-2 pl-xl-4">
-						<div class="blog-posts pr-xl-0" id="blog-posts">
+						<div class="blog-posts pr-xl-2" id="blog-posts">
 							<div class="blog-post">
 								<div class="blog-post-info">
 									<div>
@@ -61,7 +61,7 @@
 										<p class="mb-0">Attachments :</p>
 										<ol>
 											<?php foreach ($p['attachment'] as $a): ?>
-												<li><a href="<?=base_url('assets/attachment/').$a['nama_file']?>"><?=$a['nama_file']?></a></li>
+												<li><a href="<?=base_url('assets/attachments/').$a['nama_file']?>"><?=$a['nama_file']?></a></li>
 											<?php endforeach ?>
 										</ol>
 									</div>
@@ -94,6 +94,21 @@
 									<p><?=$k['komentar']?></p>
 								</div>
 							</div>
+							<?php $balasan = $this->db->select('bidang.*, user.*, balasan.*')
+							->from('balasan')
+							->join('user','balasan.username=user.username')
+							->join('bidang','bidang.id=user.id_bidang')
+							->where('id_komentar',$k['id'])
+							->get()->row_array(); ?>
+							<?php if (isset($balasan)): ?>
+							<div class="comment ml-4 pl-4 mt-1">
+								<div class="text">
+									<div class="meta"><a href="javascript:;" class="meta-author"><b><?=$balasan['nama_bidang']?></b></a><span class="meta-date"><i class="icon icon-clock3"></i><?=tanggal_indo(date('Y-m-d', strtotime($balasan['tgl_balas'])), true)?></span></div>
+									<p><?=$balasan['balasan']?></p>
+								</div>
+							</div>
+							<?php endif ?>
+							
 							<hr class="my-2">
 							<?php endforeach ?>
 							
