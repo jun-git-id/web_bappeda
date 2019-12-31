@@ -293,7 +293,6 @@ class Berita extends CI_Controller {
 	function komen(){
 		$data = $this->input->post();
 		$link = $data['link'];
-		unset($data['link']);
 		$data['tgl_komen'] = date('Y-m-d H:i:s');
 
 		$this->db->insert('komentar',$data);

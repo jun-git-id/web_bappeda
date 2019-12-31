@@ -63,7 +63,7 @@ class Komentar extends CI_Controller {
         		'balasan' 		=> $this->input->post('balasan'),
         		'id_komentar' 	=> $this->input->post('id_komentar'),
         		'tgl_balas' 	=> date('Y-m-d H:i:s'),
-        		'username' 		=> $this->input->post('username'),
+        		'username' 		=> $this->input->post('username')
         	);
 
 	    $this->db->insert('balasan',$data);
@@ -71,6 +71,10 @@ class Komentar extends CI_Controller {
 	    $status = array( 
 		    'status'      => 2
 		);
+
+		$notif = $this->db->where('id',$data['id_komentar'])->get('komentar')->row_array();
+
+		one_signal_no_image($notif['user_notif'],'Komentar anda Sudah di Tanggapi',$data['balasan'],base_url('berita/detail/').$notif['link']);
 
 		$this->db->where('id',$this->input->post('id_komentar'))->update('komentar',$status);
 		redirect('admin/komentar');
