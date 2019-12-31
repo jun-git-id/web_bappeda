@@ -127,6 +127,7 @@
 						<form class="contact-form mt-2 pb-0" method="post" novalidate="novalidate" action="<?=base_url('berita/komen')?>">
 							<input type="hidden" name="id_post" value="<?=$p['id']?>">
 							<input type="hidden" name="link" value="<?=$p['link']?>">
+							<input type="hidden" name="user_notif" id="user_notif">
 							<div class="mt-0 row">
 								<div class="col-md-8">
 									<label>Nama Anda*</label>

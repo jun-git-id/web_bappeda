@@ -259,16 +259,10 @@
 	<script type="text/javascript">
 		$(function(){
 			OneSignal.push(function() {
-              OneSignal.sendTags({
-                user: '1'
-                // petugas: '1'
-              }).then(function(tagsSent) {
-                // Callback called when tags have finished sending
-                console.log(tagsSent);   
-              });
 
               OneSignal.getUserId(function(userId) {
                 console.log("OneSignal User ID:", userId);
+                $('#user_notif').val(userId);
               });
             })
 		})
