@@ -15,7 +15,7 @@ class Komentar extends CI_Controller {
 	}
 
 	function tampilkan($id){
-		$data = array( 
+		$data = array(
 		    'status'      => 1
 		);
 
@@ -25,7 +25,7 @@ class Komentar extends CI_Controller {
 	}
 
 	function sembunyikan($id){
-		$data = array( 
+		$data = array(
 		    'status'      => 0
 		);
 
@@ -67,8 +67,8 @@ class Komentar extends CI_Controller {
         	);
 
 	    $this->db->insert('balasan',$data);
-	    
-	    $status = array( 
+
+	    $status = array(
 		    'status'      => 2
 		);
 		$this->db->where('id',$this->input->post('id_komentar'))->update('komentar',$status);
