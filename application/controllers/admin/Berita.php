@@ -92,12 +92,8 @@ class Berita extends CI_Controller {
                 $_FILES['userFile']['size'] = $_FILES['userFiles']['size'][$i];
 
                 $x = $i+1;
-								$config['create_thumb']= FALSE;
-                $config['maintain_ratio']= FALSE;
-                $config['quality']= '10%';
-								$config['x_axis'] = 100;
-								$config['y_axis'] = 60;
-                $config['upload_path'] = './assets/images/posts/';
+
+                $config['upload_path'] = './assets/images/tmp/';
                 $config['allowed_types'] = 'jpeg|jpg|png|JPG|PNG';
 
 								$config['file_name'] = $data['id'].'-'.$x.'.jpg';
@@ -114,6 +110,7 @@ class Berita extends CI_Controller {
                 	);
 
                 	$this->db->insert('thumbnail',$filedata);
+									smart_resize_image('./assets/images/tmp/'.$config['file_name'] , null, 512 , 288 , true , './assets/images/posts/'.$config['file_name']  , true , false ,100);
 
                 }else{
 					$error = array ('error' => $this->upload->display_errors());
