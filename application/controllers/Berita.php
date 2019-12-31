@@ -49,9 +49,12 @@ class Berita extends CI_Controller {
 		$config['per_page'] = 4;
 
 		if ($kategori == 'semua') {
-			$jumlah_data = $this->db->where('status','1')->get('posts')->num_rows();
+			$jml_data = $this->db->select('posts.*')
+			->from('posts')
+			->where('status','1')
+			->get()->num_rows();
+			
 			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
-			$config['total_rows'] = $jumlah_data;
 			$from = $this->uri->segment(4);
 			$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
@@ -72,12 +75,17 @@ class Berita extends CI_Controller {
 				$id_bidang = '3';
 			}else if ($kategori == 'litbang') {
 				$id_bidang = '4';
-			}else if ($kategori == 'pemsosbud') {
+			}else{
 				$id_bidang = '5';
 			}
-			$jumlah_data = $this->db->where('status','1')->where('id_bidang',$id_bidang)->get('posts')->num_rows();
+			
 			$config['base_url'] = base_url().'berita/k/'.$kategori.'/';
-			$config['total_rows'] = $jumlah_data;
+			$jml_data = $query = $this->db->select('posts.*')
+			->from('posts')
+			->where('id_bidang',$id_bidang)
+			->order_by('tanggal','desc')
+			->get()->num_rows();
+
 			$from = $this->uri->segment(4);
 
 			$bidang = $this->db->where('id',$id_bidang)->get('bidang')->row_array();
@@ -87,15 +95,15 @@ class Berita extends CI_Controller {
 			->where('status','1')
 			->where('id_bidang',$id_bidang)
 			->order_by('tanggal','desc')
-			->limit($config['per_page'])
+			->limit($config['per_page'],$from)
 			->get();
 
 			$breadcumbs = '<span class="theme-color">Berita / '.$bidang['nama_bidang'].'</span>';
 			$title = 'Berita '.$bidang['nama_bidang'].' Bappeda Litbang Kabupaten Pekalongan';
 		}
 
-
 		$data['posts'] = $query->result_array();
+		$config['total_rows'] = $jml_data;
 		$z = 0;
 
 	    while ($z < count($data['posts'])) {
@@ -125,9 +133,7 @@ class Berita extends CI_Controller {
 		$config['num_tag_open'] = '<li class="page-item"><div class="page-link">';
 		$config['num_tag_close'] = '</div></li>';
 
-		$this->pagination->initialize($config);		
-		// $data['posts'] = $this->db->get('posts',$config['per_page'],$from)->result_array();
-		// $this->load->view('berita/v_data',$data);
+		$this->pagination->initialize($config);
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('berita/index',[
@@ -135,6 +141,86 @@ class Berita extends CI_Controller {
 				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
 				'og' => array(
 					'url' => base_url('berita/k/'.$kategori),
+					'title' => $title,
+					'description' => 'description',
+					'image' => 'image'
+				),
+				'side_blog' => $this->load->view('side_blog',[],true)
+			],true),
+			'title' => $title
+		]);
+	}
+
+	function cari(){
+		if (isset($_POST['s'])) {
+			$this->session->set_userdata('key',$this->input->post('s'));
+		}
+		$this->load->library('pagination');
+		$config['per_page'] = 4;
+
+		$jml_data = $this->db->select('bidang.*, posts.*')
+		->from('posts')
+		->join('bidang','bidang.id=posts.id_bidang','null')
+		->where('status','1')
+		->where("CONCAT(judul,' ',nama_bidang,' ',isi,' ',tags) LIKE '%".$this->session->userdata('key')."%'", NULL, false)
+		->order_by('tanggal','desc')
+		->get()->num_rows();
+
+			
+		$config['base_url'] = base_url().'berita/cari/';
+		$from = $this->uri->segment(3);
+		$query = $this->db->select('bidang.*, posts.*')
+		->from('posts')
+		->join('bidang','bidang.id=posts.id_bidang','null')
+		->where('status','1')
+		->where("CONCAT(judul,' ',nama_bidang,' ',isi,' ',tags) LIKE '%".$this->session->userdata('key')."%'", NULL, false)
+		->order_by('tanggal','desc')
+		->limit($config['per_page'],$from)
+		->get();
+
+		$breadcumbs = '<span class="theme-color">Berita / Pencarian </span>';
+		$title = 'Semua Berita Bappeda Litbang Kabupaten Pekalongan';
+		
+
+		$data['posts'] = $query->result_array();
+		$config['total_rows'] = $jml_data;
+		$z = 0;
+
+	    while ($z < count($data['posts'])) {
+      		$resp = $this->db->where('id_post',$data['posts'][$z]['id'])->get('thumbnail')->result_array();
+
+      		if ($resp) {
+      			foreach ($resp as $v) {
+	      			$data['posts'][$z]['thumbnail'][] = array(
+	      				'nama_file' => $v['nama_file']
+	      			);
+	      		}	
+      		}else{
+      			$data['posts'][$z]['thumbnail'] = array();
+      		}
+      		
+        	$z += 1;
+	    }
+		
+		
+		$config['first_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-left"></i></li>';
+		$config['last_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-to-right"></i></li>';
+		$config['next_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-right"></i></li>';
+		$config['prev_link'] = '<li class="page-item page-link"><i class="fas fa-arrow-left"></i></li>';
+
+		$config['cur_tag_open'] = '<li class="page-item active"><div class="page-link">';
+		$config['cur_tag_close'] = '</div></li>';
+		$config['num_tag_open'] = '<li class="page-item"><div class="page-link">';
+		$config['num_tag_close'] = '</div></li>';
+
+		$this->pagination->initialize($config);
+
+		$this->load->view('front/template',[
+			'content' => $this->load->view('berita/index',[
+				'data' => $data['posts'],
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
+				'og' => array(
+					'url' => base_url('berita/cari/'),
 					'title' => $title,
 					'description' => 'description',
 					'image' => 'image'
@@ -198,7 +284,7 @@ class Berita extends CI_Controller {
 					'image' => $image
 				),
 				'side_blog' => $this->load->view('side_blog',[],true),
-				'komentar' => $this->db->order_by('tgl_komen','desc')->get('komentar')->result_array()
+				'komentar' => $this->db->where('id_post',$data['p']['id'])->order_by('tgl_komen','desc')->get('komentar')->result_array()
 			],true),
 			'title' => $data['p']['judul']
 		]);
@@ -391,7 +477,7 @@ class Berita extends CI_Controller {
 		$data['breadcumbs'] = '<i>Pencarian : </i>'.$key;
 		$query = $this->db->select('bidang.*, posts.*')
 			->from('posts')
-			->join('bidang','bidang.id=posts.id_bidang')
+			->join('bidang','bidang.id=posts.id_bidang','left')
 			->where('status','1')
 			->where("CONCAT(judul,' ',nama_bidang,' ',isi,' ',tags) LIKE '%".$key."%'", NULL, false)
 			->order_by('tanggal','desc')

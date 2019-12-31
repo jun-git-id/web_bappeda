@@ -1,0 +1,358 @@
+<table border="1px solid black" style="border-collapse: collapse; font-family: calibri; text-align: center;">
+        <thead>
+        <tr>
+            <th style="text-align: center;" colspan="34">November</th>
+        </tr>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+                        <th>1</th>    
+                        <th>2</th>    
+                        <th>3</th>    
+                        <th>4</th>    
+                        <th>5</th>    
+                        <th>6</th>    
+                        <th>7</th>    
+                        <th>8</th>    
+                        <th>9</th>    
+                        <th>10</th>    
+                        <th>11</th>    
+                        <th>12</th>    
+                        <th>13</th>    
+                        <th>14</th>    
+                        <th>15</th>    
+                        <th>16</th>    
+                        <th>17</th>    
+                        <th>18</th>    
+                        <th>19</th>    
+                        <th>20</th>    
+                        <th>21</th>    
+                        <th>22</th>    
+                        <th>23</th>    
+                        <th>24</th>    
+                        <th>25</th>    
+                        <th>26</th>    
+                        <th>27</th>    
+                        <th>28</th>    
+                        <th>29</th>    
+                        <th>30</th>    
+                        <th>DD</th>
+            <th>DL</th>
+            <th>Rapat</th>
+        </tr>
+    </thead>
+    <tbody>
+                            <tr>
+                <td>1</td> 
+                <td style="text-align: left;">Ir. Bambang Irianto,M.Si</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>2</td> 
+                <td style="text-align: left;">M. Yulian Akbar, S.Sos.M.Si</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>3</td> 
+                <td style="text-align: left;">Anton T. Hendrayana , SP</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>4</td> 
+                <td style="text-align: left;">Abdul Aziz, S.STP,M.Si</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>5</td> 
+                <td style="text-align: left;">Resmiati, A.Md</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>6</td> 
+                <td style="text-align: left;">Ade Heti Nurhidayah</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>7</td> 
+                <td style="text-align: left;">Irwanudin</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>8</td> 
+                <td style="text-align: left;">Fery Irawan, ST.MT</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>7</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>9</td> 
+                <td style="text-align: left;">Endang, S,R,J , SPSI , M.SI</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>10</td> 
+                <td style="text-align: left;">M. Arief Aribowo, ST</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>11</td> 
+                <td style="text-align: left;">Ratih Dhamayanti,SE</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>12</td> 
+                <td style="text-align: left;">Raharjo kukuh</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>13</td> 
+                <td style="text-align: left;">Samsiyah</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>14</td> 
+                <td style="text-align: left;">Yudhi Himawan, ST.M.Sc.MT</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>3</td>
+                <td>15</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>15</td> 
+                <td style="text-align: left;">Widi Hari Nugroho, ST,MT</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>16</td> 
+                <td style="text-align: left;">Ismail, ST</td>
+                <td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>17</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>17</td> 
+                <td style="text-align: left;">Alami,S.IP.,M.Si</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>4</td>
+                <td>3</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>18</td> 
+                <td style="text-align: left;">Nugara, ST, MT</td>
+                <td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>19</td> 
+                <td style="text-align: left;">Murhadi Wibowo</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>10</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>20</td> 
+                <td style="text-align: left;">Ir. Sri Yuliasih</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>21</td> 
+                <td style="text-align: left;">Didin Nasruddin, SH, M. SI</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>2</td>
+                <td>6</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>22</td> 
+                <td style="text-align: left;">Nufliyanti S.S</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>3</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>23</td> 
+                <td style="text-align: left;">Siti Hanikatun, S.STP</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>24</td> 
+                <td style="text-align: left;">Achmat Rizqon, SE, M.PA</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>3</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>25</td> 
+                <td style="text-align: left;">Yan Ari Widodo, S.IP</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>26</td> 
+                <td style="text-align: left;">Juanda</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>1</td>
+                <td>8</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>27</td> 
+                <td style="text-align: left;">Ikhlas Ananda, SH, M.SI</td>
+                <td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>11</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>28</td> 
+                <td style="text-align: left;">Awalludin Taufiq, SE </td>
+                <td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>7</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>29</td> 
+                <td style="text-align: left;">Rokhmawan, SS, M.Ec, Dev, MA</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>30</td> 
+                <td style="text-align: left;">Siswo Yuwono, S.IP</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>11</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>31</td> 
+                <td style="text-align: left;">Dian Asih Sumayanti, S.AP</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>16</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>32</td> 
+                <td style="text-align: left;">Yulianto Adi Setyawan, ST</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>33</td> 
+                <td style="text-align: left;">Sigit Nugroho Nur Fitranto</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>34</td> 
+                <td style="text-align: left;">M. Nur Ikhwan, S.Kom</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>12</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>35</td> 
+                <td style="text-align: left;">M. Rizqon Faza, S.E</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>36</td> 
+                <td style="text-align: left;">Arsana Rozaktana, S.E</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>3</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>37</td> 
+                <td style="text-align: left;">Aditya Darmawan, S.E</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>38</td> 
+                <td style="text-align: left;">Aprilia Fitri Pamungkas, S.T</td>
+                <td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: red">DD</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: red">DD</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>2</td>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+                    <tr>
+                <td>39</td> 
+                <td style="text-align: left;">Noviardi Titis Praponco, S.T</td>
+                <td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: blue">DL</td><td style="color: blue">DL</td><td style="color: ">-</td><td style="color: ">-</td><td style="color: ">-</td>
+                <td>0</td>
+                <td>8</td>
+                <td>0</td>
+            </tr>
+            </tbody>
+</table>

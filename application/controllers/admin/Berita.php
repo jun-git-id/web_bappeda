@@ -56,7 +56,7 @@ class Berita extends CI_Controller {
 			$this->db->where('id_post',$id)->delete('attachment');
 		}
 		$this->db->where('id',$id)->delete('posts');
-		redirect('admin/berita');
+		redirect('index.php/admin/berita');
 	}
 
 	function status($status,$id){

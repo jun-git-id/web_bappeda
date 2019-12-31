@@ -14,7 +14,7 @@
 		<div class="section page-content-first mt-4">
 			<div class="row">
 				<div class="container-fluid mx-1">
-				<form action="http://localhost/dindik/berita/pencarian" method="GET" class="content-search d-flex" style="width: 100% !important">
+				<form action="<?=base_url('berita/cari')?>" method="POST" class="content-search d-flex" style="width: 100% !important">
 					<div class="input-wrap">
 						<input type="text" class="form-control" placeholder="Cari Berita..." name="s">
 					</div>

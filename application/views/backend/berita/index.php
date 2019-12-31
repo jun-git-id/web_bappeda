@@ -10,7 +10,7 @@
                 <div class="panel-container show">
                     <div class="panel-content">
                         <?= $this->session->flashdata('alert'); ?>
-                        <a href="<?=base_url('admin/berita/tambah')?>" class="btn btn-primary"><i class="far fa-plus-hexagon"></i> Tambah Berita</a>
+                        <a href="<?=base_url('index.php/admin/berita/tambah')?>" class="btn btn-primary"><i class="far fa-plus-hexagon"></i> Tambah Berita</a>
                         <hr>
                         <!-- datatable start -->
                         <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
@@ -54,8 +54,8 @@
                                         <td><?=$d['hit_count']?></td>
 
                                         <td>
-                                            <a href="<?=base_url('admin/berita/edit/').$d['link']?>" class="btn btn-secondary btn-icon rounded-circle"><i class="far fa-edit"></i></a>
-                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/berita/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
+                                            <a href="<?=base_url('index.php/admin/berita/edit/').$d['link']?>" class="btn btn-secondary btn-icon rounded-circle"><i class="far fa-edit"></i></a>
+                                            <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('index.php/admin/berita/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php $no++; endforeach ?>
