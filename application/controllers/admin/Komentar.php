@@ -35,29 +35,30 @@ class Komentar extends CI_Controller {
 	}
 
 	function balas(){
-		// $email = $this->input->post('email');
-		// $ci = get_instance();
-	 //    $ci->load->library('email');
-	 //    $config['protocol'] = "smtp";
-	 //    $config['smtp_host'] = "ssl://smtp.gmail.com";
-	 //    $config['smtp_port'] = "465";
-	 //    $config['smtp_user'] = "einfostmikwp@gmail.com";
-	 //    $config['smtp_pass'] = "gottic76";
-	 //    $config['charset'] = "utf-8";
-	 //    $config['mailtype'] = "html";
-	 //    $config['newline'] = "\r\n";
-	 //    $ci->email->initialize($config);
-	 //    $ci->email->from('einfostmikwp@gmail.com', 'BAPPEDA LITBANG');
-	 //    $ci->email->to($email);
-	 //    $ci->email->subject('INI JUDUL');
-	 //    $ci->email->message('INI ISI EMAIL');
+		$email = $this->input->post('email');
+		$balasan = $this->input->post('email');
+		$ci = get_instance();
+	    $ci->load->library('email');
+	    $config['protocol'] = "smtp";
+	    $config['smtp_host'] = "ssl://smtp.gmail.com";
+	    $config['smtp_port'] = "465";
+	    $config['smtp_user'] = "einfostmikwp@gmail.com";
+	    $config['smtp_pass'] = "gottic76";
+	    $config['charset'] = "utf-8";
+	    $config['mailtype'] = "html";
+	    $config['newline'] = "\r\n";
+	    $ci->email->initialize($config);
+	    $ci->email->from('einfostmikwp@gmail.com', 'BAPPEDA LITBANG');
+	    $ci->email->to('galangotnaites@gmail.com');
+	    $ci->email->subject('Balasan Admin Bappeda Litbang');
+	    $ci->email->message($balasan." <br/> <br/> Hormat Kami, <br/><br/><br/>Admin Bappeda Litbang Kab. Pekalongan");
 
-	 //    if ($this->email->send()) {
-	 //        echo 'Email sent.';
-	 //    } else {
-	 //        show_error($this->email->print_debugger());
-	 //    }
-
+	    if ($this->email->send()) {
+	        $this->session->set_flashdata('alert','<div class="alert alert-info alert-dismissible fade show" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="far fa-trash"></i></span> </button> <strong>Berhasil!</strong> Balasan Anda Terkirim.</div>');
+	    } else {
+	        show_error($this->email->print_debugger());
+	    }
+	    
 		$data = array(
         		'balasan' 		=> $this->input->post('balasan'),
         		'id_komentar' 	=> $this->input->post('id_komentar'),
