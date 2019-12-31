@@ -256,7 +256,7 @@
 						+ src/../jquery-snippets.js (core) -->
 
         <script src="<?=base_url('assets/backend/')?>js/vendors.bundle.js"></script>
-        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>      
+        <script src="<?=base_url('assets/backend/')?>js/app.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/formplugins/select2/select2.bundle.js"></script>
         <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
         <script src="<?= base_url('assets/backend/libs/sweetalert/sweetalert.min.js');?>"></script>
@@ -603,7 +603,6 @@
             }
 
             $('.del').click(function(){
-                // alert('kkk');
                 var href = $(this).attr('rel');
                 swal({
                     title: "Anda Yakin?",
@@ -725,7 +724,7 @@
                  var dataPost = [];
                 $.post("<?= base_url('index.php/admin/admin/get_post')?>",
                 function(data){
-                 
+
                     for (i = 0; i < data.length; i++) {
                         dataPost[i] = [i+1,data[i].posts];
                       }
@@ -816,7 +815,7 @@
             //     [6, 7]
             // ];
 
-            
+
 
 
         </script>

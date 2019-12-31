@@ -24,19 +24,20 @@ class Pesan extends CI_Controller {
 	    $config['protocol'] = "smtp";
 	    $config['smtp_host'] = "ssl://smtp.gmail.com";
 	    $config['smtp_port'] = "465";
-	    $config['smtp_user'] = "einfostmikwp@gmail.com";
-	    $config['smtp_pass'] = "gottic76";
+	    $config['smtp_user'] = "bappedapkl.kab@gmail.com";
+	    $config['smtp_pass'] = "bappeda_123";
 	    $config['charset'] = "utf-8";
 	    $config['mailtype'] = "html";
 	    $config['newline'] = "\r\n";
 	    $ci->email->initialize($config);
-	    $ci->email->from('einfostmikwp@gmail.com', 'einfo stmik');
-	    $list = array('kamalreibonz@gmail.com');
+	    $ci->email->from('bappedapkl.kab@gmail.com', 'BAppeda Litbang Kabupaten Pekalongan');
+	    $list = array($_POST['email']);
 	    $ci->email->to($list);
-	    $ci->email->subject('judul email');
-	    $ci->email->message('isi email');
+	    $ci->email->subject('Kontak Bappeda Litbang Kabupaten Pekalongan');
+	    $ci->email->message($_POST['balas_pesan']);
 	    if ($this->email->send()) {
-	        echo 'Email sent.';
+					$this->db->where('id',$id)->update('kontak',$data);
+	        redirect('index.php/admin/pesan');
 	    } else {
 	        show_error($this->email->print_debugger());
 	    }
