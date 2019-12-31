@@ -1,6 +1,6 @@
 <?php
 
-    function one_signal($segment, $judul, $pesan, $url) {
+    function one_signal_no_image($player_id, $judul, $pesan, $url) {
         $content      = array(
             "en" => $pesan
         );
@@ -9,18 +9,18 @@
         );
         
         $fields = array(
-            'app_id' => "2d69bbdd-e329-42de-86f2-ccc07df08f9e",
-            'included_segments' => array(
-                $segment
-            ),
-            // 'include_player_ids' => array($player_id),
+            'app_id' => "04e2cc56-7beb-4ba7-a823-0de0ba5ad667",
+            // 'included_segments' => array(
+            //     $segment
+            // ),
+            'include_player_ids' => array($player_id),
             'data' => array(
                 "foo" => "bar"
             ),
             'contents' => $content,
             'headings' => $headings,
             'url' => $url,
-            'chrome_web_image' => 'http://www.letzcricket.com/uploads/articles/thumbs/q1yPwJ7m7z95dr5r.jpg'
+            // 'chrome_web_image' => 'http://www.letzcricket.com/uploads/articles/thumbs/q1yPwJ7m7z95dr5r.jpg'
         );
         
         $fields = json_encode($fields);
@@ -31,7 +31,7 @@
         curl_setopt($ch, CURLOPT_URL, "https://onesignal.com/api/v1/notifications");
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json; charset=utf-8',
-            'Authorization: Basic Y2E2MDNjMTItOTEzYS00NzQ3LWJhMjQtZGZjNThlN2VkOTkz'
+            'Authorization: Basic NjJhZTA1ZDktMjA1NC00Yjg0LThiNDgtNTViYzBmMTExOTUz'
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
@@ -41,8 +41,6 @@
         
         curl_exec($ch);
         curl_close($ch);
-        
-        // return $response;
     }
 
     function jsonku($data){
