@@ -11,30 +11,41 @@
 		</div>
 		<!--//section-->
 		<!--section-->
-		<div class="section page-content-first mt-4">
+		<div class="section page-content-first">
 			<div class="row">
-			<div class="col-md-12 col-xl-9 col-sm-12 px-xl-0 px-md-2 px-sm-2">
-				<div class="container-fluid pr-xl-0">
+			<div class="col-lg-9 aside">
+				<div class="container">
 					<div class="blog-isotope">
 						<div class="blog-posts animated fadeIn" id="blog-posts">
 							<div class="container">
 								<div class="text-center mb-2  mb-md-3 mb-lg-4">
-									<div class="h-sub theme-color">Download Data <br>Bappeda Litbang Kabupaten Pekalongan</div>
+									<div class="h-sub theme-color">Agenda Ruang Rapat <br>Bappeda Litbang Kabupaten Pekalongan</div>
 									<div class="h-decor"></div>
 								</div>
 							</div>
-							<div class="table-responsive">
-						        <table id="example" class="table table-hover dt-responsive display nowrap" cellspacing="0">
+							<div class="table-responsive" style="margin :20px">
+						        <table id="dt-basic-example" class="table table-bordered table-hover" cellspacing="0">
 						            <thead>
 						            <tr>
 						                <th>Nomor</th>
-						                <th>Keterangan</th>
-						                <th>Tanggal Upload</th>
-						                <th>Jumlah Unduhan</th>
-						                <th>Aksi</th>
+						                <th>Acara</th>
+						                <th>Tanggal</th>
+						                <th>Ruang Rapat</th>
+						                <th>Jam</th>
+						                <th>Penanggungjawab</th>
+						                <th>Kontak</th>
 						            </tr>
 						            </thead>
 						            <tbody>
+						            	<?php foreach ($data_siratu as $s){ ?>
+						            		<td><?= $s->nomor; ?></td>
+						            		<td><?= $s->acara; ?></td>
+						            		<td><?= tanggal_indo($s->tanggal); ?></td>
+						            		<td><?= $s->ruang; ?></td>
+						            		<td><?= $s->jam; ?></td>
+						            		<td><?= $s->penanggungjawab; ?></td>
+						            		<td><?= $s->contact; ?></td>
+						            	<?php } ?>
 
 						            </tbody>
 						        </table>

@@ -21,6 +21,9 @@
 	<link href="<?=base_url('assets/front/icons')?>/style.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/vendor')?>/fontawesome-pro/css/all.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css">
+
 	<link href="<?=base_url('assets/front/css')?>/style.css" rel="stylesheet">
 	<!--Favicon-->
 	<link rel="icon" href="<?=base_url('assets/front/images')?>/faviconfix.png" type="image/x-icon">
@@ -238,6 +241,7 @@
 	</div>
 	<!-- Vendors -->
 	<script src="<?=base_url('assets/front/vendor')?>/jquery/jquery-3.2.1.min.js"></script>
+	<script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/cookie/jquery.cookie.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/moment.js"></script>
@@ -265,6 +269,12 @@
                 $('#user_notif').val(userId);
               });
             })
+
+            $('#dt-basic-example').dataTable(
+                {
+                    responsive: true
+                });
+
 		})
 	</script>
 	

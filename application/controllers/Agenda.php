@@ -2,14 +2,24 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Agenda extends CI_Controller {
+	private $db2;
 
 	private $perPage = 3;
 
 	public function __construct(){
 		parent::__construct();
+		$this->db2 = $this->load->database('db2', TRUE);
+		
 	}
 
 	function index(){
+
+		// $siratu = $this->db2->get('ruangrapat')->result();
+
+		// foreach ($siratu as $k) {
+		// 	echo $k->ruang;
+		// }
+		
 
 		$breadcumbs = '<span class="theme-color">Agenda</span>';
 		$title = 'Agenda Ruang Rapat - Bappeda Litbang Kabupaten Pekalongan';
@@ -23,7 +33,9 @@ class Agenda extends CI_Controller {
 					'description' => 'description',
 					'image' => 'image'
 				),
-				'side_blog' => $this->load->view('side_blog',[],true)
+				'side_blog' => $this->load->view('side_blog',[],true),
+				'data_siratu' => $this->db2->get('ruangrapat')->result()
+
 			],true),
 			'title' => $title
 		]);
