@@ -125,13 +125,13 @@
 								</div>
 							</nav>
 						</div>
-						<div class="header-search">
+						<!-- <div class="header-search">
 							<form action="#" class="<?=base_url('assets/front/form')?>-inline">
 								<i class="icon-search"></i>
 								<input type="text" placeholder="Search">
 								<button type="submit"><i class="icon-search"></i></button>
 							</form>
-						</div>	
+						</div>	 -->
 						</div>
 				</div>
 			</div>
