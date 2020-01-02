@@ -82,11 +82,11 @@
 											<a class="nav-link" href="<?=base_url()?>"><i class="fas fa-home"></i> BERANDA</a>
 										</li>
 										<li class="nav-item <?= ($page=='profil') ? 'active' : '' ?>">
-											<a href="<?=base_url('profil')?>" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-warehouse-alt"></i> PROFIL</a>
+											<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-warehouse-alt"></i> PROFIL</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="<?=base_url('profil/visi_misi')?>">Visi Misi</a></li>
-												<li><a class="dropdown-item" href="<?=base_url('profil/latar_belakang')?>">Latar Belakang</a></li>
-												<li><a class="dropdown-item" href="<?=base_url('profil/bagan_organisasi')?>">Bagan Organisasi</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/visimisi')?>">Visi Misi</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/latarbelakang')?>">Latar Belakang</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('profil/bagan')?>">Struktur Organisasi</a></li>
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='berita') ? 'active' : '' ?>">
@@ -106,9 +106,9 @@
 										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">1</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">2</a></li>
-												<li><a class="dropdown-item" href="schedule.html">3</a></li>
+												<li><a class="dropdown-item" href="our-specialist.html">Serta Merta</a></li>
+												<li><a class="dropdown-item" href="doctor-page.html">Berkala</a></li>
+												<li><a class="dropdown-item" href="schedule.html">Setiap Saat</a></li>
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='media') ? 'active' : '' ?>">
