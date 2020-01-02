@@ -37,13 +37,14 @@ class Login extends CI_Controller {
 				'username' => $cek['username'],
 				'id_bidang' => $cek['id_bidang'],
 				'nama_bidang' => $cek['nama_bidang'],
+				'level' => $cek['level'],
 				'status' => 'login'
 			);
 			$this->session->set_userdata($data_session);
-			redirect('admin/Admin');
+			redirect('admin/admin');
 		}else{
-			// $this->session->set_flashdata("berhasil","toastr.error('Maaf, Username atau Password Salah!')");
-			redirect('');
+			$this->session->set_flashdata("berhasil","toastr.error('Maaf, Username atau Password Salah!')");
+			redirect('admin/login');
 		}
 	}
 

@@ -5,6 +5,10 @@ class Admin extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+
+		if($this->session->userdata('status') != "login"){
+			redirect('admin/login');
+	    }
 	}
 
 	public function index()
@@ -17,6 +21,8 @@ class Admin extends CI_Controller {
 		$this->load->view('backend/dashboard', $data);
 		$this->load->view('backend/template/footer');
 		// echo $data['jml_post'];
+		// echo $this->session->userdata('status');
+		// echo $this->session->userdata('level');
 	}
 
 	public function get_post()
