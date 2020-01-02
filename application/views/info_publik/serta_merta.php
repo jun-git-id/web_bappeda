@@ -9,7 +9,21 @@
 				</div>
 			</div>
 		</div>
-		<div class="table-responsive">
+		<!--//section-->
+		<!--section-->
+		<div class="section page-content-first">
+			<div class="row">
+			<div class="col-lg-9 aside">
+				<div class="container">
+					<div class="blog-isotope">
+						<div class="blog-posts animated fadeIn" id="blog-posts">
+							<div class="container">
+								<div class="text-center mb-2  mb-md-3 mb-lg-4">
+									<div class="h-sub theme-color">Agenda Ruang Rapat <br>Bappeda Litbang Kabupaten Pekalongan</div>
+									<div class="h-decor"></div>
+								</div>
+							</div>
+							<div class="table-responsive">
 						        <table id="example" class="table table-hover dt-responsive display nowrap" cellspacing="0">
 						            <thead>
 						            <tr>
@@ -33,15 +47,9 @@
 						            			<td><a download="" href="<?=base_url('assets/info_pubik/').$d['file']?>" class="btn btn-xs btn-gradient" onclick="tambah_dl('<?=$d['id_info']?>')"><i class="far fa-cloud-download"></i> Download</a></td>
 						            		</tr>
 						            	<?php $no++; endforeach ?>
-						            </tbody>
+						             </tbody>
 						        </table>
 					        </div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					
-		<!--//section-->
-		<!--section-->
 						</div>
 					</div>
 				</div>
