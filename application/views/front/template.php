@@ -22,6 +22,8 @@
 	<link href="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/vendor')?>/fontawesome-pro/css/all.min.css" rel="stylesheet">
 
+	<!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css"> -->
+
 	<link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css">
 
 	<link href="<?=base_url('assets/front/css')?>/style.css" rel="stylesheet">
