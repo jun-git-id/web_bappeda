@@ -16,7 +16,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="container-fluid mb-4">
-					<form action="http://localhost/dindik/berita/pencarian" method="GET" class="content-search d-flex" style="width: 100% !important">
+					<form action="<?=base_url('berita/cari')?>" method="POST" class="content-search d-flex" style="width: 100% !important">
 						<div class="input-wrap">
 							<input type="text" class="form-control" placeholder="Cari Berita..." name="s">
 						</div>
@@ -127,6 +127,7 @@
 						<form class="contact-form mt-2 pb-0" method="post" novalidate="novalidate" action="<?=base_url('berita/komen')?>">
 							<input type="hidden" name="id_post" value="<?=$p['id']?>">
 							<input type="hidden" name="link" value="<?=$p['link']?>">
+							<input type="hidden" name="user_notif" id="user_notif">
 							<div class="mt-0 row">
 								<div class="col-md-8">
 									<label>Nama Anda*</label>

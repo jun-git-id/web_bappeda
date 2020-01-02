@@ -60,7 +60,6 @@
 									                            <label style="font-size: 14px"><?= $d['isi']; ?></label>
 									                        </div>
 									                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
-									                        <button type="submit" class="btn btn-info"><i class="far fa-save"></i> Perbarui</button>
 									                    </form>
 									                </div>
 									            </div>

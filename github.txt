@@ -10,4 +10,4 @@ $ git push -u origin master
 $ git pull 
 // menarik data file terbaru
 
-**sebelum push harus pool (menarik data baru) terlebih dahulu
+**sebelum push harus pull (menarik data baru) terlebih dahulu

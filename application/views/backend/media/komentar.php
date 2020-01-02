@@ -58,6 +58,7 @@
                                             <?php if ($d['status']== '2') : ?>
                                                <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle del" rel="<?=base_url('admin/komentar/hapus/').$d['id']?>"><i class="far fa-trash"></i></a>
                                                <a href="javascript:;" class="btn btn-danger btn-icon rounded-circle sembunyikan" rel="<?=base_url('admin/komentar/sembunyikan/').$d['id']?>"><i class="far fa-eye-slash"></i></a>
+                                               <a href="javascript:;" class="btn btn-info btn-icon rounded-circle balas_kom" data-email="<?= $d['email'] ?>" data-id="<?= $d['id'] ?>" rel="<?=base_url('admin/komentar/balas/').$d['id']?>"><i class="far fa-comments"></i></a>
                                             <?php endif ?>
                                             
                                         </td>
@@ -99,7 +100,7 @@
                 <!-- <form method="post" id="form" enctype="multipart/form-data" action="javascript:kirim_pesan()"> -->
                 <form method="post"  enctype="multipart/form-data" action="<?= base_url('index.php/admin/komentar/balas')?>">
                     <div class="form-group">
-                        <input type="text" id="email" name="email" class="form-control" required="" disabled>
+                        <input type="text" id="email" name="email" class="form-control" required="" readonly="">
                     </div>
                     <div class="form-group">
                         <textarea type="text" name="balasan" class=" form-control" required=""></textarea>

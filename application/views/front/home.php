@@ -52,7 +52,10 @@
 							</div>
 						</div>
 					</div>
-					<?php endforeach ?>	
+				<?php endforeach ?>	
+				</div>
+			</div>
+		</div>
 		<!--//section slider-->
 		<!--section welcome-->
 		<div class="section">
@@ -121,86 +124,23 @@
 		</div>
 		<!--//section slider-->
 		<!--section welcome-->
-		<div class="footer mt-2">
-		<div class="container">
-			<div class="row py-1 py-md-2 px-lg-0">
-				<div class="col-lg-4 footer-col1">
-					<div class="row flex-column flex-md-row flex-lg-column">
-						<div class="col-md col-lg-auto">
-							<div class="footer-logo">
-								<img src="<?=base_url('assets/front/images')?>/footer-logo.png" alt="" class="img-fluid">
-							</div>
-							<div class="mt-2 mt-lg-0"></div>
-							<div class="footer-social d-lg-none">
-								<a href="https://www.facebook.com/" target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-								<a href="https://www.twitter.com/" target="blank" class="hovicon"><i class="icon-twitter-logo"></i></a>
-								<a href="https://www.instagram.com/" target="blank" class="hovicon"><i class="icon-instagram"></i></a>
-							</div>
-						</div>
-						<div class="col-md">
-							<div class="footer-text mt-1 mt-lg-2">
-								<p>Untuk mendapatkan Berita Terbaru,
-									<br>Subscribe email anda dibawah ini</p>
-								<form action="#" class="footer-subscribe">
-									<div class="input-group">
-										<input name="subscribe_mail" type="text" class="<?=base_url('assets/front/form')?>-control" placeholder="Your Email" />
-										<span><i class="icon-black-envelope"></i></span>
-									</div>
-								</form>
-							</div>
-							<div class="footer-social d-none d-lg-block">
-								<a href="https://www.facebook.com/" target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-								<a href="https://twitter.com/bappedalitbang/" target="blank" class="hovicon"><i class="icon-twitter-logo"></i></a>
-								<a href="https://plus.google.com/" target="blank" class="hovicon"><i class="icon-google-logo"></i></a>
-								<a href="https://www.instagram.com/bappedalitbang_pekalongankab/" target="blank" class="hovicon"><i class="icon-instagram"></i></a>
-							</div>
-						</div>
+		<div class="section mt-4 mb-4">
+			<div class="container px-0">
+				<div class="row">
+					<div class="col-3">
+						<a href="http://smartcity.pekalongankab.go.id/eplannning" target="_blank"><img src="<?= base_url('/assets/front/images/eplanning.png') ?>" height="30px"></a>
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-4">
-					<!-- <h3>Berita Terpopuler</h3>
-					<?php 
-						$terpopuler = $this->db->select('bidang.*, posts.*')
-								->from('posts')
-								->join('bidang','bidang.id=posts.id_bidang')
-								->where('status','1')
-								->order_by('hit_count','desc')
-								->order_by('tanggal','desc')
-								->limit(3)
-								->get()->result_array();
-						$z = 0;
-					    while ($z < count($terpopuler)) {
-				      		$resp = $this->db->where('id_post',$terpopuler[$z]['id'])->limit(1)->get('thumbnail')->row_array();
-
-				      		$terpopuler[$z]['thumbnail'] = $resp['nama_file'];
-
-				        	$z += 1;
-					    }
-					?>
-					<div class="h-decor"></div>
-					<?php $i=0; foreach ($terpopuler as $t): ?>
-					<div class="footer-post d-flex <?= ($i== 0) ? 'mt-0' : '' ?>">
-						<div class="mr-1"><img src="<?=base_url('assets/images/posts/'.$t['thumbnail'])?>" alt="" class="img-fluid" width="60px"></div>
-						<div class="footer-post-text">
-							<div class="footer-post-title"><a href="#"><?=$t['judul']?></a></div>
-							<p><i class="fas fa-history"></i> <?=tanggal_indo(date('Y-m-d', strtotime($t['tanggal'])), true)?></p>
-						</div>
+					<div class="col-3">
+						<a href="http://smartcity.pekalongankab.go.id/simonev" target="_blank"><img src="<?= base_url('/assets/front/images/simonevx.png') ?>" height="30px"></a>
 					</div>
-					<?php $i++; endforeach ?> -->
-				</div>
-				<div class="col-sm-6 col-lg-4">
-					<!-- <h3>Kontak Kami</h3>
-					<div class="h-decor"></div>
-					<ul class="icn-list">
-						<li><i class="icon-placeholder2"></i>Jl. Krakatau No. 9 Kajen, Pekalongan
-							<br>
-							<a href="<?=base_url('kontak')?>" class="btn btn-xs btn-gradient"><i class="icon-placeholder2"></i><span>Lokasi Bappeda Litbang</span><i class="icon-right-arrow"></i></a>
-						</li>
-						<li><i class="icon-telephone"></i><b><span class="phone"><span class="text-nowrap">(0285) 381010</span>, <span class="text-nowrap">(0285) 381456</span></span></b>
-							</li>
-						<li><i class="icon-black-envelope"></i><a href="mailto:bappedalitbang@pekalongankab.go.id">bappedalitbang@pekalongankab.go.id</a></li>
-					</ul> -->
+					<div class="col-3">
+						<div class="col-3">
+						<a href="http://smartcity.pekalongankab.go.id/simonev" target="_blank"><img src="<?= base_url('/assets/front/images/lpse.png') ?>" height="50px"></a>
+					</div>
+					</div>
+					<div class="col-3">
+						<a href="http://smartcity.pekalongankab.go.id/simonev" target="_blank"><img src="<?= base_url('/assets/front/images/ppid.png') ?>" height="35px"></a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
