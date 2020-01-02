@@ -14,7 +14,7 @@ class Profil extends CI_Controller {
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('profil/visimisi',[
-				'breadcumb' => $breadcumbs,
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
 				'og' => array(
 					'url' => base_url('berita/cari/'),
 					'title' => $title,
@@ -35,7 +35,7 @@ class Profil extends CI_Controller {
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('profil/latarbelakang',[
-				'breadcumb' => $breadcumbs,
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
 				'og' => array(
 					'url' => base_url('berita/cari/'),
 					'title' => $title,
@@ -56,7 +56,7 @@ class Profil extends CI_Controller {
 
 		$this->load->view('front/template',[
 			'content' => $this->load->view('profil/bagan',[
-				'breadcumb' => $breadcumbs,
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
 				'og' => array(
 					'url' => base_url('berita/cari/'),
 					'title' => $title,

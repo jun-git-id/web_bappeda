@@ -4,12 +4,10 @@
 			<div class="breadcrumbs-wrap">
 				<div class="container">
 					<div class="breadcrumbs">
-						<a style="color: #1e76bd !important" href="<?=base_url()?>">Beranda</a>
-						<!-- <span class="theme-color"><?=$breadcumbs?></span> -->
+						<?=$breadcumb?>
 					</div>
 				</div>
 			</div>
-
 		</div>
 		<!--//section-->
 		<!--section-->

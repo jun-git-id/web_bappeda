@@ -106,7 +106,7 @@
 										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="<?=base_url('infopublik/sertamerta')?>">Serta Merta</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('info_publik/sertamerta')?>">Serta Merta</a></li>
 												<li><a class="dropdown-item" href="doctor-page.html">Berkala</a></li>
 												<li><a class="dropdown-item" href="schedule.html">Setiap Saat</a></li>
 											</ul>
