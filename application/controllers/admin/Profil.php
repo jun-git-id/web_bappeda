@@ -7,6 +7,10 @@ class Profil extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('mprofil');
+
+		if($this->session->userdata('status') != "login"){
+			redirect('admin/login');
+	    }
 	}
 
 	public function index(){

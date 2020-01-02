@@ -23,7 +23,7 @@
 	<link href="<?=base_url('assets/front/vendor')?>/fontawesome-pro/css/all.min.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/css')?>/style.css" rel="stylesheet">
 	<!--Favicon-->
-	<link rel="icon" href="<?=base_url('assets/front/images')?>/favicon.png" type="image/x-icon">
+	<link rel="icon" href="<?=base_url('assets/front/images')?>/faviconfix.png" type="image/x-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">

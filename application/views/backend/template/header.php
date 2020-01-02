@@ -23,7 +23,7 @@
         <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/app.bundle.css">
         <!-- Place favicon.ico in the root directory -->
         <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/backend/')?>img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/backend/')?>img/favicon/favicon-32x32.png">
+        <link rel="icon" href="<?=base_url('assets/front/images')?>/faviconfix.png" type="image/x-icon">
         <link rel="mask-icon" href="<?=base_url('assets/backend/')?>img/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/fa-regular.css">
         <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css">
@@ -153,45 +153,13 @@
                                     <span class="nav-link-text" data-i18n="nav.ui_components">Profil</span>
                                 </a>
                             </li>
-                            <!-- <li>
-                                <a href="#" title="UI Components" data-filter-tags="ui components">
-                                    <i class="far fa-user-secret"></i>
-                                    <span class="nav-link-text" data-i18n="nav.ui_components">Layanan</span>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="ui_alerts.html" title="Alerts" data-filter-tags="ui components alerts">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_alerts">Umum</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ui_accordion.html" title="Accordions" data-filter-tags="ui components accordions">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_accordions">Bidang PAUD</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ui_badges.html" title="Badges" data-filter-tags="ui components badges">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_badges">Bidang Dikdas</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ui_badges.html" title="Badges" data-filter-tags="ui components badges">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_badges">Bidang Sarpras</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="ui_badges.html" title="Badges" data-filter-tags="ui components badges">
-                                            <span class="nav-link-text" data-i18n="nav.ui_components_badges">Bidang Kebudayaan</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li> -->
                             <li <?= ($page=='berita') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/berita')?>" title="Berita" data-filter-tags="berita">
                                     <i class="far fa-newspaper"></i>
                                     <span class="nav-link-text" data-i18n="nav.berita">Berita</span>
                                 </a>
                             </li>
+                            <?php if ($this->session->userdata('level')== 1){ ?>
                             <li class="nav-title">Master</li>
                             <li <?= ($page=='bidang') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/bidang')?>" title="Bidang" data-filter-tags="bidang">
@@ -217,6 +185,7 @@
                                     <span class="nav-link-text" data-i18n="nav.manajemen_user">Manajemen User</span>
                                 </a>
                             </li>
+                            <?php } ?>
                             <li class="nav-title">Media</li>
 
                             <li <?= ($page=='info_publik') ? 'class="active"' : '' ?>>

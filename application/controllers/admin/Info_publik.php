@@ -6,6 +6,10 @@ class Info_publik extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('minfo_publik');
+
+		if($this->session->userdata('status') != "login"){
+			redirect('admin/login');
+	    }
 	}
 
 	public function index(){
