@@ -8,9 +8,12 @@ class Kontak extends CI_Controller {
 	}
 	
 	public function index(){
+		$breadcumbs = '<span class="theme-color">Kontak</span>';
 		$title = 'Kontak Bappeda Litbang Kabupaten Pekalongan';
+
 		$this->load->view('front/template',[
 			'content' => $this->load->view('kontak/info',[
+				'breadcumb' => '<a style="color: #1e76bd !important" href="'.base_url().'">Beranda</a>'.$breadcumbs,
 				'data' => array(),
 				'og' => array(
 					'url' => base_url(''),

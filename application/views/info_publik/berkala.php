@@ -19,7 +19,7 @@
 						<div class="blog-posts animated fadeIn" id="blog-posts">
 							<div class="container">
 								<div class="text-center mb-2  mb-md-3 mb-lg-4">
-									<div class="h-sub theme-color">Download Data <br>Bappeda Litbang Kabupaten Pekalongan</div>
+									<div class="h-sub theme-color">Informasi Publik Berkala <br>Bappeda Litbang Kabupaten Pekalongan</div>
 									<div class="h-decor"></div>
 								</div>
 							</div>

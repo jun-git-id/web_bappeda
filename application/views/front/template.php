@@ -24,7 +24,7 @@
 
 	<!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css"> -->
 
-	<link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css">
+	<link rel="stylesheet" media="screen, print" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
 	<link href="<?=base_url('assets/front/css')?>/style.css" rel="stylesheet">
 	<!--Favicon-->
@@ -111,7 +111,7 @@
 										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
 											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="our-specialist.html">Serta Merta</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('info_publik/sertamerta')?>">Serta Merta</a></li>
 												<li><a class="dropdown-item" href="doctor-page.html">Berkala</a></li>
 												<li><a class="dropdown-item" href="schedule.html">Setiap Saat</a></li>
 											</ul>
@@ -243,7 +243,9 @@
 	</div>
 	<!-- Vendors -->
 	<script src="<?=base_url('assets/front/vendor')?>/jquery/jquery-3.2.1.min.js"></script>
-	<script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script>
+	<!-- <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script> -->
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
 	<script src="<?=base_url('assets/front/vendor')?>/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/cookie/jquery.cookie.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/moment.js"></script>

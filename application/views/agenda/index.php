@@ -24,7 +24,7 @@
 								</div>
 							</div>
 							<div class="table-responsive" style="margin :20px">
-						        <table id="dt-basic-example" class="table table-bordered table-hover" cellspacing="0">
+						        <table id="dt-basic-example" class="table table-hover" cellspacing="0">
 						            <thead>
 						            <tr>
 						                <th>Nomor</th>

@@ -4,8 +4,7 @@
 			<div class="breadcrumbs-wrap">
 				<div class="container">
 					<div class="breadcrumbs">
-						<a href="<?=base_url()?>">Home</a>
-						<span><?=$breadcumb?></span>
+						<?=$breadcumb?>
 					</div>
 				</div>
 			</div>
