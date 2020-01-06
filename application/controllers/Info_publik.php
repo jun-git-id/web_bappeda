@@ -32,5 +32,16 @@ class Info_publik extends CI_Controller {
 		]);
 	}
 
+	function tambah_hit_info($id){
+		$x = $this->db->where('id_info', $id)->get('info_publik')->row_array();
+		$count = array(
+			'hit_count' => $x['hit_count']+1
+		);
+
+		$this->db->where('id_info',$x['id_info'])->update('info_publik',$count);
+		echo json_encode($count);
+	}
+
+
 
 }

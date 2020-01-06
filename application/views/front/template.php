@@ -264,7 +264,15 @@
 	<script src="<?=base_url('assets/front/js')?>/app.js"></script>
 	<script src="<?=base_url('assets/front/js')?>/app-shop.js"></script>
 	<script src="<?=base_url('assets/front/form')?>/forms.js"></script>
+
 	<script type="text/javascript">
+		function tambah_hit_info(id){
+			$.post('<?=base_url('info_publik/tambah_hit_info/')?>'+id,
+            function(data){
+            	location.reload();            	
+            });
+		}
+
 		$(function(){
 			OneSignal.push(function() {
 
@@ -274,10 +282,12 @@
               });
             })
 
-            $('#dt-basic-example').dataTable(
+            $('#data-table').dataTable(
                 {
                     responsive: true
                 });
+
+
 
 		})
 	</script>

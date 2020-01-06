@@ -125,4 +125,7 @@ class Info_publik extends CI_Controller {
 		// var_dump($filedata);
 	}
 
+
+
+
 }

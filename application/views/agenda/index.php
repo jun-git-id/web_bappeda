@@ -24,7 +24,7 @@
 								</div>
 							</div>
 							<div class="table-responsive" style="margin :20px">
-						        <table id="dt-basic-example" class="table table-hover" cellspacing="0">
+						        <table id="data-table" class="table table-hover" cellspacing="0">
 						            <thead>
 						            <tr>
 						                <th>Nomor</th>
@@ -38,6 +38,7 @@
 						            </thead>
 						            <tbody>
 						            	<?php foreach ($data_siratu as $s){ ?>
+						            		<tr>
 						            		<td><?= $s->nomor; ?></td>
 						            		<td><?= $s->acara; ?></td>
 						            		<td><?= tanggal_indo($s->tanggal); ?></td>
@@ -45,6 +46,7 @@
 						            		<td><?= $s->jam; ?></td>
 						            		<td><?= $s->penanggungjawab; ?></td>
 						            		<td><?= $s->contact; ?></td>
+						            		</tr>
 						            	<?php } ?>
 
 						            </tbody>

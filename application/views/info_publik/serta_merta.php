@@ -42,9 +42,9 @@
 						            			<td><?=$no?></td>
 						            			<td><?=nl2br($d['keterangan'])?></td>
 						            			<td><?=tanggal_indo(date('Y-m-d', strtotime($d['tgl_input']))).', '.date('H.i', strtotime($d['tgl_input'])).' WIB'?></td>
-						            			<!-- <td><?=$d['nama_unduhan']?></td> -->
+						            			<td><?=$d['kategori']?></td>
 						            			<td><?=$d['hit_count']?></td>
-						            			<td><a download="" href="<?=base_url('assets/info_pubik/').$d['file']?>" class="btn btn-xs btn-gradient" onclick="tambah_dl('<?=$d['id_info']?>')"><i class="far fa-cloud-download"></i> Download</a></td>
+						            			<td><a href="<?=base_url('assets/info_publik/').$d['file']?>" class="btn btn-xs btn-gradient" onclick="tambah_hit_info('<?=$d['id_info']?>')"><i class="far fa-cloud-download"></i> Download</a></td>
 						            		</tr>
 						            	<?php $no++; endforeach ?>
 						             </tbody>
