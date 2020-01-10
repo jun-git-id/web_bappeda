@@ -189,9 +189,9 @@
                             <li class="nav-title">Media</li>
 
                             <li <?= ($page=='info_publik') ? 'class="active"' : '' ?>>
-                                <a href="<?=base_url('admin/download')?>" title="Informasi Publik" data-filter-tags="info_publik">
+                                <a href="<?=base_url('admin/info_publik')?>" title="Informasi Publik" data-filter-tags="info_publik">
                                     <i class="far fa-info-circle"></i>
-                                    <span class="nav-link-text" data-i18n="nav.download">Informasi Publik</span>
+                                    <span class="nav-link-text" data-i18n="nav.info_publik">Informasi Publik</span>
                                 </a>
                             </li>
                             <li <?= ($page=='download') ? 'class="active"' : '' ?>>
@@ -200,12 +200,12 @@
                                     <span class="nav-link-text" data-i18n="nav.download">Download</span>
                                 </a>
                             </li>
-                            <li <?= ($page=='galeri') ? 'class="active"' : '' ?>>
+                          <!--   <li <?= ($page=='galeri') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/galeri')?>" title="Galeri" data-filter-tags="galeri">
                                     <i class="far fa-images"></i>
                                     <span class="nav-link-text" data-i18n="nav.galeri">Galeri</span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li <?= ($page=='pesan') ? 'class="active"' : '' ?>>
                                 <a href="<?=base_url('admin/pesan')?>" title="Pesan" data-filter-tags="pesan">
                                     <i class="far fa-envelope"></i>

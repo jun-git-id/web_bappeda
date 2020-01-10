@@ -1,6 +1,6 @@
 <div class="page-content">
 		<!--section slider-->
-		<div class="section mt-0">
+		<!-- <div class="section mt-0">
 			<div id="mainSliderWrapper">
 				<div class="loading-content">
 					<div class="inner-circles-loader"></div>
@@ -8,14 +8,14 @@
 				<div class="main-slider mb-0 arrows-white arrows-bottom" id="mainSlider" data-slick='{"arrows": false, "dots": true}'>
 				<?php foreach ($carousel as $c): ?>
 					<div class="slide">
-						<div class="img--holder" data-bg="<?=base_url('assets/front/images/slideshow/').$c['foto']?>"></div>
+						<div class="img--holder" style="width: 100%" data-bg="<?=base_url('assets/front/images/slideshow/testuit.jpg')?>"></div>
 						<div class="slide-content center">
 							<div class="vert-wrap container">
 								<div class="vert">
 									<div class="container">
-										<!-- <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
+										<div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
 											<?=$c['keterangan']?>
-										</div> -->
+										</div>
 										<div class="slide-btn">
 											<a target="_blank" href="<?=$c['link']?>" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Buka</span><i class="icon-right-arrow"></i></a>
 										</div>
@@ -27,8 +27,66 @@
 				<?php endforeach ?>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!--//section under slider-->
+		<!--section slider-->
+		<div class="section mt-0">
+			<div class="container">
+			  <div>
+			  	<BR/>
+			    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+			      <!-- Indicators -->
+			      <ol class="carousel-indicators">
+			        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			        <li data-target="#myCarousel" data-slide-to="1"></li>
+			        <li data-target="#myCarousel" data-slide-to="2"></li>
+			      </ol>
+
+			      <!-- deklarasi carousel -->
+			      <div class="carousel-inner" role="listbox">
+			      	 <div class="item active">
+			          <img src="<?=base_url('assets/front/images/slideshow/test2.jpg')?>">
+			          <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.3) ;">
+			            <h3 style="color: white;">Bappeda Litbang Kab. Pekalongan</h3>
+			            <p>Belajar tutorial bootstrap dasar di www.malasngoding.com</p>
+			          </div>
+			        </div>
+			      	<?php foreach ($carousel as $c): ?>
+			        <div class="item">
+			          <img src="<?=base_url('assets/front/images/slideshow/test3.jpg')?>">
+			          <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.3) ;">
+			            <h3 style="color: white;">Bappeda Litbang Kab. Pekalongan</h3>
+			            <p><?=$c['keterangan']?></p>
+			          </div>
+			        </div>
+			        <?php endforeach ?>
+
+			       
+
+			        <!-- <div class="item">
+			          <img src="<?=base_url('assets/front/images/slideshow/test1.jpg')?>" alt="www.malasngoding.com">
+			          <div class="carousel-caption">
+			            <h3>Tutorial Android</h3>
+			            <p>Tutorial membuat aplikasi android.</p>
+			          </div>
+			        </div> -->
+			      </div>
+
+			      <!-- membuat panah next dan previous -->
+			      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			        <span class="sr-only">Previous</span>
+			      </a>
+			      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			        <span class="sr-only">Next</span>
+			      </a>
+			    </div>
+			  </div>
+
+			</div>
+		</div>
+		<!--//section slider-->
 		<!--section services-->
 		<div class="section mt-4 mb-4">
 			<div class="container px-0">

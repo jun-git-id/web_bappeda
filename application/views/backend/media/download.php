@@ -74,7 +74,7 @@
                 <div class="panel-container show">
                     <div class="panel-content">
                         <div class="panel-tag">
-                            This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
+                            Download merupakan menu yang digunakan untuk upload data/file yang diperbolehkan diakses oleh masyarakat luas (publik). Bisa berupa data maupun paparan yang digunakan rapat sehingga bisa didownload secara mudah. Jika file/ data berjumlah banyak mohon di ZIP/ Rar dulu sehingga data/file dapat dijadikan satu.
                         </div>
                         <?= $this->session->flashdata('alert'); ?>
                         <button data-toggle="modal" data-target="#modal-tambah" type="button" class="btn btn-info"><i class="far fa-plus-hexagon"></i> Tambah Data Unduhan</button>

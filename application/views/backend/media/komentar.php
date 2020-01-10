@@ -10,7 +10,7 @@
                 <div class="panel-container show">
                     <div class="panel-content">
                         <div class="panel-tag">
-                            This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
+                            Data Komentar yang ada dalam setiap postingan.
                         </div>
                         <?= $this->session->flashdata('alert'); ?>
                         <hr>
@@ -106,8 +106,8 @@
                         <textarea type="text" name="balasan" class=" form-control" required=""></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="id" name="id_komentar" class="form-control" required="">
-                        <input type="text" id="username" name="username" class="form-control" required="" value="<?= $this->session->userdata('username') ?>">
+                        <input type="hidden" id="id" name="id_komentar" class="form-control" required="">
+                        <input type="hidden" id="username" name="username" class="form-control" required="" value="<?= $this->session->userdata('username') ?>">
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> Tutup</button>
                     <button type="submit" class="btn btn-info"><i class="far fa-arrow-alt-up"></i>Balas Pesan</button>

@@ -14,11 +14,11 @@
         <meta name="msapplication-tap-highlight" content="no">
         <!-- base css -->
         <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/vendors.bundle.css">
-        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backendend/')?>css/app.bundle.css">
+        <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/app.bundle.css">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/backendend/')?>img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/backend/')?>img/favicon/favicon-32x32.png">
-        <link rel="mask-icon" href="<?=base_url('assets/backend/')?>img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/backend/')?>img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/front/images/faviconfix.png')?>">
+        <link rel="mask-icon" href="<?=base_url('assets/front/images')?>/faviconfix.png" color="#5bbad5">
         <!-- Optional: page related CSS-->
         <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/fa-regular.css">
         <!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/fa-brands.css"> -->
@@ -31,18 +31,19 @@
                         <div class="d-flex align-items-center container p-0">
                             <div class="page-logo width-mobile-auto m-0 align-items-center justify-content-center p-0 bg-transparent bg-img-none shadow-0 height-9">
                                 <a href="javascript:void(0)" class="page-logo-link press-scale-down d-flex align-items-center">
-                                    <span class="page-logo-text mr-1">Login Admin</span>
+                                    <img src="<?=base_url('assets/front/images')?>/faviconfix.png" alt="Admin Bappeda" aria-roledescription="logo" style="width: 36px">
+                                    <span class="page-logo-text mr-1"><b>LOGIN ADMINISTRATOR</b></span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="flex-1" style="backendground: url(<?=base_url('assets/backend/')?>img/svg/pattern-1.svg) no-repeat center bottom fixed; backendground-size: cover;">
+                    <div class="flex-1" style="background: url(<?=base_url('assets/backend/')?>img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
                         <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
                             <div class="row">
                                 <div class="col col-md-6 col-lg-7 hidden-sm-down">
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <img height="200" src="<?=base_url('assets/backend/img/icon.png')?>">
+                                            <img width = "100%" src="<?=base_url('assets/backend/img/bg_login.jpg')?>">
                                         </div>
                                     </div>
                                     <h2 class="fs-xxl fw-500 mt-4 text-white text-center">
@@ -61,16 +62,18 @@
                                             <div class="form-group">
                                                 <label class="form-label" for="username">Username</label>
                                                 <input type="text" id="username" class="form-control form-control-lg" placeholder="Username" name="username" required>
-                                                <div class="invalid-feedbackend">Username Belum Diisi</div>
+                                                <div class="invalid-feedback">Ups, jangan ditinggalin namanya nanti sakit</div>
+                                                <div class="help-block">Masukkan Username Anda</div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-label" for="password">Password</label>
-                                                <input type="password" id="password" class="form-control form-control-lg" placeholder="password" name="password" required>
-                                                <div class="invalid-feedbackend">Maaf, Password Belum Diisi</div>
+                                                <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" required>
+                                                <div class="invalid-feedback">Ups, masak punya gembok gapunya kuncinya?</div>
+                                                <div class="help-block">Masukkan Password Anda</div>
                                             </div>
                                             <div class="row no-gutters">
                                                 <div class="col-lg-6 pl-lg-1 my-2">
-                                                    <button id="js-login-btn" type="submit" class="btn btn-danger btn-block btn-lg"><i class="far fa-sign-in"></i> Secure login</button>
+                                                    <button id="js-login-btn" type="submit" class="btn btn-info btn-block btn-lg"><i class="far fa-sign-in"></i> Login Kuy!</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -78,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-                                2019 © &nbsp;<a href='<?=base_url('')?>' class='text-white opacity-40 fw-500' title='DINDIKBUD Kab. Pekalongan' target='_blank'>Dinas Pendidikan dan Kebudayaan Kab. Pekalongan</a>
+                                2019 © &nbsp;<a href='<?=base_url('')?>' class='text-white opacity-40 fw-500' title='BAPPEDA LITBANG KAB. PEKALONGAN' target='_blank'>BAPPEDA LITBANG KAB. PEKALONGAN</a>
                             </div>
                         </div>
                     </div>

@@ -7,14 +7,19 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 	}
 
+	// public function index()
+	// {
+	// 	$this->load->view('front/template',[
+	// 		'content' => $this->load->view('berita/index',[
+	// 			'data' => array()
+	// 		],true),
+	// 		'title' => 'Judul'
+	// 	]);	
+	// }
+
 	public function index()
 	{
-		$this->load->view('front/template',[
-			'content' => $this->load->view('berita/index',[
-				'data' => array()
-			],true),
-			'title' => 'Judul'
-		]);	
+		$this->load->view('welcome_uit');
 	}
 	
 }

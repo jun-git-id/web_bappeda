@@ -20,6 +20,7 @@
 	<link href="<?=base_url('assets/front/vendor')?>/animate/animate.min.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/icons')?>/style.css" rel="stylesheet">
 	<link href="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link href="<?=base_url('assets/front/vendor')?>/fontawesome-pro/css/all.min.css" rel="stylesheet">
 
 	<!-- <link rel="stylesheet" media="screen, print" href="<?=base_url('assets/backend/')?>css/datagrid/datatables/datatables.bundle.css"> -->
@@ -109,11 +110,11 @@
 											<a class="nav-link" href="<?=base_url('agenda')?>"><i class="fas fa-calendar-week"></i> AGENDA</a>
 										</li>
 										<li class="nav-item <?= ($page=='informasi_publik') ? 'active' : '' ?>">
-											<a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
+											<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-person-sign"></i> INFORMASI PUBLIK</a>
 											<ul class="dropdown-menu">
 												<li><a class="dropdown-item" href="<?=base_url('info_publik/sertamerta')?>">Serta Merta</a></li>
-												<li><a class="dropdown-item" href="doctor-page.html">Berkala</a></li>
-												<li><a class="dropdown-item" href="schedule.html">Setiap Saat</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('info_publik/berkala')?>">Berkala</a></li>
+												<li><a class="dropdown-item" href="<?=base_url('info_publik/setiapsaat')?>">Setiap Saat</a></li>
 											</ul>
 										</li>
 										<li class="nav-item <?= ($page=='media') ? 'active' : '' ?>">
@@ -165,12 +166,12 @@
 							<div class="footer-text mt-1 mt-lg-2">
 								<p>Untuk mendapatkan Berita Terbaru,
 									<br>Subscribe email anda dibawah ini</p>
-								<form action="#" class="footer-subscribe">
+								<!-- <form action="#" class="footer-subscribe">
 									<div class="input-group">
-										<input name="subscribe_mail" type="text" class="<?=base_url('assets/front/form')?>-control" placeholder="Your Email" />
-										<span><i class="icon-black-envelope"></i></span>
+										<span><input name="subscribe_mail" type="text" class="<?=base_url('assets/front/form')?>-control" placeholder="Your Email" />
+										<i class="icon-black-envelope"></i></span>
 									</div>
-								</form>
+								</form> -->
 							</div>
 							<div class="footer-social d-none d-lg-block">
 								<a href="https://www.facebook.com/" target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
@@ -231,7 +232,7 @@
 			<div class="container">
 				<div class="row text-center text-md-left">
 					<div class="col-sm">© 2019 <a href="javascript:;">Tim IT - Bappeda Litbang </a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-						<a href="http://pekalongankab.go.id" target="_blank"><i class="fas fa-globe-asia"></i> Website Kabupaten Pekalongan</a></div>
+						<a href="http://pekalongankab.go.id" target="_blank"><i class="fas fa-globe-asia"></i> Website Bappeda Litbang Kabupaten Pekalongan</a></div>
 					<div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">Nomor Telp.&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>(0285) 381010 / 381456</b></div>
 				</div>
 			</div>
@@ -246,6 +247,8 @@
 	<!-- <script src="<?=base_url('assets/backend/')?>js/datagrid/datatables/datatables.bundle.js"></script> -->
 	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
 	<script src="<?=base_url('assets/front/vendor')?>/jquery-migrate/jquery-migrate-3.0.1.min.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/cookie/jquery.cookie.js"></script>
 	<script src="<?=base_url('assets/front/vendor')?>/bootstrap-datetimepicker/moment.js"></script>

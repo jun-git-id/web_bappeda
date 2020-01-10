@@ -105,13 +105,13 @@
             <div id="panel-1" class="panel">
                 <div class="panel-hdr">
                     <h2>
-                        <i class="far fa-cloud-info_publik"></i> Data <span class="fw-300"><i>Unduhan</i></span>
+                        <i class="far fa-cloud-info_publik"></i> Data <span class="fw-300"><i>Info Publik</i></span>
                     </h2>
                 </div>
                 <div class="panel-container show">
                     <div class="panel-content">
                         <div class="panel-tag">
-                            This example shows DataTables and the Responsive extension being used with the Bootstrap framework providing the styling. The DataTables / Bootstrap integration provides seamless integration for DataTables to be used in a Bootstrap page. <strong>Note</strong> that the <code>.dt-responsive</code> class is used to indicate to the extension that it should be enabled on this page, as responsive has special meaning in Bootstrap. The responsive option could also be used if required
+                            Informasi Publik merupakan data mengenai informasi publik yang bisa diakses untuk publik/ masyarakat. Informasi Publik sendiri dibagi menjadi 3, yaitu : Serta Merta, Berkala, dan Setiap Saat. <strong>Serta Merta</strong> memuat informasi publik yang berupa data serta merta. <strong>Berkala</strong> memuat informasi yang diberikan secara berkala/ periodik. <strong>Setiap Saat</strong> memuat informasi yang diberikan tanpa ada acuan waktu. Data yang diberikan dalam bentuk file PDF.
                         </div>
                         <?= $this->session->flashdata('alert'); ?>
                         <button data-toggle="modal" data-target="#modal-tambah" type="button" class="btn btn-info"><i class="far fa-plus-hexagon"></i> Tambah Informasi Publik</button>
